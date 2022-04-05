@@ -1,0 +1,16 @@
+env/
+source/codebook/*
+!source/codebook/.gitkeep
+
+source/concat/*
+!source/concat/.gitkeep
+
+source/datasets/*
+!source/datasets/.gitkeep
+
+source/merge/*
+!source/merge/.gitkeep
+
+
+sas_confirm/
+the_code/__pycache__

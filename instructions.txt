@@ -1,0 +1,123 @@
+Project Two: What affects a teacher’s decision to leave teaching?
+
+Project two builds on project one.
+
+Step 1. Data Concatenation (15 points)
+
+We will examine two new data files. One of them is called the current teachers’ file and the other is called the former teachers’ file. These two datasets will help you determine teachers’ whereabouts one year after the 1999-2000 school year. So, you will be able to tell teachers’ status (STATUS) if you link these two datasets with SASS public teacher dataset.
+
+Provide the number of observations using describe function and variable names using codebook function in STATA for both current teacher data file and former teacher data file.
+Provide a frequency distribution of teachers’ status for both data files using tabulate function in STATA.
+Limit both datasets to include only two variables:
+current teacher file: (1) CNTLNUM and STATUS;
+Former teacher file: (1) CNTLNUM and STATUS;
+Write STATA code to concatenate these two datasets. We will call this data product the teacher follow-up data file. Provide an explanation of what data concatenation accomplishes here. Provide a codebook after the data concatenation.
+ 
+
+
+
+
+Step 2. Data Merge (15 points)
+
+You will need to merge public teachers and public schools based on their school control number (SCHCNTL). You should have done this in your Project #1. This dataset should have both individual teacher info from the public teacher data file and school info from the public school data file.
+
+Next, you will merge in the teacher follow-up data that you compiled in STEP #1. Remember that you will now merge in datasets rather than concatenate datasets. Essentially, you will merge a combined dataset from project #1 with the teacher follow-up data file from step 1 of project #2.
+
+ 
+
+Provide the number of observations using describe function and variable names using codebook function in STATA for both the teacher follow-up data file (2000-2001) and the combined public teacher and school info data file (1999-2000).
+Write STATA code to merge the above-mentioned two data files. Provide a frequency tabulation of the _merge variable. Explain how many teachers we have STATUS information and how many we do not. Explain why we only observe a smaller subset of teachers in 2000-2001.
+
+
+
+
+
+
+
+Step 3. Data Cleaning and Variable Creation: (20 points)
+
+You will need to locate the dependent variable from Step 1. STATUS. You will need to create one dummy variable to indicate whether a teacher left teaching.
+
+gen leaver=(STATUS=="L") if STATUS~=""
+
+ 
+
+Next, you will locate and create variables to include in your models. They are sometimes called independent variables.
+
+You will need to locate the following set of variables from the public teacher file:
+
+(1) age;
+
+(2) sex;
+
+(3) race and ethnicity;
+
+(4) total teaching experience;
+
+(5) main teaching assignment;
+
+(6) one more variable of your team’s choice;
+
+ 
+
+You will need to locate the following set of variables from the public-school file:
+
+(1) percent of minority student enrollment share;
+
+(2) school levels 3 categories
+
+(3) one more variable of your team’s choice;
+
+ 
+
+Provide a summary statistic all variables that you created.
+ 
+
+Next you will need to clean up these variables. Sometimes these variables contain “-8” which indicates that that variable is missing or is a valid skip. You will need to tell STATA or code your new variable to replace -8 with proper missing in STATA. You will provide another summary statistics once you finished cleaning your datasets.
+ 
+
+You will need to create new dummy variables or continuous variables based on the properties of these variables.
+ 
+
+Continuous variable
+
+Age
+
+Gen age_new= age if age>=0
+
+(this will take care of any missing and create a continuous variable for age)
+
+Dummy variable
+
+school levels contain 3 categories
+
+gen elementary=(slevel4==1) if slevel4>=0
+
+gen secondary=(slevel4==2) if slevel4>=0
+
+gen combined=(slevel4==3) if slevel4>=0
+
+ 
+
+Step 4. Exploratory Data Analysis and Simple Linear Regression: (50 points)
+
+Provide the summary statistics on all variables including your dependent variable (STATUS in 2000-2001) and independent variables listed in step 3.
+ 
+
+Graph one variable at a time: Provide histogram, bar graph, or any other plots to illustrate that you understand your independent variables.
+ 
+
+Graph two variables: select one variable from the list of variables and explore the relationship between this variable and the dependent variable leaver.
+ 
+
+Run simple linear regression: Run your first simple linear regression. Keep in mind STATA code syntax: reg leaver female
+ 
+
+Run multiple regression: You can start building up your models. You will need to explain three S for each coefficient. Detailed explanation of statistical significance, sign, and size will be necessary for you to receive full credits here. You will also need to compare the overall model fit using R-squared to judge which one of your models is the best model.
+ 
+
+Model 1: Leaver = a+b1*female teacher
+
+ 
+
+Model X: Leaver = a+b1*female teacher +b2*black teacher +b3*Hispanic teacher +b4*total experience +b5*math and science teacher +b6*special education teacher +b7*secondary school +b8*share of minority students
