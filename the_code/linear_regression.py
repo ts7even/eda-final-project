@@ -19,7 +19,7 @@ def regressAttack():
     print(pre_stats)
     print()
     model = smf.ols('NEW_STATUS ~ C(ATTACK)', data = df).fit()
-    print(model.summary(yname="Status Leaver", xname=["Never Attacked", "Attacked but not in the last 12 Months", "Attacked in the past 12 months"],
+    print(model.summary(yname="Status Leaver", xname=["Never Attacked", "Has Been Attacked"],
     title='Linear Regression on the Attack Variable against Leaver'))
     print()
     
@@ -35,23 +35,23 @@ def regressFreeTraining():
     title='Linear Regression on the Free Traininng Variable against Leaver'))
     print()
 
-def jobSecurity():
-    print('I worry about the security of my job because of the performance of my students on state or local tests.\n')
+def jobSecurity(): # 0 Agree 1 Disagree
+    print('I worry about the security of my job because of the performance of my students on state or local tests.\n \n')
     print("Preliminary Stats")
     pre_stats = df.groupby('T0313')["NEW_STATUS"].describe()
     print(pre_stats)
-    print()
+    print('\n \n')
     model = smf.ols('NEW_STATUS ~ C(T0313)', data = df).fit()
-    print(model.summary(yname="Status Leaver", xname=['Strongly Agree', 'Somewhat Agree', 'Somewhat disagree', 'Stongly Agree'],
+    print(model.summary(yname="Status Leaver", xname=['Agree', 'Disagree'],
     title='Linear Regression on the Job Security Variable against Leaver'))
     print()
 
-def age():
-    print('What are the ages of the teachers? \n')
+def age(): # Should I do the two highest averages for this regression? 
+    print('What are the ages of the teachers? \n ')
     print("Preliminary Stats")
     pre_stats = df.groupby('AGE_T')["NEW_STATUS"].describe()
     print(pre_stats)
-    print()
+    print('\n \n')
     model = smf.ols('NEW_STATUS ~ C(AGE_T)', data = df).fit()
     print(model.summary(yname="Status Leaver", xname=['Younger than 30', '30 - 39', '40 - 49', '50 or older'],
     title='Linear Regression on the Age Variable against Leaver'))
@@ -117,13 +117,13 @@ def StudentswithDisablilies(): # # This is a catagorical regresing on a continuo
 
 
 
-regressAttack()
-regressFreeTraining()
+# regressAttack()
+# regressFreeTraining()
 jobSecurity()
-age()
-totalExperiance()
-specialNeedsSupport()
-schoolLevel()
-freeLunch()
-doBest()
-StudentswithDisablilies()
+# age()
+# totalExperiance()
+# specialNeedsSupport()
+# schoolLevel()
+# freeLunch()
+# doBest()
+# StudentswithDisablilies()

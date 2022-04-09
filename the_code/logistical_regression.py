@@ -11,6 +11,8 @@ import matplotlib as plt
 df = pd.read_csv('source/data_cleaning/cleaned_data.csv')
 
 
+# IDK if we need to recode and make dummy variables for regresson 
+
 def regressAttack():
     print('Have you been attacked before as a teacher? \n')
     print("Preliminary Stats")
@@ -18,8 +20,8 @@ def regressAttack():
     print(pre_stats)
     print()
     model = smf.logit('NEW_STATUS ~ C(ATTACK)', data = df).fit()
-    print(model.summary(yname="Status Leaver", xname=["Never Attacked", "Attacked but not in the last 12 Months", "Attacked in the past 12 months"],
-    title='Linear Regression on the Attack Variable against Leaver'))
+    print(model.summary(yname="Status Leaver", xname=["Never Attacked", "Has Been Attacked"],
+    title='Logistic Regression on the Attack Variable against Leaver'))
     print()
     
 
@@ -31,7 +33,7 @@ def regressFreeTraining():
     print()
     model = smf.logit('NEW_STATUS ~ C(S1628)', data = df).fit()
     print(model.summary(yname="Status Leaver", xname=['Yes Free Training is Avaliable', 'No Free Training Avaliable'],
-    title='Linear Regression on the Free Traininng Variable against Leaver'))
+    title='Logistic Regression on the Free Traininng Variable against Leaver'))
     print()
 
 def jobSecurity():
@@ -41,8 +43,8 @@ def jobSecurity():
     print(pre_stats)
     print()
     model = smf.logit('NEW_STATUS ~ C(T0313)', data = df).fit()
-    print(model.summary(yname="Status Leaver", xname=['Strongly Agree', 'Somewhat Agree', 'Somewhat disagree', 'Stongly Agree'],
-    title='Linear Regression on the Job Security Variable against Leaver'))
+    print(model.summary(yname="Status Leaver", xname=['Agree', 'Disagree'],
+    title='Logistic Regression on the Job Security Variable against Leaver'))
     print()
 
 def age():
@@ -53,7 +55,7 @@ def age():
     print()
     model = smf.logit('NEW_STATUS ~ C(AGE_T)', data = df).fit()
     print(model.summary(yname="Status Leaver", xname=['Younger than 30', '30 - 39', '40 - 49', '50 or older'],
-    title='Linear Regression on the Age Variable against Leaver'))
+    title='Logistic Regression on the Age Variable against Leaver'))
     print()
 
 # def totalExperiance(): # This is a catagorical regresing on a continuous variable
@@ -70,7 +72,7 @@ def specialNeedsSupport():
     print()
     model = smf.logit('NEW_STATUS ~ C(T0314)', data = df).fit()
     print(model.summary(yname="Status Leaver", xname=['Strongly Agree', 'Somewhat Agree', 'Somewhat disagree', 'Stongly Agree'],
-    title='Linear Regression on the Support Special Needs Variable against Leaver'))
+    title='Logistic Regression on the Support Special Needs Variable against Leaver'))
     print()
 
 def schoolLevel():
@@ -81,7 +83,7 @@ def schoolLevel():
     print()
     model = smf.logit('NEW_STATUS ~ C(SCHLEVEL_x)', data = df).fit()
     print(model.summary(yname="Status Leaver", xname=['Elementary', 'Secondary', 'Combined'],
-    title='Linear Regression on the School Level Variable against Leaver'))
+    title='Logistic Regression on the School Level Variable against Leaver'))
     print()
 
 def freeLunch():
@@ -92,7 +94,7 @@ def freeLunch():
     print()
     model = smf.logit('NEW_STATUS ~ C(S0287)', data = df).fit()
     print(model.summary(yname="Status Leaver", xname=['Less than 1 percent', '1 - 4 percent', '5 - 19 percent', '20 percent or more'],
-    title='Linear Regression on the Free Lunch Variable against Leaver'))
+    title='Logistic Regression on the Free Lunch Variable against Leaver'))
     print()
 
 def doBest():
@@ -119,10 +121,10 @@ def doBest():
 regressAttack()
 regressFreeTraining()
 jobSecurity()
-age()
+# age()
 # totalExperiance()
-specialNeedsSupport()
-schoolLevel()
-freeLunch()
-doBest()
+# specialNeedsSupport()
+# schoolLevel()
+# freeLunch()
+# doBest()
 # StudentswithDisablilies()

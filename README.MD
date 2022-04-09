@@ -1,6 +1,6 @@
 Project 2 - Python Team
 
-- Might need to dropna() for the merge2 files
+- Do we need to code different catagorical variables for leaver? i.e Strongly Disagree and Disagree =1 and Agree and Strongly Agree =0? I.e only have two variables for our independent catagorical variable?
 
 # Team Members and their contribution
 Trevor Seibert - Project Leader
