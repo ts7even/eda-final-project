@@ -1,0 +1,349 @@
+Have you been attacked before as a teacher? 
+
+Preliminary Stats
+         count      mean       std  min  25%  50%  75%  max
+ATTACK                                                     
+0       3499.0  0.407545  0.491448  0.0  0.0  0.0  1.0  1.0
+1        157.0  0.458599  0.499877  0.0  0.0  0.0  1.0  1.0
+2        172.0  0.267442  0.443917  0.0  0.0  0.0  1.0  1.0
+
+           Linear Regression on the Attack Variable against Leaver            
+==============================================================================
+Dep. Variable:          Status Leaver   R-squared:                       0.004
+Model:                            OLS   Adj. R-squared:                  0.004
+Method:                 Least Squares   F-statistic:                     7.750
+Date:                Fri, 08 Apr 2022   Prob (F-statistic):           0.000438
+Time:                        20:59:10   Log-Likelihood:                -2697.7
+No. Observations:                3828   AIC:                             5401.
+Df Residuals:                    3825   BIC:                             5420.
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+==========================================================================================================
+                                             coef    std err          t      P>|t|      [0.025      0.975]
+----------------------------------------------------------------------------------------------------------
+Never Attacked                             0.4075      0.008     49.222      0.000       0.391       0.424
+Attacked but not in the last 12 Months     0.0511      0.040      1.278      0.201      -0.027       0.129
+Attacked in the past 12 months            -0.1401      0.038     -3.663      0.000      -0.215      -0.065
+==============================================================================
+Omnibus:                    15058.099   Durbin-Watson:                   0.009
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              632.683
+Skew:                           0.390   Prob(JB):                    4.12e-138
+Kurtosis:                       1.167   Cond. No.                         5.11
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+If free training available in this district? regardless of funding source, to prepare staff members to teach in fields with current or anticipated shortages?
+
+Preliminary Stats
+        count      mean       std  min  25%  50%  75%  max
+S1628                                                     
+1.0    1091.0  0.396884  0.489476  0.0  0.0  0.0  1.0  1.0
+2.0    2299.0  0.411918  0.492288  0.0  0.0  0.0  1.0  1.0
+
+       Linear Regression on the Free Traininng Variable against Leaver        
+==============================================================================
+Dep. Variable:          Status Leaver   R-squared:                       0.000
+Model:                            OLS   Adj. R-squared:                 -0.000
+Method:                 Least Squares   F-statistic:                    0.6926
+Date:                Fri, 08 Apr 2022   Prob (F-statistic):              0.405
+Time:                        20:59:10   Log-Likelihood:                -2400.5
+No. Observations:                3390   AIC:                             4805.
+Df Residuals:                    3388   BIC:                             4817.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==================================================================================================
+                                     coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------------
+Yes Free Training is Avaliable     0.3969      0.015     26.678      0.000       0.368       0.426
+No Free Training Avaliable         0.0150      0.018      0.832      0.405      -0.020       0.050
+==============================================================================
+Omnibus:                    13140.362   Durbin-Watson:                   0.002
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              567.445
+Skew:                           0.378   Prob(JB):                    6.04e-124
+Kurtosis:                       1.144   Cond. No.                         3.29
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+I worry about the security of my job because of the performance of my students on state or local tests.
+
+Preliminary Stats
+        count      mean       std  min  25%  50%  75%  max
+T0313                                                     
+1       256.0  0.316406  0.465984  0.0  0.0  0.0  1.0  1.0
+2       768.0  0.339844  0.473965  0.0  0.0  0.0  1.0  1.0
+3      1157.0  0.395851  0.489244  0.0  0.0  0.0  1.0  1.0
+4      1647.0  0.451730  0.497816  0.0  0.0  0.0  1.0  1.0
+
+        Linear Regression on the Job Security Variable against Leaver         
+==============================================================================
+Dep. Variable:          Status Leaver   R-squared:                       0.010
+Model:                            OLS   Adj. R-squared:                  0.009
+Method:                 Least Squares   F-statistic:                     12.51
+Date:                Fri, 08 Apr 2022   Prob (F-statistic):           3.88e-08
+Time:                        20:59:10   Log-Likelihood:                -2686.7
+No. Observations:                3828   AIC:                             5381.
+Df Residuals:                    3824   BIC:                             5406.
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+=====================================================================================
+                        coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------------
+Strongly Agree        0.3164      0.031     10.365      0.000       0.257       0.376
+Somewhat Agree        0.0234      0.035      0.665      0.506      -0.046       0.093
+Somewhat disagree     0.0794      0.034      2.355      0.019       0.013       0.146
+Stongly Agree         0.1353      0.033      4.124      0.000       0.071       0.200
+==============================================================================
+Omnibus:                    15339.301   Durbin-Watson:                   0.019
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              618.133
+Skew:                           0.387   Prob(JB):                    5.95e-135
+Kurtosis:                       1.190   Cond. No.                         9.12
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+What are the ages of the teachers? 
+
+Preliminary Stats
+        count      mean       std  min  25%  50%  75%  max
+AGE_T                                                     
+1      1007.0  0.253227  0.435076  0.0  0.0  0.0  1.0  1.0
+2       783.0  0.325670  0.468924  0.0  0.0  0.0  1.0  1.0
+3       832.0  0.306490  0.461313  0.0  0.0  0.0  1.0  1.0
+4      1206.0  0.645937  0.478427  0.0  0.0  1.0  1.0  1.0
+
+             Linear Regression on the Age Variable against Leaver             
+==============================================================================
+Dep. Variable:          Status Leaver   R-squared:                       0.115
+Model:                            OLS   Adj. R-squared:                  0.115
+Method:                 Least Squares   F-statistic:                     166.1
+Date:                Fri, 08 Apr 2022   Prob (F-statistic):          3.33e-101
+Time:                        20:59:10   Log-Likelihood:                -2471.0
+No. Observations:                3828   AIC:                             4950.
+Df Residuals:                    3824   BIC:                             4975.
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+===================================================================================
+                      coef    std err          t      P>|t|      [0.025      0.975]
+-----------------------------------------------------------------------------------
+Younger than 30     0.2532      0.015     17.406      0.000       0.225       0.282
+30 - 39             0.0724      0.022      3.293      0.001       0.029       0.116
+40 - 49             0.0533      0.022      2.463      0.014       0.011       0.096
+50 or older         0.3927      0.020     19.927      0.000       0.354       0.431
+==============================================================================
+Omnibus:                    21593.337   Durbin-Watson:                   0.227
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              368.281
+Skew:                           0.377   Prob(JB):                     1.07e-80
+Kurtosis:                       1.681   Cond. No.                         4.73
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+Linear Regression on the Total Expriance Variable against Leaver  
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:             NEW_STATUS   R-squared:                       0.131
+Model:                            OLS   Adj. R-squared:                  0.130
+Method:                 Least Squares   F-statistic:                     575.0
+Date:                Fri, 08 Apr 2022   Prob (F-statistic):          1.68e-118
+Time:                        20:59:10   Log-Likelihood:                -2437.4
+No. Observations:                3828   AIC:                             4879.
+Df Residuals:                    3826   BIC:                             4891.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept      0.1984      0.011     17.559      0.000       0.176       0.221
+TOTEXPER       0.0152      0.001     23.980      0.000       0.014       0.016
+==============================================================================
+Omnibus:                     8579.995   Durbin-Watson:                   0.262
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              361.947
+Skew:                           0.396   Prob(JB):                     2.54e-79
+Kurtosis:                       1.719   Cond. No.                         27.2
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+I am given the support I need to teach students with special needs.
+
+Preliminary Stats
+        count      mean       std  min  25%  50%  75%  max
+T0314                                                     
+1       708.0  0.402542  0.490757  0.0  0.0  0.0  1.0  1.0
+2      1644.0  0.389903  0.487876  0.0  0.0  0.0  1.0  1.0
+3      1006.0  0.404573  0.491053  0.0  0.0  0.0  1.0  1.0
+4       470.0  0.448936  0.497916  0.0  0.0  0.0  1.0  1.0
+
+    Linear Regression on the Support Special Needs Variable against Leaver    
+==============================================================================
+Dep. Variable:          Status Leaver   R-squared:                       0.001
+Model:                            OLS   Adj. R-squared:                  0.001
+Method:                 Least Squares   F-statistic:                     1.768
+Date:                Fri, 08 Apr 2022   Prob (F-statistic):              0.151
+Time:                        20:59:10   Log-Likelihood:                -2702.8
+No. Observations:                3828   AIC:                             5414.
+Df Residuals:                    3824   BIC:                             5439.
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+=====================================================================================
+                        coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------------
+Strongly Agree        0.4025      0.018     21.837      0.000       0.366       0.439
+Somewhat Agree       -0.0126      0.022     -0.573      0.566      -0.056       0.031
+Somewhat disagree     0.0020      0.024      0.084      0.933      -0.045       0.049
+Stongly Agree         0.0464      0.029      1.590      0.112      -0.011       0.104
+==============================================================================
+Omnibus:                    14980.742   Durbin-Watson:                   0.004
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              638.406
+Skew:                           0.393   Prob(JB):                    2.35e-139
+Kurtosis:                       1.161   Cond. No.                         5.76
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+What school level does the teacher teach?.
+
+Preliminary Stats
+             count      mean       std  min  25%  50%  75%  max
+SCHLEVEL_x                                                     
+1           1890.0  0.285185  0.451622  0.0  0.0  0.0  1.0  1.0
+2           1709.0  0.516676  0.499868  0.0  0.0  1.0  1.0  1.0
+3            229.0  0.532751  0.500019  0.0  0.0  1.0  1.0  1.0
+
+        Linear Regression on the School Level Variable against Leaver         
+==============================================================================
+Dep. Variable:          Status Leaver   R-squared:                       0.057
+Model:                            OLS   Adj. R-squared:                  0.056
+Method:                 Least Squares   F-statistic:                     114.8
+Date:                Fri, 08 Apr 2022   Prob (F-statistic):           3.77e-49
+Time:                        20:59:10   Log-Likelihood:                -2593.8
+No. Observations:                3828   AIC:                             5194.
+Df Residuals:                    3825   BIC:                             5212.
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Elementary     0.2852      0.011     26.010      0.000       0.264       0.307
+Secondary      0.2315      0.016     14.549      0.000       0.200       0.263
+Combined       0.2476      0.033      7.423      0.000       0.182       0.313
+==============================================================================
+Omnibus:                    18742.208   Durbin-Watson:                   0.100
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              502.586
+Skew:                           0.356   Prob(JB):                    7.33e-110
+Kurtosis:                       1.374   Cond. No.                         4.92
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+Around the first of October, how many applicants at this school were APPROVED for free or reduced-price lunches?
+
+Preliminary Stats
+        count      mean       std  min  25%  50%  75%  max
+S0287                                                     
+1.0     285.0  0.378947  0.485978  0.0  0.0  0.0  1.0  1.0
+2.0     969.0  0.461300  0.498758  0.0  0.0  0.0  1.0  1.0
+3.0    1276.0  0.404389  0.490966  0.0  0.0  0.0  1.0  1.0
+4.0    1064.0  0.343985  0.475260  0.0  0.0  0.0  1.0  1.0
+
+         Linear Regression on the Free Lunch Variable against Leaver          
+==============================================================================
+Dep. Variable:          Status Leaver   R-squared:                       0.008
+Model:                            OLS   Adj. R-squared:                  0.007
+Method:                 Least Squares   F-statistic:                     9.976
+Date:                Fri, 08 Apr 2022   Prob (F-statistic):           1.51e-06
+Time:                        20:59:10   Log-Likelihood:                -2520.0
+No. Observations:                3594   AIC:                             5048.
+Df Residuals:                    3590   BIC:                             5073.
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+=======================================================================================
+                          coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------------
+Less than 1 percent     0.3789      0.029     13.107      0.000       0.322       0.436
+1 - 4 percent           0.0824      0.033      2.504      0.012       0.018       0.147
+5 - 19 percent          0.0254      0.032      0.796      0.426      -0.037       0.088
+20 percent or more     -0.0350      0.033     -1.074      0.283      -0.099       0.029
+==============================================================================
+Omnibus:                    14527.408   Durbin-Watson:                   0.015
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              584.116
+Skew:                           0.404   Prob(JB):                    1.45e-127
+Kurtosis:                       1.198   Cond. No.                         8.28
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+I sometimes feel it is a waste of time to try to do my best as a teacher. 
+
+Preliminary Stats
+        count      mean       std  min  25%  50%  75%  max
+T0318                                                     
+1       239.0  0.535565  0.499780  0.0  0.0  1.0  1.0  1.0
+2       677.0  0.493353  0.500325  0.0  0.0  0.0  1.0  1.0
+3       673.0  0.416048  0.493268  0.0  0.0  0.0  1.0  1.0
+4      2239.0  0.358196  0.479577  0.0  0.0  0.0  1.0  1.0
+
+        Linear Regression on the Do your Best Variable against Leaver         
+==============================================================================
+Dep. Variable:          Status Leaver   R-squared:                       0.016
+Model:                            OLS   Adj. R-squared:                  0.015
+Method:                 Least Squares   F-statistic:                     20.15
+Date:                Fri, 08 Apr 2022   Prob (F-statistic):           5.93e-13
+Time:                        20:59:10   Log-Likelihood:                -2675.4
+No. Observations:                3828   AIC:                             5359.
+Df Residuals:                    3824   BIC:                             5384.
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+=====================================================================================
+                        coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------------
+Strongly Agree        0.5356      0.032     17.002      0.000       0.474       0.597
+Somewhat Agree       -0.0422      0.037     -1.152      0.249      -0.114       0.030
+Somewhat disagree    -0.1195      0.037     -3.259      0.001      -0.191      -0.048
+Stongly Agree        -0.1774      0.033     -5.352      0.000      -0.242      -0.112
+==============================================================================
+Omnibus:                    15696.201   Durbin-Watson:                   0.032
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              603.314
+Skew:                           0.388   Prob(JB):                    9.82e-132
+Kurtosis:                       1.217   Cond. No.                         9.87
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+Linear Regression on the total students with disabilites variable against Leaver  
+How many students have disabilities or are special education students at your school?
+==============================================================================
+Dep. Variable:             NEW_STATUS   R-squared:                       0.000
+Model:                            OLS   Adj. R-squared:                 -0.000
+Method:                 Least Squares   F-statistic:                    0.7180
+Date:                Fri, 08 Apr 2022   Prob (F-statistic):              0.397
+Time:                        20:59:10   Log-Likelihood:                -2705.1
+No. Observations:                3828   AIC:                             5414.
+Df Residuals:                    3826   BIC:                             5427.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept      0.4077      0.009     43.008      0.000       0.389       0.426
+T0244         -0.0005      0.001     -0.847      0.397      -0.002       0.001
+==============================================================================
+Omnibus:                    14928.080   Durbin-Watson:                   0.001
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              641.384
+Skew:                           0.394   Prob(JB):                    5.31e-140
+Kurtosis:                       1.156   Cond. No.                         19.3
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
