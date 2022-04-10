@@ -1,0 +1,170 @@
+I was pleased with the opportunities for professional DEVELOPMENT.
+
+Preliminary Stats
+        count      mean       std  min  25%  50%  75%  max
+F0119                                                     
+0.0     743.0  0.624495  0.484579  0.0  0.0  1.0  1.0  1.0
+1.0    1285.0  0.659922  0.473919  0.0  0.0  1.0  1.0  1.0
+
+Linear Regression on the Opportunities for professional development Variable against Leaver
+==============================================================================
+Dep. Variable:          Status Leaver   R-squared:                       0.001
+Model:                            OLS   Adj. R-squared:                  0.001
+Method:                 Least Squares   F-statistic:                     2.588
+Date:                Sun, 10 Apr 2022   Prob (F-statistic):              0.108
+Time:                        18:17:30   Log-Likelihood:                -1379.0
+No. Observations:                2028   AIC:                             2762.
+Df Residuals:                    2026   BIC:                             2773.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Disagree       0.6245      0.018     35.623      0.000       0.590       0.659
+Agree          0.0354      0.022      1.609      0.108      -0.008       0.079
+==============================================================================
+Omnibus:                    10433.272   Durbin-Watson:                   0.005
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              348.455
+Skew:                          -0.614   Prob(JB):                     2.16e-76
+Kurtosis:                       1.382   Cond. No.                         3.06
+==============================================================================
+
+
+
+
+
+Increase in salary or other pay increases as a result of participating in professional development activities?
+
+Preliminary Stats
+        count      mean       std  min  25%  50%  75%  max
+T0186                                                     
+0       446.0  0.392377  0.488828  0.0  0.0  0.0  1.0  1.0
+1      3382.0  0.404790  0.490924  0.0  0.0  0.0  1.0  1.0
+
+Linear Regression on the pay rewards increase of completing professional development variable against Leaver
+==============================================================================
+Dep. Variable:          Status Leaver   R-squared:                       0.000
+Model:                            OLS   Adj. R-squared:                 -0.000
+Method:                 Least Squares   F-statistic:                    0.2522
+Date:                Sun, 10 Apr 2022   Prob (F-statistic):              0.616
+Time:                        18:17:30   Log-Likelihood:                -2705.3
+No. Observations:                3828   AIC:                             5415.
+Df Residuals:                    3826   BIC:                             5427.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Yes            0.3924      0.023     16.888      0.000       0.347       0.438
+No             0.0124      0.025      0.502      0.616      -0.036       0.061
+==============================================================================
+Omnibus:                    14922.652   Durbin-Watson:                   0.001
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              641.684
+Skew:                           0.394   Prob(JB):                    4.57e-140
+Kurtosis:                       1.156   Cond. No.                         5.69
+==============================================================================
+
+
+
+
+
+If free training available in this district? regardless of funding source, to prepare staff members to teach in fields with current or anticipated shortages?
+
+Preliminary Stats
+        count      mean       std  min  25%  50%  75%  max
+S1628                                                     
+0.0    1091.0  0.396884  0.489476  0.0  0.0  0.0  1.0  1.0
+1.0    2299.0  0.411918  0.492288  0.0  0.0  0.0  1.0  1.0
+
+       Linear Regression on the Free Traininng Variable against Leaver        
+==============================================================================
+Dep. Variable:          Status Leaver   R-squared:                       0.000
+Model:                            OLS   Adj. R-squared:                 -0.000
+Method:                 Least Squares   F-statistic:                    0.6926
+Date:                Sun, 10 Apr 2022   Prob (F-statistic):              0.405
+Time:                        18:17:30   Log-Likelihood:                -2400.5
+No. Observations:                3390   AIC:                             4805.
+Df Residuals:                    3388   BIC:                             4817.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==================================================================================================
+                                     coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------------
+Yes Free Training is Avaliable     0.3969      0.015     26.678      0.000       0.368       0.426
+No Free Training Avaliable         0.0150      0.018      0.832      0.405      -0.020       0.050
+==============================================================================
+Omnibus:                    13140.362   Durbin-Watson:                   0.002
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              567.445
+Skew:                           0.378   Prob(JB):                    6.04e-124
+Kurtosis:                       1.144   Cond. No.                         3.29
+==============================================================================
+
+
+
+
+
+What are the ages of the teachers? 
+ 
+Preliminary Stats
+          count      mean       std  min  25%  50%  75%  max
+AGE_T_x                                                     
+0        1790.0  0.284916  0.451501  0.0  0.0  0.0  1.0  1.0
+1        2038.0  0.507360  0.500069  0.0  0.0  1.0  1.0  1.0
+
+ 
+
+             Linear Regression on the Age Variable against Leaver             
+==============================================================================
+Dep. Variable:          Status Leaver   R-squared:                       0.051
+Model:                            OLS   Adj. R-squared:                  0.051
+Method:                 Least Squares   F-statistic:                     206.4
+Date:                Sun, 10 Apr 2022   Prob (F-statistic):           1.26e-45
+Time:                        18:17:30   Log-Likelihood:                -2604.9
+No. Observations:                3828   AIC:                             5214.
+Df Residuals:                    3826   BIC:                             5226.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+===================================================================================
+                      coef    std err          t      P>|t|      [0.025      0.975]
+-----------------------------------------------------------------------------------
+Younger than 40     0.2849      0.011     25.220      0.000       0.263       0.307
+40 and older        0.2224      0.015     14.367      0.000       0.192       0.253
+==============================================================================
+Omnibus:                    18090.091   Durbin-Watson:                   0.101
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              516.442
+Skew:                           0.358   Prob(JB):                    7.18e-113
+Kurtosis:                       1.349   Cond. No.                         2.70
+==============================================================================
+
+
+
+
+Around the first of October, how many applicants at this school were APPROVED for free or reduced-price lunches?
+Preliminary Stats
+        count      mean       std  min  25%  50%  75%  max
+S0287                                                     
+0.0    1254.0  0.442584  0.496891  0.0  0.0  0.0  1.0  1.0
+1.0    2340.0  0.376923  0.484719  0.0  0.0  0.0  1.0  1.0
+
+         Linear Regression on the Free Lunch Variable against Leaver          
+==============================================================================
+Dep. Variable:          Status Leaver   R-squared:                       0.004
+Model:                            OLS   Adj. R-squared:                  0.004
+Method:                 Least Squares   F-statistic:                     14.72
+Date:                Sun, 10 Apr 2022   Prob (F-statistic):           0.000127
+Time:                        18:17:30   Log-Likelihood:                -2527.5
+No. Observations:                3594   AIC:                             5059.
+Df Residuals:                    3592   BIC:                             5071.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+========================================================================================
+                           coef    std err          t      P>|t|      [0.025      0.975]
+----------------------------------------------------------------------------------------
+Less than 50 percent     0.4426      0.014     32.051      0.000       0.416       0.470
+50 percent or more      -0.0657      0.017     -3.837      0.000      -0.099      -0.032
+==============================================================================
+Omnibus:                    14346.085   Durbin-Watson:                   0.008
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              593.700
+Skew:                           0.407   Prob(JB):                    1.20e-129
+Kurtosis:                       1.183   Cond. No.                         3.15
+==============================================================================

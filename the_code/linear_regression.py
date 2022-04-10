@@ -11,8 +11,19 @@ import matplotlib as plt
 df = pd.read_csv('source/data_cleaning/cleaned_data.csv')
 # Only do graphs for variables that correlate to our project. 
 
- # F0119, F0607, F0608
+# Order of Variables that we are doing 
+# F0119
+# F0120
+# T0186 ------
+# S1628 ------
+# T0178 ------
+# T0165
+# F0120 
+# F0115
+## F0119 
 
+
+# On statsmodels, It goes by numerical order of smallest to largest. 
 def opportunites():
     print('I was pleased with the opportunities for professional DEVELOPMENT.\n')
     print("Preliminary Stats")
@@ -24,27 +35,17 @@ def opportunites():
     title='Linear Regression on the Opportunities for professional development Variable against Leaver'))
     print()
 
-def ProfDevGoals():
-    print('REQUIRED professional development activities at the school usually closely matched my professional development goals..\n')
-    print("Preliminary Stats")
-    pre_stats = df.groupby('F0120')["NEW_STATUS"].describe()
-    print(pre_stats)
-    print()
-    model = smf.ols('NEW_STATUS ~ C(F0120)', data = df).fit()
-    print(model.summary(yname="Status Leaver", xname=['Disagree', 'Agree'],  
-    title='Linear Regression on the prof development activities variable against Leaver'))
-    print()
 
 
-def ProfDevGoals2():
-    print('REQUIRED professional development activities at this school usually closely match my professional development goals.\n')
+def IncreseSalaryProfDevelopment(): # Good to go
+    print('Increase in salary or other pay increases as a result of participating in professional development activities?\n')
     print("Preliminary Stats")
-    pre_stats = df.groupby('F0608')["NEW_STATUS"].describe()
+    pre_stats = df.groupby('T0186')["NEW_STATUS"].describe()
     print(pre_stats)
     print()
-    model = smf.ols('NEW_STATUS ~ C(F0608)', data = df).fit()
-    print(model.summary(yname="Status Leaver", xname=['Disagree', 'Agree'],  
-    title='Linear Regression on the prof development activities variable against Leaver'))
+    model = smf.ols('NEW_STATUS ~ C(T0186)', data = df).fit()
+    print(model.summary(yname="Status Leaver", xname=['Yes', 'No'],  # Yes is 0, No is 1 
+    title='Linear Regression on the pay rewards increase of completing professional development variable against Leaver'))
     print()
 
 
@@ -56,70 +57,44 @@ def regressFreeTraining():
     print(pre_stats)
     print()
     model = smf.ols('NEW_STATUS ~ C(S1628)', data = df).fit()
-    print(model.summary(yname="Status Leaver", xname=['Yes Free Training is Avaliable', 'No Free Training Avaliable'],
+    print(model.summary(yname="Status Leaver", xname=['Yes Free Training is Avaliable', 'No Free Training Avaliable'], # 0 is 
     title='Linear Regression on the Free Traininng Variable against Leaver'))
     print()
 
 
-def age(): # Should I do the two highest averages for this regression? 
+
+
+def age(): 
     print('What are the ages of the teachers? \n ')
     print("Preliminary Stats")
-    pre_stats = df.groupby('AGE_T')["NEW_STATUS"].describe()
+    pre_stats = df.groupby('AGE_T_x')["NEW_STATUS"].describe()
     print(pre_stats)
     print('\n \n')
-    model = smf.ols('NEW_STATUS ~ C(AGE_T)', data = df).fit()
-    print(model.summary(yname="Status Leaver", xname=['Younger than 30', '30 - 39', '40 - 49', '50 or older'],
+    model = smf.ols('NEW_STATUS ~ C(AGE_T_x)', data = df).fit()
+    print(model.summary(yname="Status Leaver", xname=['Younger than 40', '40 and older'], # 1 is younger than 40 #0 is older than 40
     title='Linear Regression on the Age Variable against Leaver'))
     print()
 
 
-def freeLunch():
+
+def freeLunch(): 
     print('Around the first of October, how many applicants at this school were APPROVED for free or reduced-price lunches?\n')
     print("Preliminary Stats")
     pre_stats = df.groupby('S0287')["NEW_STATUS"].describe()
     print(pre_stats)
     print()
     model = smf.ols('NEW_STATUS ~ C(S0287)', data = df).fit()
-    print(model.summary(yname="Status Leaver", xname=['Less than 1 percent', '1 - 4 percent', '5 - 19 percent', '20 percent or more'],
+    print(model.summary(yname="Status Leaver", xname=['Less than 50 percent', '50 percent or more'], # 1 is less than 50% #0 is 50 percent or more
     title='Linear Regression on the Free Lunch Variable against Leaver'))
     print()
 
 
 
-# opportunites()
-# ProfDevGoals()
-# ProfDevGoals2()
-
+opportunites()
+IncreseSalaryProfDevelopment()
 regressFreeTraining()
+age()
+freeLunch()
 
 
 
-
-
-
-
-
-# def jobSecurity(): # 0 Agree 1 Disagree
-#     print('I worry about the security of my job because of the performance of my students on state or local tests.\n \n')
-#     print("Preliminary Stats")
-#     pre_stats = df.groupby('T0313')["NEW_STATUS"].describe()
-#     print(pre_stats)
-#     print('\n \n')
-#     model = smf.ols('NEW_STATUS ~ C(T0313)', data = df).fit()
-#     print(model.summary(yname="Status Leaver", xname=['Agree', 'Disagree'],
-#     title='Linear Regression on the Job Security Variable against Leaver'))
-#     print()
-
-
-
-
-# def doBest():
-#     print("I sometimes feel it is a waste of time to try to do my best as a teacher. \n")
-#     print("Preliminary Stats")
-#     pre_stats = df.groupby('T0318')["NEW_STATUS"].describe()
-#     print(pre_stats)
-#     print()
-#     model = smf.ols('NEW_STATUS ~ C(T0318)', data = df).fit()
-#     print(model.summary(yname="Status Leaver", xname=['Strongly Agree', 'Somewhat Agree', 'Somewhat disagree', 'Stongly Agree'],
-#     title='Linear Regression on the Do your Best Variable against Leaver'))
-#     print()
