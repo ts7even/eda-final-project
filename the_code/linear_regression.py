@@ -11,18 +11,43 @@ import matplotlib as plt
 df = pd.read_csv('source/data_cleaning/cleaned_data.csv')
 # Only do graphs for variables that correlate to our project. 
 
+ # F0119, F0607, F0608
 
-def regressAttack():
-    print('Have you been attacked before as a teacher? \n')
+def opportunites():
+    print('I was pleased with the opportunities for professional DEVELOPMENT.\n')
     print("Preliminary Stats")
-    pre_stats = df.groupby('ATTACK')["NEW_STATUS"].describe()
+    pre_stats = df.groupby('F0119')["NEW_STATUS"].describe()
     print(pre_stats)
     print()
-    model = smf.ols('NEW_STATUS ~ C(ATTACK)', data = df).fit()
-    print(model.summary(yname="Status Leaver", xname=["Never Attacked", "Has Been Attacked"],
-    title='Linear Regression on the Attack Variable against Leaver'))
+    model = smf.ols('NEW_STATUS ~ C(F0119)', data = df).fit()
+    print(model.summary(yname="Status Leaver", xname=['Disagree', 'Agree'],  
+    title='Linear Regression on the Opportunities for professional development Variable against Leaver'))
     print()
-    
+
+def ProfDevGoals():
+    print('REQUIRED professional development activities at the school usually closely matched my professional development goals..\n')
+    print("Preliminary Stats")
+    pre_stats = df.groupby('F0120')["NEW_STATUS"].describe()
+    print(pre_stats)
+    print()
+    model = smf.ols('NEW_STATUS ~ C(F0120)', data = df).fit()
+    print(model.summary(yname="Status Leaver", xname=['Disagree', 'Agree'],  
+    title='Linear Regression on the prof development activities variable against Leaver'))
+    print()
+
+
+def ProfDevGoals2():
+    print('REQUIRED professional development activities at this school usually closely match my professional development goals.\n')
+    print("Preliminary Stats")
+    pre_stats = df.groupby('F0608')["NEW_STATUS"].describe()
+    print(pre_stats)
+    print()
+    model = smf.ols('NEW_STATUS ~ C(F0608)', data = df).fit()
+    print(model.summary(yname="Status Leaver", xname=['Disagree', 'Agree'],  
+    title='Linear Regression on the prof development activities variable against Leaver'))
+    print()
+
+
 
 def regressFreeTraining():
     print('If free training available in this district? regardless of funding source, to prepare staff members to teach in fields with current or anticipated shortages?\n')
@@ -35,16 +60,6 @@ def regressFreeTraining():
     title='Linear Regression on the Free Traininng Variable against Leaver'))
     print()
 
-def jobSecurity(): # 0 Agree 1 Disagree
-    print('I worry about the security of my job because of the performance of my students on state or local tests.\n \n')
-    print("Preliminary Stats")
-    pre_stats = df.groupby('T0313')["NEW_STATUS"].describe()
-    print(pre_stats)
-    print('\n \n')
-    model = smf.ols('NEW_STATUS ~ C(T0313)', data = df).fit()
-    print(model.summary(yname="Status Leaver", xname=['Agree', 'Disagree'],
-    title='Linear Regression on the Job Security Variable against Leaver'))
-    print()
 
 def age(): # Should I do the two highest averages for this regression? 
     print('What are the ages of the teachers? \n ')
@@ -57,33 +72,6 @@ def age(): # Should I do the two highest averages for this regression?
     title='Linear Regression on the Age Variable against Leaver'))
     print()
 
-def totalExperiance(): # This is a catagorical regresing on a continuous variable
-    print("Linear Regression on the Total Expriance Variable against Leaver  ")
-    model = smf.ols('NEW_STATUS ~ TOTEXPER', data = df).fit()
-    print(model.summary())
-    print()
-
-def specialNeedsSupport():
-    print('I am given the support I need to teach students with special needs.\n')
-    print("Preliminary Stats")
-    pre_stats = df.groupby('T0314')["NEW_STATUS"].describe()
-    print(pre_stats)
-    print()
-    model = smf.ols('NEW_STATUS ~ C(T0314)', data = df).fit()
-    print(model.summary(yname="Status Leaver", xname=['Strongly Agree', 'Somewhat Agree', 'Somewhat disagree', 'Stongly Agree'],
-    title='Linear Regression on the Support Special Needs Variable against Leaver'))
-    print()
-
-def schoolLevel():
-    print('What school level does the teacher teach?.\n')
-    print("Preliminary Stats")
-    pre_stats = df.groupby('SCHLEVEL_x')["NEW_STATUS"].describe()
-    print(pre_stats)
-    print()
-    model = smf.ols('NEW_STATUS ~ C(SCHLEVEL_x)', data = df).fit()
-    print(model.summary(yname="Status Leaver", xname=['Elementary', 'Secondary', 'Combined'],
-    title='Linear Regression on the School Level Variable against Leaver'))
-    print()
 
 def freeLunch():
     print('Around the first of October, how many applicants at this school were APPROVED for free or reduced-price lunches?\n')
@@ -96,34 +84,42 @@ def freeLunch():
     title='Linear Regression on the Free Lunch Variable against Leaver'))
     print()
 
-def doBest():
-    print("I sometimes feel it is a waste of time to try to do my best as a teacher. \n")
-    print("Preliminary Stats")
-    pre_stats = df.groupby('T0318')["NEW_STATUS"].describe()
-    print(pre_stats)
-    print()
-    model = smf.ols('NEW_STATUS ~ C(T0318)', data = df).fit()
-    print(model.summary(yname="Status Leaver", xname=['Strongly Agree', 'Somewhat Agree', 'Somewhat disagree', 'Stongly Agree'],
-    title='Linear Regression on the Do your Best Variable against Leaver'))
-    print()
 
 
-def StudentswithDisablilies(): # # This is a catagorical regresing on a continuous variable
-    print("Linear Regression on the total students with disabilites variable against Leaver  ")
-    model = smf.ols('NEW_STATUS ~ T0244', data = df).fit()
-    print(model.summary(title='How many students have disabilities or are special education students at your school?'))
-    print()
+# opportunites()
+# ProfDevGoals()
+# ProfDevGoals2()
+
+regressFreeTraining()
 
 
 
 
-# regressAttack()
-# regressFreeTraining()
-jobSecurity()
-# age()
-# totalExperiance()
-# specialNeedsSupport()
-# schoolLevel()
-# freeLunch()
-# doBest()
-# StudentswithDisablilies()
+
+
+
+
+# def jobSecurity(): # 0 Agree 1 Disagree
+#     print('I worry about the security of my job because of the performance of my students on state or local tests.\n \n')
+#     print("Preliminary Stats")
+#     pre_stats = df.groupby('T0313')["NEW_STATUS"].describe()
+#     print(pre_stats)
+#     print('\n \n')
+#     model = smf.ols('NEW_STATUS ~ C(T0313)', data = df).fit()
+#     print(model.summary(yname="Status Leaver", xname=['Agree', 'Disagree'],
+#     title='Linear Regression on the Job Security Variable against Leaver'))
+#     print()
+
+
+
+
+# def doBest():
+#     print("I sometimes feel it is a waste of time to try to do my best as a teacher. \n")
+#     print("Preliminary Stats")
+#     pre_stats = df.groupby('T0318')["NEW_STATUS"].describe()
+#     print(pre_stats)
+#     print()
+#     model = smf.ols('NEW_STATUS ~ C(T0318)', data = df).fit()
+#     print(model.summary(yname="Status Leaver", xname=['Strongly Agree', 'Somewhat Agree', 'Somewhat disagree', 'Stongly Agree'],
+#     title='Linear Regression on the Do your Best Variable against Leaver'))
+#     print()

@@ -29,5 +29,5 @@ def dataMerge2():
     print(f'The amount of variables that merged is {data_merge2_variables}')
 
 
-# dataMerge()
-# dataMerge2()
+dataMerge()
+dataMerge2()
