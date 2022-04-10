@@ -11,17 +11,6 @@ import matplotlib as plt
 df = pd.read_csv('source/data_cleaning/cleaned_data.csv')
 # Only do graphs for variables that correlate to our project. 
 
-# Order of Variables that we are doing 
-# F0119
-# F0120
-# T0186 ------
-# S1628 ------
-# T0178 ------
-# T0165
-# F0120 
-# F0115
-## F0119 
-
 
 # On statsmodels, It goes by numerical order of smallest to largest. 
 def opportunites():
@@ -38,7 +27,7 @@ def opportunites():
 
 
 def IncreseSalaryProfDevelopment(): # Good to go
-    print('Increase in salary or other pay increases as a result of participating in professional development activities?\n')
+    print('Did you receive an increase in salary or other pay increases as a result of participating in professional development activities?\n')
     print("Preliminary Stats")
     pre_stats = df.groupby('T0186')["NEW_STATUS"].describe()
     print(pre_stats)
@@ -90,11 +79,53 @@ def freeLunch():
 
 
 
+def regressMulti2():
+    model = smf.ols('NEW_STATUS ~ C(F0119) + C(T0186)', data = df).fit()
+    print(model.summary(yname="Status Leaver", 
+    title='Multiple regression of F0119 and T0186'))
+    print()
+
+ # xname=['Disagree', 'Agree'], 
+
+
+def regressMulti3():
+    model = smf.ols('NEW_STATUS ~ C(F0119) + C(T0186) + C(S1628)', data = df).fit()
+    print(model.summary(yname="Status Leaver", 
+    title=' Multiple Linear Regression on F0119, T0186, and S1628 '))
+    print()
+
+
+
+def regressMulti4():
+    model = smf.ols('NEW_STATUS ~ C(F0119) + C(T0186) + C(S1628) + C(AGE_T_x)', data = df).fit()
+    print(model.summary(yname="Status Leaver", 
+    title=' Multiple Linear Regression on F0119, T0186, S1628, and AGE_T_x '))
+    print()
+
+
+
+def regressMulti5():
+    model = smf.ols('NEW_STATUS ~ C(F0119) + C(T0186) + C(S1628) + C(AGE_T_x) + C(S0287)', data = df).fit()
+    print(model.summary(yname="Status Leaver", 
+    title=' Multiple Linear Regression on F0119, T0186, S1628, AGE_T_x, S0287 '))
+    print()
+    print()
+
+
+
+
+
+
+
 opportunites()
 IncreseSalaryProfDevelopment()
 regressFreeTraining()
 age()
 freeLunch()
 
+regressMulti2()
+regressMulti3()
+regressMulti4()
+regressMulti5()
 
 
