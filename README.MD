@@ -26,7 +26,8 @@ pip install ~
 * scipy 
 * PyQt5
 * Tk (Tkinter)
-* sklearn
+* scikit-learn
+* seaborn
 * statsmodels
 
 # File Structure 
@@ -39,7 +40,10 @@ Log folder
 Profiling folder
 * This is where you will find the summary statisics of the varibles.
 
-* On MAC/Linux, the file structure has to be / not \. Windows uses \ for the directories. 
+* On MAC/Linux, the file structure has to be / not \ :: Windows uses \ for the directories. 
+
+
+
 
 # Git Good 
 
