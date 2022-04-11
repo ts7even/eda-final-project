@@ -6,10 +6,26 @@ import statsmodels.api as sm
 import sklearn as sk 
 from sklearn.linear_model import LinearRegression
 import scipy as sp
-import matplotlib as plt
+import matplotlib 
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 df = pd.read_csv('source/data_cleaning/cleaned_data.csv')
+
+# Data for Graph
 # Only do graphs for variables that correlate to our project. 
+
+matplotlib.use('Qt5Agg')
+sns.set_theme(style='ticks', color_codes=True)
+def graph():
+
+    sns.catplot(x="F0119", y="NEW_STATUS", data=df)
+    plt.title("Scatter plot of leaver (dependent) and Opportunities of Professional Development")
+    plt.ylabel('Left Teaching')
+    plt.savefig('profiling/graph_scatter.png')
+    plt.show(block=False)
+    plt.pause(2)
+    plt.close()
 
 
 # On statsmodels, It goes by numerical order of smallest to largest. 
@@ -50,6 +66,17 @@ def regressFreeTraining():
     title='Linear Regression on the Free Traininng Variable against Leaver'))
     print()
 
+
+def usefullDevelopment():
+    print('Thinking about ALL of the professional development you have participated in over the past 12 months, how useful was it??\n')
+    print("Preliminary Stats")
+    pre_stats = df.groupby('T0178')["NEW_STATUS"].describe()
+    print(pre_stats)
+    print()
+    model = smf.ols('NEW_STATUS ~ C(T0178)', data = df).fit()
+    print(model.summary(yname="Status Leaver", xname=['Not Usefull (0)', 'Very Usefull (1)'], # 0 is 
+    title='Linear Regression on the Free Traininng Variable against Leaver'))
+    print()
 
 
 
@@ -111,21 +138,32 @@ def regressMulti5():
     print()
     print()
 
+def regressMulti6():
+    model = smf.ols('NEW_STATUS ~ C(F0119) + C(T0186) + C(S1628) + C(AGE_T_x) + C(S0287) + C(T0178)', data = df).fit()
+    print(model.summary(yname="Status Leaver", 
+    title=' Multiple Linear Regression on F0119, T0186, S1628, AGE_T_x, S0287, T0178'))
+    print()
+    print()
 
 
 
 
 
+# graph()
 
-opportunites()
-IncreseSalaryProfDevelopment()
-regressFreeTraining()
-age()
-freeLunch()
+# opportunites()
+# IncreseSalaryProfDevelopment()
+# regressFreeTraining()
+# usefullDevelopment()
+# age()
+# freeLunch()
 
-regressMulti2()
-regressMulti3()
-regressMulti4()
-regressMulti5()
+
+
+# regressMulti2()
+# regressMulti3()
+# regressMulti4()
+# regressMulti5()
+# regressMulti6()
 
 

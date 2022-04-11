@@ -1,11 +1,11 @@
 Project 2 - Python Team
 
-- Do we need to code different catagorical variables for leaver? i.e Strongly Disagree and Disagree =1 and Agree and Strongly Agree =0? I.e only have two variables for our independent catagorical variable?
+
 
 # Team Members and their contribution
 Trevor Seibert - Project Leader
-* Formated the project structure
-* Spent Roughly 12hrs on Project
+* 
+* 
 
 Crisitan Mayen - Researcher
 * 
@@ -22,13 +22,15 @@ Christopher Webster - Database Specialist
 # Dependencies 
 pip install ~
 * numpy
-* pandas==1.3.5 (Only for profiling unless they made an update)
+* pandas
 * pandas-profiling
 * matplotlib
 * scipy 
 * PyQt5
 * Tk (Tkinter)
 * scikit-learn
+* seaborn
+* statsmodels
 
 # File Structure 
 The_Code folder
@@ -40,7 +42,10 @@ Log folder
 Profiling folder
 * This is where you will find the summary statisics of the varibles. This is for step4-exploritory-linear-regression. Here you will find graphs from MatPlotLib and pandas profiling in HTML and PDF format. 
 
-* On MAC/Linux, the file structure has to be / not \. Windows uses \ for the directories. 
+* On MAC/Linux, the file structure has to be / not \ :: Windows uses \ for the directories. 
+
+
+
 
 # Git Good 
 

@@ -15,7 +15,7 @@ df2_filter = df2[['STATUS', 'CNTLNUM']]
 def teacherConcat():
     data_concat = pd.concat([df1, df2])
     data_concat.to_csv('source/concat/data-concat.csv')
-    print('Data concatination worked')
+    # print('Data concatination worked')
 
 
 # All questions answered for Step 1. 
@@ -23,8 +23,8 @@ def currentFormer():
     df3 = pd.read_csv('source/concat/data-concat.csv', low_memory=False)
     df3_observations = df3.shape[0]
     df3_variables = df3.shape[1]
-    print(f'The amount of observations that conactinted is {df3_observations}')
-    print(f'The amount of variables that concatinated is {df3_variables}')
+    # print(f'The amount of observations that conactinted is {df3_observations}')
+    # print(f'The amount of variables that concatinated is {df3_variables}')
 
-teacherConcat()
-currentFormer()
+# teacherConcat()
+# currentFormer()
