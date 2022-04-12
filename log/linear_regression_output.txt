@@ -12,16 +12,16 @@ Dep. Variable:          Status Leaver   R-squared:                       0.001
 Model:                            OLS   Adj. R-squared:                  0.001
 Method:                 Least Squares   F-statistic:                     2.588
 Date:                Tue, 12 Apr 2022   Prob (F-statistic):              0.108
-Time:                        14:03:14   Log-Likelihood:                -1379.0
+Time:                        15:00:55   Log-Likelihood:                -1379.0
 No. Observations:                2028   AIC:                             2762.
 Df Residuals:                    2026   BIC:                             2773.
 Df Model:                           1
 Covariance Type:            nonrobust
-==================================================================================================   
-                                     coef    std err          t      P>|t|      [0.025      0.975]   
---------------------------------------------------------------------------------------------------   
-Intercept                          0.6599      0.013     49.505      0.000       0.634       0.686   
-Not Pleased Prof Dev (Overall)    -0.0354      0.022     -1.609      0.108      -0.079       0.008   
+==================================================================================================
+                                     coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------------
+Intercept                          0.6599      0.013     49.505      0.000       0.634       0.686
+Not Pleased Prof Dev (Overall)    -0.0354      0.022     -1.609      0.108      -0.079       0.008
 ==============================================================================
 Omnibus:                    10433.272   Durbin-Watson:                   0.005
 Prob(Omnibus):                  0.000   Jarque-Bera (JB):              348.455
@@ -46,7 +46,7 @@ Dep. Variable:          Status Leaver   R-squared:                       0.001
 Model:                            OLS   Adj. R-squared:                 -0.000
 Method:                 Least Squares   F-statistic:                    0.7829
 Date:                Tue, 12 Apr 2022   Prob (F-statistic):              0.377
-Time:                        14:03:14   Log-Likelihood:                -400.63
+Time:                        15:00:55   Log-Likelihood:                -400.63
 No. Observations:                 629   AIC:                             805.3
 Df Residuals:                     627   BIC:                             814.1
 Df Model:                           1
@@ -80,7 +80,7 @@ Dep. Variable:          Status Leaver   R-squared:                       0.002
 Model:                            OLS   Adj. R-squared:                  0.001
 Method:                 Least Squares   F-statistic:                     2.365
 Date:                Tue, 12 Apr 2022   Prob (F-statistic):              0.124
-Time:                        14:03:14   Log-Likelihood:                -970.83
+Time:                        15:00:55   Log-Likelihood:                -970.83
 No. Observations:                1399   AIC:                             1946.
 Df Residuals:                    1397   BIC:                             1956.
 Df Model:                           1
@@ -114,7 +114,7 @@ Dep. Variable:          Status Leaver   R-squared:                       0.000
 Model:                            OLS   Adj. R-squared:                 -0.000
 Method:                 Least Squares   F-statistic:                    0.2522
 Date:                Tue, 12 Apr 2022   Prob (F-statistic):              0.616
-Time:                        14:03:14   Log-Likelihood:                -2705.3
+Time:                        15:00:55   Log-Likelihood:                -2705.3
 No. Observations:                3828   AIC:                             5415.
 Df Residuals:                    3826   BIC:                             5427.
 Df Model:                           1
@@ -148,7 +148,7 @@ Dep. Variable:          Status Leaver   R-squared:                       0.000
 Model:                            OLS   Adj. R-squared:                 -0.001
 Method:                 Least Squares   F-statistic:                    0.3815
 Date:                Tue, 12 Apr 2022   Prob (F-statistic):              0.537
-Time:                        14:03:14   Log-Likelihood:                -835.91
+Time:                        15:00:55   Log-Likelihood:                -835.91
 No. Observations:                1156   AIC:                             1676.
 Df Residuals:                    1154   BIC:                             1686.
 Df Model:                           1
@@ -182,7 +182,7 @@ Dep. Variable:          Status Leaver   R-squared:                       0.000
 Model:                            OLS   Adj. R-squared:                 -0.000
 Method:                 Least Squares   F-statistic:                  0.003480
 Date:                Tue, 12 Apr 2022   Prob (F-statistic):              0.953
-Time:                        14:03:14   Log-Likelihood:                -1855.7
+Time:                        15:00:55   Log-Likelihood:                -1855.7
 No. Observations:                2672   AIC:                             3715.
 Df Residuals:                    2670   BIC:                             3727.
 Df Model:                           1
@@ -216,7 +216,7 @@ Dep. Variable:          Status Leaver   R-squared:                       0.000
 Model:                            OLS   Adj. R-squared:                 -0.000
 Method:                 Least Squares   F-statistic:                    0.6926
 Date:                Tue, 12 Apr 2022   Prob (F-statistic):              0.405
-Time:                        14:03:14   Log-Likelihood:                -2400.5
+Time:                        15:00:55   Log-Likelihood:                -2400.5
 No. Observations:                3390   AIC:                             4805.
 Df Residuals:                    3388   BIC:                             4817.
 Df Model:                           1
@@ -250,7 +250,7 @@ Dep. Variable:          Status Leaver   R-squared:                       0.000
 Model:                            OLS   Adj. R-squared:                 -0.001
 Method:                 Least Squares   F-statistic:                    0.4829
 Date:                Tue, 12 Apr 2022   Prob (F-statistic):              0.487
-Time:                        14:03:14   Log-Likelihood:                -747.61
+Time:                        15:00:55   Log-Likelihood:                -747.61
 No. Observations:                1035   AIC:                             1499.
 Df Residuals:                    1033   BIC:                             1509.
 Df Model:                           1
@@ -284,7 +284,7 @@ Dep. Variable:          Status Leaver   R-squared:                       0.001
 Model:                            OLS   Adj. R-squared:                  0.000
 Method:                 Least Squares   F-statistic:                     1.799
 Date:                Tue, 12 Apr 2022   Prob (F-statistic):              0.180
-Time:                        14:03:14   Log-Likelihood:                -1643.0
+Time:                        15:00:55   Log-Likelihood:                -1643.0
 No. Observations:                2355   AIC:                             3290.
 Df Residuals:                    2353   BIC:                             3302.
 Df Model:                           1
@@ -318,7 +318,7 @@ Dep. Variable:          Status Leaver   R-squared:                       0.003
 Model:                            OLS   Adj. R-squared:                  0.003
 Method:                 Least Squares   F-statistic:                     8.781
 Date:                Tue, 12 Apr 2022   Prob (F-statistic):            0.00307
-Time:                        14:03:14   Log-Likelihood:                -1857.1
+Time:                        15:00:55   Log-Likelihood:                -1857.1
 No. Observations:                2645   AIC:                             3718.
 Df Residuals:                    2643   BIC:                             3730.
 Df Model:                           1
@@ -352,7 +352,7 @@ Dep. Variable:          Status Leaver   R-squared:                       0.006
 Model:                            OLS   Adj. R-squared:                  0.004
 Method:                 Least Squares   F-statistic:                     4.376
 Date:                Tue, 12 Apr 2022   Prob (F-statistic):             0.0368
-Time:                        14:03:14   Log-Likelihood:                -565.61
+Time:                        15:00:55   Log-Likelihood:                -565.61
 No. Observations:                 787   AIC:                             1135.
 Df Residuals:                     785   BIC:                             1145.
 Df Model:                           1
@@ -386,7 +386,7 @@ Dep. Variable:          Status Leaver   R-squared:                       0.001
 Model:                            OLS   Adj. R-squared:                  0.001
 Method:                 Least Squares   F-statistic:                     2.235
 Date:                Tue, 12 Apr 2022   Prob (F-statistic):              0.135
-Time:                        14:03:14   Log-Likelihood:                -1284.3
+Time:                        15:00:55   Log-Likelihood:                -1284.3
 No. Observations:                1858   AIC:                             2573.
 Df Residuals:                    1856   BIC:                             2584.
 Df Model:                           1
@@ -422,7 +422,7 @@ Dep. Variable:          Status Leaver   R-squared:                       0.051
 Model:                            OLS   Adj. R-squared:                  0.051
 Method:                 Least Squares   F-statistic:                     206.4
 Date:                Tue, 12 Apr 2022   Prob (F-statistic):           1.26e-45
-Time:                        14:03:15   Log-Likelihood:                -2604.9
+Time:                        15:00:55   Log-Likelihood:                -2604.9
 No. Observations:                3828   AIC:                             5214.
 Df Residuals:                    3826   BIC:                             5226.
 Df Model:                           1
@@ -458,7 +458,7 @@ Dep. Variable:          Status Leaver   R-squared:                       0.084
 Model:                            OLS   Adj. R-squared:                  0.083
 Method:                 Least Squares   F-statistic:                     105.9
 Date:                Tue, 12 Apr 2022   Prob (F-statistic):           7.90e-24
-Time:                        14:03:15   Log-Likelihood:                -785.34
+Time:                        15:00:55   Log-Likelihood:                -785.34
 No. Observations:                1156   AIC:                             1575.
 Df Residuals:                    1154   BIC:                             1585.
 Df Model:                           1
@@ -494,7 +494,7 @@ Dep. Variable:          Status Leaver   R-squared:                       0.039
 Model:                            OLS   Adj. R-squared:                  0.039
 Method:                 Least Squares   F-statistic:                     108.3
 Date:                Tue, 12 Apr 2022   Prob (F-statistic):           6.97e-25
-Time:                        14:03:15   Log-Likelihood:                -1802.6
+Time:                        15:00:55   Log-Likelihood:                -1802.6
 No. Observations:                2672   AIC:                             3609.
 Df Residuals:                    2670   BIC:                             3621.
 Df Model:                           1
@@ -528,7 +528,7 @@ Dep. Variable:          Status Leaver   R-squared:                       0.004
 Model:                            OLS   Adj. R-squared:                  0.004
 Method:                 Least Squares   F-statistic:                     14.72
 Date:                Tue, 12 Apr 2022   Prob (F-statistic):           0.000127
-Time:                        14:03:15   Log-Likelihood:                -2527.5
+Time:                        15:00:55   Log-Likelihood:                -2527.5
 No. Observations:                3594   AIC:                             5059.
 Df Residuals:                    3592   BIC:                             5071.
 Df Model:                           1
@@ -556,13 +556,13 @@ S0287
 0.0    1254.0  0.442584  0.496891  0.0  0.0  0.0  1.0  1.0
 1.0    2340.0  0.376923  0.484719  0.0  0.0  0.0  1.0  1.0
 
-      Linear Regression on the Free Lunch Variable against Leaver (Male)      
+      Linear Regression on the Free Lunch Variable against Leaver (Male)
 ==============================================================================
 Dep. Variable:          Status Leaver   R-squared:                       0.001
 Model:                            OLS   Adj. R-squared:                 -0.000
 Method:                 Least Squares   F-statistic:                    0.6440
 Date:                Tue, 12 Apr 2022   Prob (F-statistic):              0.422
-Time:                        14:03:15   Log-Likelihood:                -779.12
+Time:                        15:00:55   Log-Likelihood:                -779.12
 No. Observations:                1079   AIC:                             1562.
 Df Residuals:                    1077   BIC:                             1572.
 Df Model:                           1
@@ -596,7 +596,7 @@ Dep. Variable:          Status Leaver   R-squared:                       0.005
 Model:                            OLS   Adj. R-squared:                  0.005
 Method:                 Least Squares   F-statistic:                     13.23
 Date:                Tue, 12 Apr 2022   Prob (F-statistic):           0.000281
-Time:                        14:03:15   Log-Likelihood:                -1737.0
+Time:                        15:00:55   Log-Likelihood:                -1737.0
 No. Observations:                2515   AIC:                             3478.
 Df Residuals:                    2513   BIC:                             3490.
 Df Model:                           1
@@ -630,7 +630,7 @@ Dep. Variable:          Status Leaver   R-squared:                       0.020
 Model:                            OLS   Adj. R-squared:                  0.020
 Method:                 Least Squares   F-statistic:                     78.81
 Date:                Tue, 12 Apr 2022   Prob (F-statistic):           1.03e-18
-Time:                        14:03:15   Log-Likelihood:                -2633.0
+Time:                        15:00:55   Log-Likelihood:                -2633.0
 No. Observations:                3786   AIC:                             5270.
 Df Residuals:                    3784   BIC:                             5283.
 Df Model:                           1
@@ -664,7 +664,7 @@ Dep. Variable:          Status Leaver   R-squared:                       0.039
 Model:                            OLS   Adj. R-squared:                  0.038
 Method:                 Least Squares   F-statistic:                     45.25
 Date:                Tue, 12 Apr 2022   Prob (F-statistic):           2.76e-11
-Time:                        14:03:15   Log-Likelihood:                -794.49
+Time:                        15:00:55   Log-Likelihood:                -794.49
 No. Observations:                1130   AIC:                             1593.
 Df Residuals:                    1128   BIC:                             1603.
 Df Model:                           1
@@ -698,7 +698,7 @@ Dep. Variable:          Status Leaver   R-squared:                       0.013
 Model:                            OLS   Adj. R-squared:                  0.013
 Method:                 Least Squares   F-statistic:                     35.92
 Date:                Tue, 12 Apr 2022   Prob (F-statistic):           2.33e-09
-Time:                        14:03:15   Log-Likelihood:                -1824.7
+Time:                        15:00:55   Log-Likelihood:                -1824.7
 No. Observations:                2656   AIC:                             3653.
 Df Residuals:                    2654   BIC:                             3665.
 Df Model:                           1
@@ -718,135 +718,6 @@ Kurtosis:                       1.314   Cond. No.                         2.92
 Notes:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
 
-There are many opportunities to collaborate with other teachers in this school? (Overall)
-
-Preliminary Stats
-        count  mean  std  min  25%  50%  75%  max
-F0603
-0.0    1247.0   0.0  0.0  0.0  0.0  0.0  0.0  0.0
-1.0     767.0   0.0  0.0  0.0  0.0  0.0  0.0  0.0
-
-C:\Users\Trevor Seibert\Desktop\DevProj\Univerisity\EmpricalDataAnalysis\eda_final_project\env\lib\site-packages\statsmodels\regression\linear_model.py:1736: RuntimeWarning: invalid value encountered in double_scalars
-  return 1 - self.ssr/self.centered_tss
-C:\Users\Trevor Seibert\Desktop\DevProj\Univerisity\EmpricalDataAnalysis\eda_final_project\env\lib\site-packages\statsmodels\regression\linear_model.py:1825: RuntimeWarning: invalid value encountered in double_scalars
-  return self.mse_model/self.mse_resid
-C:\Users\Trevor Seibert\Desktop\DevProj\Univerisity\EmpricalDataAnalysis\eda_final_project\env\lib\site-packages\statsmodels\regression\linear_model.py:924: RuntimeWarning: divide by zero encountered in log
-  llf = -nobs2*np.log(2*np.pi) - nobs2*np.log(ssr / nobs) - nobs2
-C:\Users\Trevor Seibert\Desktop\DevProj\Univerisity\EmpricalDataAnalysis\eda_final_project\env\lib\site-packages\statsmodels\stats\stattools.py:50: 
-RuntimeWarning: invalid value encountered in double_scalars
-  dw = np.sum(diff_resids**2, axis=axis) / np.sum(resids**2, axis=axis)
-Linear Regression on the Current Year Colaboration with teachers variable against Leaver (Overall)
-==============================================================================
-Dep. Variable:          Status Leaver   R-squared:                         nan
-Model:                            OLS   Adj. R-squared:                    nan
-Method:                 Least Squares   F-statistic:                       nan
-Date:                Tue, 12 Apr 2022   Prob (F-statistic):                nan
-Time:                        14:03:15   Log-Likelihood:                    inf
-No. Observations:                2014   AIC:                              -inf
-Df Residuals:                    2012   BIC:                              -inf
-Df Model:                           1
-Covariance Type:            nonrobust
-======================================================================================================================
-                                                         coef    std err          t      P>|t|      [0.025      0.975]
-----------------------------------------------------------------------------------------------------------------------
-Intercept                                                   0          0        nan        nan           0           0
-Disagree with coloboration with teachers (Overall)          0          0        nan        nan           0           0
-==============================================================================
-Omnibus:                     5218.138   Durbin-Watson:                     nan
-Prob(Omnibus):                  0.000   Jarque-Bera (JB):              755.250
-Skew:                           0.000   Prob(JB):                    9.99e-165
-Kurtosis:                       0.000   Cond. No.                         2.43
-==============================================================================
-
-Notes:
-[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
-
-There are many opportunities to collaborate with other teachers in this school? (Male)
-
-Preliminary Stats
-        count  mean  std  min  25%  50%  75%  max
-F0603
-0.0    1247.0   0.0  0.0  0.0  0.0  0.0  0.0  0.0
-1.0     767.0   0.0  0.0  0.0  0.0  0.0  0.0  0.0
-
-C:\Users\Trevor Seibert\Desktop\DevProj\Univerisity\EmpricalDataAnalysis\eda_final_project\env\lib\site-packages\statsmodels\regression\linear_model.py:1736: RuntimeWarning: invalid value encountered in double_scalars
-  return 1 - self.ssr/self.centered_tss
-C:\Users\Trevor Seibert\Desktop\DevProj\Univerisity\EmpricalDataAnalysis\eda_final_project\env\lib\site-packages\statsmodels\regression\linear_model.py:1825: RuntimeWarning: invalid value encountered in double_scalars
-  return self.mse_model/self.mse_resid
-C:\Users\Trevor Seibert\Desktop\DevProj\Univerisity\EmpricalDataAnalysis\eda_final_project\env\lib\site-packages\statsmodels\regression\linear_model.py:924: RuntimeWarning: divide by zero encountered in log
-  llf = -nobs2*np.log(2*np.pi) - nobs2*np.log(ssr / nobs) - nobs2
-C:\Users\Trevor Seibert\Desktop\DevProj\Univerisity\EmpricalDataAnalysis\eda_final_project\env\lib\site-packages\statsmodels\stats\stattools.py:50: 
-RuntimeWarning: invalid value encountered in double_scalars
-  dw = np.sum(diff_resids**2, axis=axis) / np.sum(resids**2, axis=axis)
-Linear Regression on the Current Year Colaboration with teachers variable against Leaver (Male)
-==============================================================================
-Dep. Variable:          Status Leaver   R-squared:                         nan
-Model:                            OLS   Adj. R-squared:                    nan
-Method:                 Least Squares   F-statistic:                       nan
-Date:                Tue, 12 Apr 2022   Prob (F-statistic):                nan
-Time:                        14:03:15   Log-Likelihood:                    inf
-No. Observations:                 551   AIC:                              -inf
-Df Residuals:                     549   BIC:                              -inf
-Df Model:                           1
-Covariance Type:            nonrobust
-===================================================================================================================
-                                                      coef    std err          t      P>|t|      [0.025      0.975]
--------------------------------------------------------------------------------------------------------------------
-Intercept                                                0          0        nan        nan           0           0
-Disagree with coloboration with teachers (Male)          0          0        nan        nan           0           0
-==============================================================================
-Omnibus:                     1594.633   Durbin-Watson:                     nan
-Prob(Omnibus):                  0.000   Jarque-Bera (JB):              206.625
-Skew:                           0.000   Prob(JB):                     1.36e-45
-Kurtosis:                       0.000   Cond. No.                         2.41
-==============================================================================
-
-Notes:
-[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
-
-There are many opportunities to collaborate with other teachers in this school? (Female)
-
-Preliminary Stats
-        count  mean  std  min  25%  50%  75%  max
-F0603
-0.0    1247.0   0.0  0.0  0.0  0.0  0.0  0.0  0.0
-1.0     767.0   0.0  0.0  0.0  0.0  0.0  0.0  0.0
-
-C:\Users\Trevor Seibert\Desktop\DevProj\Univerisity\EmpricalDataAnalysis\eda_final_project\env\lib\site-packages\statsmodels\regression\linear_model.py:1736: RuntimeWarning: invalid value encountered in double_scalars
-  return 1 - self.ssr/self.centered_tss
-C:\Users\Trevor Seibert\Desktop\DevProj\Univerisity\EmpricalDataAnalysis\eda_final_project\env\lib\site-packages\statsmodels\regression\linear_model.py:1825: RuntimeWarning: invalid value encountered in double_scalars
-  return self.mse_model/self.mse_resid
-C:\Users\Trevor Seibert\Desktop\DevProj\Univerisity\EmpricalDataAnalysis\eda_final_project\env\lib\site-packages\statsmodels\regression\linear_model.py:924: RuntimeWarning: divide by zero encountered in log
-  llf = -nobs2*np.log(2*np.pi) - nobs2*np.log(ssr / nobs) - nobs2
-C:\Users\Trevor Seibert\Desktop\DevProj\Univerisity\EmpricalDataAnalysis\eda_final_project\env\lib\site-packages\statsmodels\stats\stattools.py:50: 
-RuntimeWarning: invalid value encountered in double_scalars
-  dw = np.sum(diff_resids**2, axis=axis) / np.sum(resids**2, axis=axis)
-Linear Regression on the Current Year Colaboration with teachers variable against Leaver (Female)
-==============================================================================
-Dep. Variable:          Status Leaver   R-squared:                         nan
-Model:                            OLS   Adj. R-squared:                    nan
-Method:                 Least Squares   F-statistic:                       nan
-Date:                Tue, 12 Apr 2022   Prob (F-statistic):                nan
-Time:                        14:03:15   Log-Likelihood:                    inf
-No. Observations:                1463   AIC:                              -inf
-Df Residuals:                    1461   BIC:                              -inf
-Df Model:                           1
-Covariance Type:            nonrobust
-=====================================================================================================================
-                                                        coef    std err          t      P>|t|      [0.025      0.975]
----------------------------------------------------------------------------------------------------------------------
-Intercept                                                  0          0        nan        nan           0           0
-Disagree with coloboration with teachers (Female)          0          0        nan        nan           0           0
-==============================================================================
-Omnibus:                     3852.689   Durbin-Watson:                     nan
-Prob(Omnibus):                  0.000   Jarque-Bera (JB):              548.625
-Skew:                           0.000   Prob(JB):                    7.37e-120
-Kurtosis:                       0.000   Cond. No.                         2.45
-==============================================================================
-
-Notes:
-[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
-
 Base Salary Pay? (Overall)
 
 Preliminary Stats
@@ -861,7 +732,7 @@ Dep. Variable:          Status Leaver   R-squared:                       0.035
 Model:                            OLS   Adj. R-squared:                  0.034
 Method:                 Least Squares   F-statistic:                     108.2
 Date:                Tue, 12 Apr 2022   Prob (F-statistic):           6.50e-25
-Time:                        14:03:15   Log-Likelihood:                -2059.4
+Time:                        15:00:55   Log-Likelihood:                -2059.4
 No. Observations:                3025   AIC:                             4123.
 Df Residuals:                    3023   BIC:                             4135.
 Df Model:                           1
@@ -895,7 +766,7 @@ Dep. Variable:          Status Leaver   R-squared:                       0.061
 Model:                            OLS   Adj. R-squared:                  0.060
 Method:                 Least Squares   F-statistic:                     56.38
 Date:                Tue, 12 Apr 2022   Prob (F-statistic):           1.49e-13
-Time:                        14:03:15   Log-Likelihood:                -597.43
+Time:                        15:00:55   Log-Likelihood:                -597.43
 No. Observations:                 869   AIC:                             1199.
 Df Residuals:                     867   BIC:                             1208.
 Df Model:                           1
@@ -929,7 +800,7 @@ Dep. Variable:          Status Leaver   R-squared:                       0.021
 Model:                            OLS   Adj. R-squared:                  0.020
 Method:                 Least Squares   F-statistic:                     45.51
 Date:                Tue, 12 Apr 2022   Prob (F-statistic):           1.94e-11
-Time:                        14:03:16   Log-Likelihood:                -1456.0
+Time:                        15:00:55   Log-Likelihood:                -1456.0
 No. Observations:                2156   AIC:                             2916.
 Df Residuals:                    2154   BIC:                             2927.
 Df Model:                           1

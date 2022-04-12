@@ -1,0 +1,404 @@
+               Multiple regression of F0119 and T0186 (Overall)
+==============================================================================
+Dep. Variable:          Status Leaver   No. Observations:                 2028
+Model:                          Logit   Df Residuals:                     2025
+Method:                           MLE   Df Model:                            2
+Date:                Tue, 12 Apr 2022   Pseudo R-squ.:                0.001777
+Time:                        14:58:53   Log-Likelihood:                -1314.5
+converged:                       True   LL-Null:                       -1316.8
+Covariance Type:            nonrobust   LLR p-value:                   0.09630
+====================================================================================================================
+                                                       coef    std err          z      P>|z|      [0.025      0.975]
+--------------------------------------------------------------------------------------------------------------------
+Intercept                                            0.8574      0.148      5.782      0.000       0.567       1.148
+Not Pleased Prof Dev (Overall)                      -0.1536      0.096     -1.600      0.110      -0.342       0.035
+No salary increase becasue of prof dev (Overall)    -0.2183      0.152     -1.435      0.151      -0.516       0.080
+====================================================================================================================
+
+Optimization terminated successfully.
+         Current function value: 0.609173
+         Iterations 5
+                Multiple regression of F0119 and T0186 (Male)
+==============================================================================
+Dep. Variable:          Status Leaver   No. Observations:                  629
+Model:                          Logit   Df Residuals:                      626
+Method:                           MLE   Df Model:                            2
+Date:                Tue, 12 Apr 2022   Pseudo R-squ.:                0.001223
+Time:                        14:58:53   Log-Likelihood:                -383.17
+converged:                       True   LL-Null:                       -383.64
+Covariance Type:            nonrobust   LLR p-value:                    0.6255
+=================================================================================================================
+                                                    coef    std err          z      P>|z|      [0.025      0.975]
+-----------------------------------------------------------------------------------------------------------------
+Intercept                                         0.8196      0.268      3.063      0.002       0.295       1.344
+Not Pleased Prof Dev (Male)                      -0.1578      0.177     -0.892      0.373      -0.505       0.189
+No salary increase becasue of prof dev (Male)     0.1094      0.275      0.398      0.690      -0.429       0.648
+=================================================================================================================
+
+Optimization terminated successfully.
+         Current function value: 0.660523
+         Iterations 5
+               Multiple regression of F0119 and T0186 (Female)
+==============================================================================
+Dep. Variable:          Status Leaver   No. Observations:                 1399
+Model:                          Logit   Df Residuals:                     1396
+Method:                           MLE   Df Model:                            2
+Date:                Tue, 12 Apr 2022   Pseudo R-squ.:                0.003410
+Time:                        14:58:53   Log-Likelihood:                -924.07
+converged:                       True   LL-Null:                       -927.23
+Covariance Type:            nonrobust   LLR p-value:                   0.04233
+===================================================================================================================
+                                                      coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------------------------------------------
+Intercept                                           0.8835      0.178      4.952      0.000       0.534       1.233
+Not Pleased Prof Dev (Female)                      -0.1769      0.115     -1.537      0.124      -0.402       0.049
+No salary increase becasue of prof dev (Female)    -0.3583      0.183     -1.959      0.050      -0.717       0.000
+===================================================================================================================
+
+Optimization terminated successfully.
+         Current function value: 0.647956
+         Iterations 5
+        Multiple Linear Regression on F0119, T0186, and S1628 (Overall)
+==============================================================================
+Dep. Variable:          Status Leaver   No. Observations:                 1806
+Model:                          Logit   Df Residuals:                     1802
+Method:                           MLE   Df Model:                            3
+Date:                Tue, 12 Apr 2022   Pseudo R-squ.:                0.002807
+Time:                        14:58:53   Log-Likelihood:                -1170.2
+converged:                       True   LL-Null:                       -1173.5
+Covariance Type:            nonrobust   LLR p-value:                   0.08623
+====================================================================================================================
+                                                       coef    std err          z      P>|z|      [0.025      0.975]
+--------------------------------------------------------------------------------------------------------------------
+Intercept                                            0.7789      0.174      4.486      0.000       0.439       1.119
+Not Pleased Prof Dev (Overall)                      -0.2088      0.102     -2.048      0.041      -0.409      -0.009
+No salary increase becasue of prof dev (Overall)    -0.1904      0.162     -1.174      0.241      -0.508       0.128
+No Free Training Avaliable (Overall)                 0.1035      0.105      0.983      0.326      -0.103       0.310
+====================================================================================================================
+
+Optimization terminated successfully.
+         Current function value: 0.613254
+         Iterations 5
+         Multiple Linear Regression on F0119, T0186, and S1628 (Male)
+==============================================================================
+Dep. Variable:          Status Leaver   No. Observations:                  561
+Model:                          Logit   Df Residuals:                      557
+Method:                           MLE   Df Model:                            3
+Date:                Tue, 12 Apr 2022   Pseudo R-squ.:                0.005022
+Time:                        14:58:53   Log-Likelihood:                -344.04
+converged:                       True   LL-Null:                       -345.77
+Covariance Type:            nonrobust   LLR p-value:                    0.3243
+=================================================================================================================
+                                                    coef    std err          z      P>|z|      [0.025      0.975]
+-----------------------------------------------------------------------------------------------------------------
+Intercept                                         1.0498      0.324      3.242      0.001       0.415       1.684
+Not Pleased Prof Dev (Male)                      -0.1986      0.186     -1.065      0.287      -0.564       0.167
+No salary increase becasue of prof dev (Male)     0.0745      0.290      0.257      0.797      -0.493       0.642
+No Free Training Avaliable (Male)                -0.3072      0.206     -1.489      0.136      -0.711       0.097
+=================================================================================================================
+
+Optimization terminated successfully.
+         Current function value: 0.657375
+         Iterations 5
+        Multiple Linear Regression on F0119, T0186, and S1628 (Female)        
+==============================================================================
+Dep. Variable:          Status Leaver   No. Observations:                 1245
+Model:                          Logit   Df Residuals:                     1241
+Method:                           MLE   Df Model:                            3
+Date:                Tue, 12 Apr 2022   Pseudo R-squ.:                0.006408
+Time:                        14:58:53   Log-Likelihood:                -818.43
+converged:                       True   LL-Null:                       -823.71
+Covariance Type:            nonrobust   LLR p-value:                   0.01439
+===================================================================================================================
+                                                      coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------------------------------------------
+Intercept                                           0.7116      0.208      3.429      0.001       0.305       1.118
+Not Pleased Prof Dev (Female)                      -0.2434      0.123     -1.981      0.048      -0.484      -0.003
+No salary increase becasue of prof dev (Female)    -0.3167      0.197     -1.612      0.107      -0.702       0.068
+No Free Training Avaliable (Female)                 0.2517      0.124      2.028      0.043       0.008       0.495
+===================================================================================================================
+
+Optimization terminated successfully.
+         Current function value: 0.586035
+         Iterations 5
+   Multiple Linear Regression on F0119, T0186, S1628, and AGE_T_x  (Overall)
+==============================================================================
+Dep. Variable:          Status Leaver   No. Observations:                 1806
+Model:                          Logit   Df Residuals:                     1801
+Method:                           MLE   Df Model:                            4
+Date:                Tue, 12 Apr 2022   Pseudo R-squ.:                 0.09810
+Time:                        14:58:53   Log-Likelihood:                -1058.4
+converged:                       True   LL-Null:                       -1173.5
+Covariance Type:            nonrobust   LLR p-value:                 1.169e-48
+====================================================================================================================
+                                                       coef    std err          z      P>|z|      [0.025      0.975]
+--------------------------------------------------------------------------------------------------------------------
+Intercept                                            1.6409      0.196      8.367      0.000       1.257       2.025
+Not Pleased Prof Dev (Overall)                      -0.1631      0.109     -1.498      0.134      -0.376       0.050
+No salary increase becasue of prof dev (Overall)    -0.3420      0.173     -1.981      0.048      -0.680      -0.004
+No Free Training Avaliable (Overall)                 0.1469      0.112      1.306      0.192      -0.074       0.367
+Younger than 40 (Overall)                           -1.5312      0.106    -14.395      0.000      -1.740      -1.323
+====================================================================================================================
+
+Optimization terminated successfully.
+         Current function value: 0.531547
+         Iterations 6
+    Multiple Linear Regression on F0119, T0186, S1628, and AGE_T_x  (Male)
+==============================================================================
+Dep. Variable:          Status Leaver   No. Observations:                  561
+Model:                          Logit   Df Residuals:                      556
+Method:                           MLE   Df Model:                            4
+Date:                Tue, 12 Apr 2022   Pseudo R-squ.:                  0.1376
+Time:                        14:58:53   Log-Likelihood:                -298.20
+converged:                       True   LL-Null:                       -345.77
+Covariance Type:            nonrobust   LLR p-value:                 1.060e-19
+=================================================================================================================
+                                                    coef    std err          z      P>|z|      [0.025      0.975]
+-----------------------------------------------------------------------------------------------------------------
+Intercept                                         2.3079      0.381      6.055      0.000       1.561       3.055
+Not Pleased Prof Dev (Overall)                   -0.2347      0.204     -1.150      0.250      -0.635       0.165
+No salary increase becasue of prof dev (Male)    -0.3224      0.314     -1.028      0.304      -0.937       0.292
+No Free Training Avaliable (Male)                -0.2303      0.224     -1.026      0.305      -0.670       0.210
+Younger than 40 (Male)                           -1.8684      0.207     -9.042      0.000      -2.273      -1.463
+=================================================================================================================
+
+Optimization terminated successfully.
+         Current function value: 0.604842
+         Iterations 5
+   Multiple Linear Regression on F0119, T0186, S1628, and AGE_T_x  (Female)
+==============================================================================
+Dep. Variable:          Status Leaver   No. Observations:                 1245
+Model:                          Logit   Df Residuals:                     1240
+Method:                           MLE   Df Model:                            4
+Date:                Tue, 12 Apr 2022   Pseudo R-squ.:                 0.08581
+Time:                        14:58:53   Log-Likelihood:                -753.03
+converged:                       True   LL-Null:                       -823.71
+Covariance Type:            nonrobust   LLR p-value:                 1.442e-29
+===================================================================================================================
+                                                      coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------------------------------------------
+Intercept                                           1.4198      0.230      6.181      0.000       0.970       1.870
+Not Pleased Prof Dev (Female)                      -0.1679      0.130     -1.293      0.196      -0.423       0.087
+No salary increase becasue of prof dev (Female)    -0.3715      0.207     -1.795      0.073      -0.777       0.034
+No Free Training Avaliable (Female)                 0.2769      0.131      2.109      0.035       0.020       0.534
+Younger than 40 (Overall)                          -1.3869      0.125    -11.088      0.000      -1.632      -1.142
+===================================================================================================================
+
+Optimization terminated successfully.
+         Current function value: 0.581532
+         Iterations 5
+  Multiple Linear Regression on F0119, T0186, S1628, AGE_T_x, S0287 (Overall)
+==============================================================================
+Dep. Variable:          Status Leaver   No. Observations:                 1698
+Model:                          Logit   Df Residuals:                     1692
+Method:                           MLE   Df Model:                            5
+Date:                Tue, 12 Apr 2022   Pseudo R-squ.:                  0.1061
+Time:                        14:58:53   Log-Likelihood:                -987.44
+converged:                       True   LL-Null:                       -1104.7
+Covariance Type:            nonrobust   LLR p-value:                 1.206e-48
+====================================================================================================================
+                                                       coef    std err          z      P>|z|      [0.025      0.975]
+--------------------------------------------------------------------------------------------------------------------
+Intercept                                            2.0097      0.219      9.198      0.000       1.581       2.438
+Not Pleased Prof Dev (Overall)                      -0.1086      0.113     -0.960      0.337      -0.330       0.113
+No salary increase becasue of prof dev (Overall)    -0.3552      0.178     -1.992      0.046      -0.705      -0.006
+No Free Training Avaliable (Overall)                 0.0889      0.117      0.761      0.447      -0.140       0.318
+Younger than 40 (Overall)                           -1.5275      0.110    -13.863      0.000      -1.743      -1.312
+20 percent or more free lunch (Overall)             -0.5126      0.119     -4.296      0.000      -0.747      -0.279
+====================================================================================================================
+
+Optimization terminated successfully.
+         Current function value: 0.538107
+         Iterations 6
+   Multiple Linear Regression on F0119, T0186, S1628, AGE_T_x, S0287 (Male)
+==============================================================================
+Dep. Variable:          Status Leaver   No. Observations:                  524
+Model:                          Logit   Df Residuals:                      518
+Method:                           MLE   Df Model:                            5
+Date:                Tue, 12 Apr 2022   Pseudo R-squ.:                  0.1341
+Time:                        14:58:53   Log-Likelihood:                -281.97
+converged:                       True   LL-Null:                       -325.65
+Covariance Type:            nonrobust   LLR p-value:                 2.413e-17
+=================================================================================================================
+                                                    coef    std err          z      P>|z|      [0.025      0.975]
+-----------------------------------------------------------------------------------------------------------------
+Intercept                                         2.2762      0.406      5.601      0.000       1.480       3.073
+Not Pleased Prof Dev (Male)                      -0.2231      0.210     -1.061      0.289      -0.635       0.189
+No salary increase becasue of prof dev (Male)    -0.3077      0.322     -0.957      0.339      -0.938       0.323
+No Free Training Avaliable (Male)                -0.2076      0.228     -0.909      0.363      -0.655       0.240
+Younger than 40 (Male)                           -1.8262      0.212     -8.601      0.000      -2.242      -1.410
+20 percent or more free lunch (Male)             -0.0913      0.214     -0.426      0.670      -0.511       0.328
+=================================================================================================================
+
+Optimization terminated successfully.
+         Current function value: 0.594520
+         Iterations 5
+  Multiple Linear Regression on F0119, T0186, S1628, AGE_T_x, S0287 (Female)
+==============================================================================
+Dep. Variable:          Status Leaver   No. Observations:                 1174
+Model:                          Logit   Df Residuals:                     1168
+Method:                           MLE   Df Model:                            5
+Date:                Tue, 12 Apr 2022   Pseudo R-squ.:                  0.1006
+Time:                        14:58:53   Log-Likelihood:                -697.97
+converged:                       True   LL-Null:                       -776.03
+Covariance Type:            nonrobust   LLR p-value:                 6.593e-32
+===================================================================================================================
+                                                      coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------------------------------------------
+Intercept                                           1.9465      0.261      7.462      0.000       1.435       2.458
+Not Pleased Prof Dev (Female)                      -0.0777      0.136     -0.573      0.567      -0.343       0.188
+No salary increase becasue of prof dev (Female)    -0.3915      0.215     -1.823      0.068      -0.812       0.029
+No Free Training Avaliable (Female)                 0.2010      0.138      1.461      0.144      -0.069       0.471
+Younger than 40 (Female)                           -1.4198      0.131    -10.873      0.000      -1.676      -1.164
+20 percent or more free lunch (Female)             -0.6714      0.146     -4.597      0.000      -0.958      -0.385
+===================================================================================================================
+
+Optimization terminated successfully.
+         Current function value: 0.576710
+         Iterations 5
+ Multiple Linear Regression on F0119, T0186, S1628, AGE_T_x, S0287, T0178 (Overall)
+==============================================================================
+Dep. Variable:          Status Leaver   No. Observations:                 1176
+Model:                          Logit   Df Residuals:                     1169
+Method:                           MLE   Df Model:                            6
+Date:                Tue, 12 Apr 2022   Pseudo R-squ.:                  0.1110
+Time:                        14:58:54   Log-Likelihood:                -678.21
+converged:                       True   LL-Null:                       -762.87
+Covariance Type:            nonrobust   LLR p-value:                 6.262e-34
+====================================================================================================================
+                                                       coef    std err          z      P>|z|      [0.025      0.975]
+--------------------------------------------------------------------------------------------------------------------
+Intercept                                            2.0172      0.258      7.828      0.000       1.512       2.522
+Not Pleased Prof Dev (Overall)                      -0.1336      0.140     -0.955      0.340      -0.408       0.141
+No salary increase becasue of prof dev (Overall)    -0.3396      0.207     -1.637      0.102      -0.746       0.067
+No Free Training Avaliable (Overall)                 0.1090      0.140      0.779      0.436      -0.165       0.383
+Younger than 40 (Overall)                           -1.5683      0.134    -11.724      0.000      -1.830      -1.306
+20 percent or more free lunch (Overall)             -0.5673      0.146     -3.887      0.000      -0.853      -0.281
+Not useful prof dev (Overall)                        0.2232      0.175      1.278      0.201      -0.119       0.566
+====================================================================================================================
+
+Optimization terminated successfully.
+         Current function value: 0.541791
+         Iterations 6
+ Multiple Linear Regression on F0119, T0186, S1628, AGE_T_x, S0287, T0178 (Male)
+==============================================================================
+Dep. Variable:          Status Leaver   No. Observations:                  353
+Model:                          Logit   Df Residuals:                      346
+Method:                           MLE   Df Model:                            6
+Date:                Tue, 12 Apr 2022   Pseudo R-squ.:                  0.1329
+Time:                        14:58:54   Log-Likelihood:                -191.25
+converged:                       True   LL-Null:                       -220.56
+Covariance Type:            nonrobust   LLR p-value:                 8.635e-11
+=================================================================================================================
+                                                    coef    std err          z      P>|z|      [0.025      0.975]
+-----------------------------------------------------------------------------------------------------------------
+Intercept                                         2.3884      0.492      4.854      0.000       1.424       3.353
+Not Pleased Prof Dev (Male)                      -0.1064      0.256     -0.416      0.677      -0.607       0.395
+No salary increase becasue of prof dev (Male)    -0.3344      0.390     -0.857      0.391      -1.099       0.430
+No Free Training Avaliable (Male)                -0.4281      0.274     -1.563      0.118      -0.965       0.109
+Younger than 40 (Male)                           -1.7544      0.256     -6.860      0.000      -2.256      -1.253
+20 percent or more free lunch (Male)             -0.2366      0.264     -0.895      0.371      -0.755       0.282
+Not useful prof dev (Male)                        0.1214      0.291      0.417      0.677      -0.450       0.693
+=================================================================================================================
+
+Optimization terminated successfully.
+         Current function value: 0.585095
+         Iterations 5
+ Multiple Linear Regression on F0119, T0186, S1628, AGE_T_x, S0287, T0178 (Female)
+==============================================================================
+Dep. Variable:          Status Leaver   No. Observations:                  823
+Model:                          Logit   Df Residuals:                      816
+Method:                           MLE   Df Model:                            6
+Date:                Tue, 12 Apr 2022   Pseudo R-squ.:                  0.1099
+Time:                        14:58:54   Log-Likelihood:                -481.53
+converged:                       True   LL-Null:                       -540.97
+Covariance Type:            nonrobust   LLR p-value:                 2.813e-23
+===================================================================================================================
+                                                      coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------------------------------------------
+Intercept                                           1.8944      0.304      6.228      0.000       1.298       2.491
+Not Pleased Prof Dev (Female)                      -0.1369      0.170     -0.803      0.422      -0.471       0.197
+No salary increase becasue of prof dev (Female)    -0.3492      0.246     -1.421      0.155      -0.831       0.133
+No Free Training Avaliable (Female)                 0.3222      0.165      1.953      0.051      -0.001       0.646
+Younger than 40 (Female)                           -1.4970      0.159     -9.401      0.000      -1.809      -1.185
+20 percent or more free lunch (Female)             -0.6906      0.178     -3.881      0.000      -1.039      -0.342
+Not useful prof dev (Female)                        0.1987      0.225      0.885      0.376      -0.241       0.639
+===================================================================================================================
+
+Optimization terminated successfully.
+         Current function value: 0.576983
+         Iterations 6
+ Multiple Linear Regression on F0119, T0186, S1628, AGE_T_x, S0287, T0178 (Overall)
+==============================================================================
+Dep. Variable:          Status Leaver   No. Observations:                  934
+Model:                          Logit   Df Residuals:                      925
+Method:                           MLE   Df Model:                            8
+Date:                Tue, 12 Apr 2022   Pseudo R-squ.:                  0.1325
+Time:                        14:58:54   Log-Likelihood:                -538.90
+converged:                       True   LL-Null:                       -621.24
+Covariance Type:            nonrobust   LLR p-value:                 1.674e-31
+====================================================================================================================
+                                                       coef    std err          z      P>|z|      [0.025      0.975]
+--------------------------------------------------------------------------------------------------------------------
+Intercept                                            2.5833      0.328      7.876      0.000       1.940       3.226
+Not Pleased Prof Dev (Overall)                      -0.1629      0.157     -1.035      0.301      -0.472       0.146
+No salary increase becasue of prof dev (Overall)    -0.1608      0.235     -0.684      0.494      -0.621       0.300
+No Free Training Avaliable (Overall)                 0.0399      0.157      0.253      0.800      -0.269       0.348
+Younger than 40 (Overall)                           -1.2620      0.159     -7.943      0.000      -1.573      -0.951
+20 percent or more free lunch (Overall)             -0.5220      0.165     -3.169      0.002      -0.845      -0.199
+Not useful prof dev (Overall)                        0.3491      0.193      1.807      0.071      -0.029       0.728
+No Masters Degree (Overall)                         -0.3895      0.165     -2.364      0.018      -0.712      -0.067
+Teachers that make less than 39,999k (Overall)      -0.8460      0.236     -3.591      0.000      -1.308      -0.384
+====================================================================================================================
+
+Optimization terminated successfully.
+         Current function value: 0.528206
+         Iterations 6
+ Multiple Linear Regression on F0119, T0186, S1628, AGE_T_x, S0287, T0178 (Male)
+==============================================================================
+Dep. Variable:          Status Leaver   No. Observations:                  266
+Model:                          Logit   Df Residuals:                      257
+Method:                           MLE   Df Model:                            8
+Date:                Tue, 12 Apr 2022   Pseudo R-squ.:                  0.1809
+Time:                        14:58:54   Log-Likelihood:                -140.50
+converged:                       True   LL-Null:                       -171.53
+Covariance Type:            nonrobust   LLR p-value:                 1.840e-10
+=================================================================================================================
+                                                    coef    std err          z      P>|z|      [0.025      0.975]
+-----------------------------------------------------------------------------------------------------------------
+Intercept                                         2.7122      0.594      4.562      0.000       1.547       3.877
+Not Pleased Prof Dev (Male)                      -0.0618      0.299     -0.206      0.836      -0.649       0.525
+No salary increase becasue of prof dev (Male)    -0.0826      0.440     -0.188      0.851      -0.944       0.779
+No Free Training Avaliable (Male)                -0.4183      0.313     -1.335      0.182      -1.033       0.196
+Younger than 40 (Male)                           -1.4561      0.323     -4.509      0.000      -2.089      -0.823
+20 percent or more free lunch (Male)             -0.0388      0.317     -0.123      0.902      -0.659       0.582
+Not useful prof dev (Female)                      0.4012      0.344      1.167      0.243      -0.273       1.075
+No Masters Degree (Male)                         -0.5006      0.338     -1.482      0.138      -1.163       0.161
+Teachers that make less than 39,999k (Male)      -0.9008      0.426     -2.114      0.035      -1.736      -0.066
+=================================================================================================================
+
+Optimization terminated successfully.
+         Current function value: 0.590005
+         Iterations 6
+ Multiple Linear Regression on F0119, T0186, S1628, AGE_T_x, S0287, T0178 (Female)
+==============================================================================
+Dep. Variable:          Status Leaver   No. Observations:                  668
+Model:                          Logit   Df Residuals:                      659
+Method:                           MLE   Df Model:                            8
+Date:                Tue, 12 Apr 2022   Pseudo R-squ.:                  0.1216
+Time:                        14:58:54   Log-Likelihood:                -394.12
+converged:                       True   LL-Null:                       -448.66
+Covariance Type:            nonrobust   LLR p-value:                 5.878e-20
+===================================================================================================================
+                                                      coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------------------------------------------
+Intercept                                           2.5434      0.397      6.408      0.000       1.765       3.321
+Not Pleased Prof Dev (Female)                      -0.1957      0.189     -1.035      0.301      -0.567       0.175
+No salary increase becasue of prof dev (Female)    -0.1826      0.280     -0.652      0.515      -0.732       0.367
+No Free Training Avaliable (Female)                 0.2146      0.184      1.165      0.244      -0.147       0.576
+Younger than 40 (Female)                           -1.1839      0.184     -6.417      0.000      -1.546      -0.822
+20 percent or more free lunch (Female)             -0.6903      0.196     -3.525      0.000      -1.074      -0.307
+Not useful prof dev (Female)                        0.2926      0.240      1.220      0.223      -0.178       0.763
+No Masters Degree (Female)                         -0.3591      0.191     -1.879      0.060      -0.734       0.015
+Teachers that make less than 39,999k (Female)      -0.8415      0.290     -2.899      0.004      -1.410      -0.273
+===================================================================================================================
