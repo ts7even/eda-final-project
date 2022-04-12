@@ -254,34 +254,34 @@ def mastersDegree():
     print()
 
 
-def currentColab():
-    print('There are many opportunities to collaborate with other teachers in this school? (Overall)\n')
-    print("Preliminary Stats")
-    pre_stats = df.groupby('F0603')["NEW_STATUS"].describe()
-    print(pre_stats)
-    print()
-    model = smf.logit('NEW_STATUS ~ C(F0603)', data = df).fit()
-    print(model.summary(yname="Status Leaver", xname=['Intercept', 'Disagree with coloboration with teachers (Overall)'], 
-    title='Linear Regression on the Current Year Colaboration with teachers variable against Leaver (Overall)'))
-    print()
-    print('There are many opportunities to collaborate with other teachers in this school? (Male)\n')
-    print("Preliminary Stats")
-    pre_stats = df.groupby('F0603')["NEW_STATUS"].describe()
-    print(pre_stats)
-    print()
-    model = smf.logit('NEW_STATUS ~ C(F0603)', data = df1).fit()
-    print(model.summary(yname="Status Leaver", xname=['Intercept', 'Disagree with coloboration with teachers (Male)'], 
-    title='Linear Regression on the Current Year Colaboration with teachers variable against Leaver (Male)'))
-    print()
-    print('There are many opportunities to collaborate with other teachers in this school? (Female)\n')
-    print("Preliminary Stats")
-    pre_stats = df.groupby('F0603')["NEW_STATUS"].describe()
-    print(pre_stats)
-    print()
-    model = smf.logit('NEW_STATUS ~ C(F0603)', data = df2).fit()
-    print(model.summary(yname="Status Leaver", xname=['Intercept', 'Disagree with coloboration with teachers (Female)'], 
-    title='Linear Regression on the Current Year Colaboration with teachers variable against Leaver (Female)'))
-    print()    
+# def currentColab():
+#     print('There are many opportunities to collaborate with other teachers in this school? (Overall)\n')
+#     print("Preliminary Stats")
+#     pre_stats = df.groupby('F0603')["NEW_STATUS"].describe()
+#     print(pre_stats)
+#     print()
+#     model = smf.logit('NEW_STATUS ~ C(F0603)', data = df).fit()
+#     print(model.summary(yname="Status Leaver", xname=['Intercept', 'Disagree with coloboration with teachers (Overall)'], 
+#     title='Linear Regression on the Current Year Colaboration with teachers variable against Leaver (Overall)'))
+#     print()
+#     print('There are many opportunities to collaborate with other teachers in this school? (Male)\n')
+#     print("Preliminary Stats")
+#     pre_stats = df.groupby('F0603')["NEW_STATUS"].describe()
+#     print(pre_stats)
+#     print()
+#     model = smf.logit('NEW_STATUS ~ C(F0603)', data = df1).fit()
+#     print(model.summary(yname="Status Leaver", xname=['Intercept', 'Disagree with coloboration with teachers (Male)'], 
+#     title='Linear Regression on the Current Year Colaboration with teachers variable against Leaver (Male)'))
+#     print()
+#     print('There are many opportunities to collaborate with other teachers in this school? (Female)\n')
+#     print("Preliminary Stats")
+#     pre_stats = df.groupby('F0603')["NEW_STATUS"].describe()
+#     print(pre_stats)
+#     print()
+#     model = smf.logit('NEW_STATUS ~ C(F0603)', data = df2).fit()
+#     print(model.summary(yname="Status Leaver", xname=['Intercept', 'Disagree with coloboration with teachers (Female)'], 
+#     title='Linear Regression on the Current Year Colaboration with teachers variable against Leaver (Female)'))
+#     print()    
 
 
 # def formerColab():
@@ -380,7 +380,7 @@ usefullDevelopment()
 age()
 freeLunch()
 mastersDegree()
-currentColab()
+# currentColab()
 # formerColab()
 # encouragement()
 teacherEarnings()

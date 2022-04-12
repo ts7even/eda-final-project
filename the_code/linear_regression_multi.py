@@ -119,25 +119,25 @@ def regressMulti6():
 
 
 def regressMulti7():
-    model = smf.ols('NEW_STATUS ~ C(F0119) + C(T0186) + C(S1628) + C(AGE_T_x) + C(S0287) + C(T0178) + C(T0080) + C(F0603) + C(EARNALL)', data = df).fit()
+    model = smf.ols('NEW_STATUS ~ C(F0119) + C(T0186) + C(S1628) + C(AGE_T_x) + C(S0287) + C(T0178) + C(T0080) + C(EARNALL)', data = df).fit()
     print(model.summary(yname="Status Leaver",
     xname=['Intercept', 'Not Pleased Prof Dev (Overall)', 'No salary increase becasue of prof dev (Overall)', 'No Free Training Avaliable (Overall)',
     'Younger than 40 (Overall)', '20 percent or more free lunch (Overall)','Not useful prof dev (Overall)', 'No Masters Degree (Overall)',
-    'Disagree with coloboration with teachers (Overall)', 'Teachers that make less than 39,999k (Overall)'], 
+    'Teachers that make less than 39,999k (Overall)'], 
     title=' Multiple Linear Regression on F0119, T0186, S1628, AGE_T_x, S0287, T0178 (Overall)'))
     print()
-    model = smf.ols('NEW_STATUS ~ C(F0119) + C(T0186) + C(S1628) + C(AGE_T_x) + C(S0287) + C(T0178) + C(T0080) + C(F0603) + C(EARNALL)', data = df1).fit()
+    model = smf.ols('NEW_STATUS ~ C(F0119) + C(T0186) + C(S1628) + C(AGE_T_x) + C(S0287) + C(T0178) + C(T0080) + C(EARNALL)', data = df1).fit()
     print(model.summary(yname="Status Leaver",
     xname=['Intercept', 'Not Pleased Prof Dev (Male)', 'No salary increase becasue of prof dev (Male)', 'No Free Training Avaliable (Male)',
     'Younger than 40 (Male)', '20 percent or more free lunch (Male)','Not useful prof dev (Female)', 'No Masters Degree (Male)',
-    'Disagree with coloboration with teachers (Male)', 'Teachers that make less than 39,999k (Male)'], 
+    'Teachers that make less than 39,999k (Male)'], 
     title=' Multiple Linear Regression on F0119, T0186, S1628, AGE_T_x, S0287, T0178 (Male)'))
     print()
-    model = smf.ols('NEW_STATUS ~ C(F0119) + C(T0186) + C(S1628) + C(AGE_T_x) + C(S0287) + C(T0178) + C(T0080) + C(F0603) + C(EARNALL)', data = df2).fit()
+    model = smf.ols('NEW_STATUS ~ C(F0119) + C(T0186) + C(S1628) + C(AGE_T_x) + C(S0287) + C(T0178) + C(T0080) + C(EARNALL)', data = df2).fit()
     print(model.summary(yname="Status Leaver",
     xname=['Intercept', 'Not Pleased Prof Dev (Female)', 'No salary increase becasue of prof dev (Female)', 'No Free Training Avaliable (Female)',
     'Younger than 40 (Female)', '20 percent or more free lunch (Female)','Not useful prof dev (Female)', 'No Masters Degree (Female)',
-    'Disagree with coloboration with teachers (Female)', 'Teachers that make less than 39,999k (Female)'], 
+    'Teachers that make less than 39,999k (Female)'], 
     title=' Multiple Linear Regression on F0119, T0186, S1628, AGE_T_x, S0287, T0178 (Female)'))
     print()
 
