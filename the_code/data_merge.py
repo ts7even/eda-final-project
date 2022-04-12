@@ -16,18 +16,13 @@ def dataMerge():
     # print('Data merged worked for public teacher and public school datasets.')
 
 # Merging concatinated data with public teacher and schools datasets. 
+
 def dataMerge2():
     df3 = pd.read_csv('source/concat/data-concat.csv')
     df4 = pd.read_csv('source/merge/data-merge.csv')
     data_merge2 = pd.merge(df3, df4, on='CNTLNUM')
     data_merge2.to_csv('source/merge/data-merge2.csv')
-    data_merge2_observations = data_merge2.shape[0]
-    data_merge2_variables = data_merge2.shape[1]
-    # print()
-    # print('Data merged worked for merging public teacher and schools to current and former teacher data set.')
-    # print(f'The amount of observations that merged is {data_merge2_observations}')
-    # print(f'The amount of variables that merged is {data_merge2_variables}')
 
 
-# dataMerge()
-# dataMerge2()
+dataMerge()
+dataMerge2()
