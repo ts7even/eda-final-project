@@ -72,3 +72,4 @@ Make sure you git pull before you start coding on other devives.
 * git commit -m "Branch merged into Master"
 * git push 
 
+* git pull origin <branch>

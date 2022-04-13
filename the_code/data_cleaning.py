@@ -13,11 +13,11 @@ import seaborn as sns
 matplotlib.use('Qt5Agg')
 
 # Dataframe that was the final merge from Project two. (Concat t2, t3), (Merged S3a, S4a) (Merged Concat, Merged S3a, S4A)
-df = pd.read_csv('source\merge\data-merge2.csv', low_memory=False)
+df = pd.read_csv('source/merge/data-merge2.csv', low_memory=False)
 
 
 # Reassigning Varables to {Status L:1, M:0, S:0}
-df['NEW_STATUS'] = df.STATUS.map({'L':1, 'M':0, 'S':0}) #Coded for Leaver
+df['NEW_STATUS'] = df.STATUS.map({'L':1, 'M':0, 'S':0}) #Coded for Leaver and mover 
 
 # Ones we used F0119, T0186, S1628, AGE_T_x, S0287, T0178
 df['S0287'] = df['S0287'].replace([1,2,3,4, -8, -9], [0, 0, 1, 1, np.nan, np.nan]) #Free Lunch Coded for 20% or more 
@@ -38,9 +38,6 @@ df['AGE_T_x'] = df['AGE_T_x'].replace([1,2,3,4], [1,1,0,0]) # Weighing teachers 
 # Professor wanted us to add more variables; These are our wild cards
 # df['NEWTCH'] = df['NEWTEACH'].replace([1,2], [1,0]) # Weighted for teachers has taught 3 years or less
 df['T0080'] = df['T0080'].replace([1,2,-8], [0,1,np.nan]) # No to teach having masters degree
-df['F0603'] = df['F0603'].replace([1,2,3,4,5], [1,1,np.nan,0,0]) # Disagreed with there is many opportuniites to colab with teachers for the current year
-df['F0115'] = df['F0115'].replace([1,2,3,4,5], [1,1,np.nan,0,0]) # Disagreed with there is many opportuniites to colab with teachers for the former year
-df['F0121'] = df['F0121'].replace([1,2,3,4,5], [1,1,np.nan,0,0]) # Disagree with adminitrator encouagement
 df['EARNALL'] = df['EARNALL'].replace([1,2,3,4], [1,1,np.nan,0]) # For teachers that make less than (39,999)
 
 # Testing varaibles that might have a correlation
@@ -49,21 +46,29 @@ df['T0330'] = df['T0330'].replace([1,2,3,4], [1,1,0,0]) # does have a dug abouse
 df['T0332'] = df['T0332'].replace([1,2,3,4], [1,1,0,0]) # Problem disrepect towards teachers
 df['T0333'] = df['T0333'].replace([1,2,3,4], [1,1,0,0]) # Problem with dropouts
 df['T0336'] = df['T0336'].replace([1,2,3,4], [1,1,0,0]) # Problem with poverty
-df['F0752'] = df['F0752'].replace([1,2,3,4,5,-8], [0,0,1,1,1,np.nan]) # Disatisfied with working conditions
-df['F0746'] = df['F0746'].replace([1,2,3,4,5,-8], [1,1,np.nan,0,0,np.nan]) # Do not have shared beliefs with collegues
-df['F0747'] = df['F0747'].replace([1,2,3,4,5,-8], [1,1,np.nan,0,0,np.nan]) # There was not a great deal of cooperative effort among the staf
-df['F0754'] = df['F0754'].replace([1,2,3,4,5,-8], [0,0,1,1,1,np.nan]) # Disasisfied with changes in job discription and details
-df['F0757'] = df['F0757'].replace([1,2,3,4,5,-8], [0,1,1,1,1,np.nan]) # Importance of being laid off involuntary or voluntary
+# df['F0752'] = df['F0752'].replace([1,2,3,4,5,-8], [0,0,1,1,1,np.nan]) # Disatisfied with working conditions
+# df['F0746'] = df['F0746'].replace([1,2,3,4,5,-8], [1,1,np.nan,0,0,np.nan]) # Do not have shared beliefs with collegues
+# df['F0747'] = df['F0747'].replace([1,2,3,4,5,-8], [1,1,np.nan,0,0,np.nan]) # There was not a great deal of cooperative effort among the staf
+# df['F0754'] = df['F0754'].replace([1,2,3,4,5,-8], [0,0,1,1,1,np.nan]) # Disasisfied with changes in job discription and details
+# df['F0757'] = df['F0757'].replace([1,2,3,4,5,-8], [0,1,1,1,1,np.nan]) # Importance of being laid off involuntary or voluntary
+# df['F0759'] = df['F0759'].replace([1,2,3,4,5,-8], [0,1,1,1,1,np.nan]) # I was dissatisfied with opportunities for professional development at last year's school
+# df['F0796'] = df['F0796'].replace([1,2,3,4,5], [1,1,1,0,0]) # Base teacher salary under 35k
+df['T0155'] = df['T0155'].replace([1,2], [0,1]) # No Mentoring and/or peer observation and coaching, as part of a formal arrangement that is recognized or supported by the school or district
+df['T0157'] = df['T0157'].replace([1,2], [0,1]) # No to attending workshops, conferences or training
+df['T0182'] = df['T0182'].replace([1,2], [0,1]) # No to full or partial reimbursement of college tuition - which is type of support
+df['T0184'] = df['T0184'].replace([1,2], [0,1]) # No to Reimbersement for travel and or daily expenses
+df['T0159'] = df['T0159'].replace([1,2], [0,1]) # Have not participated in any professional development activities that focused on in-depth study of the content in your MAIN teaching assignment field?
+df['T0165'] = df['T0165'].replace([1,2], [0,1]) # Have not participated in any professional development activities that focused on methods of teaching?
+df['T0174'] = df['T0174'].replace([1,2], [0,1]) # Have not participated in any professional development activities that focused on student discipline and management in the classroom?
 # df[''] = df[''].replace([], [])
 # df[''] = df[''].replace([], [])
-# df[''] = df[''].replace([], [])
-# df[''] = df[''].replace([], [])
+
 
 
  
 
 df = df[['NEW_STATUS', 'F0119', 'T0186', 'S1628', 'AGE_T_x', 'S0287', 'T0178',  'T0080', 'EARNALL', 'T0356',
-'T0329', 'T0330', 'T0332', 'T0333', 'T0336', 'F0752', 'F0746', 'F0747']]
+'T0329', 'T0330', 'T0332', 'T0333', 'T0336', 'T0155','T0157', 'T0182', 'T0184', 'T0159', 'T0165', 'T0174']]
 # Not in index  'TOTEXPER', 'NEWTCH', 
 
 df2 = df[(df['T0356']==1)] # Male
@@ -71,16 +76,16 @@ df3 = df[(df['T0356']==2)] # Female
 
 # Sending to new dataframe 
 def dataClean():
-    df.to_csv('source\data_cleaning\cleaned_data.csv')
-    df2.to_csv('source\data_cleaning\cleaned_data_male.csv')
-    df3.to_csv('source\data_cleaning\cleaned_data_female.csv')
+    df.to_csv('source/data_cleaning/cleaned_data.csv')
+    df2.to_csv('source/data_cleaning/cleaned_data_male.csv')
+    df3.to_csv('source/data_cleaning/cleaned_data_female.csv')
 
 
 
 def correlationMatrix():
     cor = df.corr()
-    cor2 = df2.corr()
-    cor3 = df3.corr()
+    cor2 = df2.corr().drop('T0356')
+    cor3 = df3.corr().drop('T0356')
     print('\n\n')
     print('Correlation Matrix of overall data')
     print(cor)
@@ -92,11 +97,28 @@ def correlationMatrix():
     print(cor3)
     print()
     sns.heatmap(cor)
-    plt.show()
+    plt.title("Heatmap of Correlation of Leaver (Overall)")
+    plt.show(block=False)
+    plt.savefig('profiling/heatmap_correlation_overall.png')
+    plt.pause(2)
+    plt.close()
+   
     sns.heatmap(cor2)
-    plt.show()
+    plt.title("Heatmap of Correlation of Leaver (Male)")
+    plt.show(block=False)
+    plt.savefig('profiling/heatmap_correlation_male.png')
+    plt.pause(2)
+    plt.close()
+    
     sns.heatmap(cor3)
-    plt.show()
+    plt.title("Heatmap of Correlation of Leaver (Female)")
+    plt.show(block=False)
+    plt.savefig('profiling/heatmap_correlation_female.png')
+    plt.pause(2)
+    plt.close()
+
+
+
 
 
 
