@@ -9,11 +9,14 @@ import scipy as sp
 import matplotlib 
 import matplotlib.pyplot as plt
 import seaborn as sns
-
+matplotlib.use('Qt5Agg')
 
 df = pd.read_csv('source\data_cleaning\cleaned_data.csv')
 df1 = pd.read_csv('source\data_cleaning\cleaned_data_male.csv')
 df2 = pd.read_csv('source\data_cleaning\cleaned_data_female.csv')
+
+
+
 
 def regressMulti2():
     model = smf.logit('NEW_STATUS ~ C(F0119) + C(T0186)', data = df).fit()
@@ -126,15 +129,15 @@ def regressMulti7():
     'Teachers that make less than 39,999k (Overall)'], 
     title=' Multiple Linear Regression on F0119, T0186, S1628, AGE_T_x, S0287, T0178 (Overall)'))
     print()
-    model = smf.logit('NEW_STATUS ~ C(F0119) + C(T0186) + C(S1628) + C(AGE_T_x) + C(S0287) + C(T0178) + C(T0080) + C(EARNALL)', data = df1).fit()
-    print(model.summary(yname="Status Leaver",
+    model1 = smf.logit('NEW_STATUS ~ C(F0119) + C(T0186) + C(S1628) + C(AGE_T_x) + C(S0287) + C(T0178) + C(T0080) + C(EARNALL)', data = df1).fit()
+    print(model1.summary(yname="Status Leaver",
     xname=['Intercept', 'Not Pleased Prof Dev (Male)', 'No salary increase becasue of prof dev (Male)', 'No Free Training Avaliable (Male)',
     'Younger than 40 (Male)', '20 percent or more free lunch (Male)','Not useful prof dev (Female)', 'No Masters Degree (Male)',
     'Teachers that make less than 39,999k (Male)'], 
     title=' Multiple Linear Regression on F0119, T0186, S1628, AGE_T_x, S0287, T0178 (Male)'))
     print()
-    model = smf.logit('NEW_STATUS ~ C(F0119) + C(T0186) + C(S1628) + C(AGE_T_x) + C(S0287) + C(T0178) + C(T0080) + C(EARNALL)', data = df2).fit()
-    print(model.summary(yname="Status Leaver",
+    model2 = smf.logit('NEW_STATUS ~ C(F0119) + C(T0186) + C(S1628) + C(AGE_T_x) + C(S0287) + C(T0178) + C(T0080) + C(EARNALL)', data = df2).fit()
+    print(model2.summary(yname="Status Leaver",
     xname=['Intercept', 'Not Pleased Prof Dev (Female)', 'No salary increase becasue of prof dev (Female)', 'No Free Training Avaliable (Female)',
     'Younger than 40 (Female)', '20 percent or more free lunch (Female)','Not useful prof dev (Female)', 'No Masters Degree (Female)',
     'Teachers that make less than 39,999k (Female)'], 
@@ -144,11 +147,24 @@ def regressMulti7():
 
 
 
+def graph():
+    dep = sns.load_dataset('NEW_STATUS')
+    sad = dep.groupby('F0119')
+    sns.heatmap(sad)
+    # plt.title("Scatter plot of leaver (dependent) and Opportunities of Professional Development")
+    # plt.ylabel('Left Teaching')
+    # plt.savefig('profiling/graph_scatter.png')
+    plt.show()
+    # plt.pause(2)
+    # plt.close()
 
 
-regressMulti2()
-regressMulti3()
-regressMulti4()
-regressMulti5()
-regressMulti6()
-regressMulti7()
+
+
+# regressMulti2()
+# regressMulti3()
+# regressMulti4()
+# regressMulti5()
+# regressMulti6()
+# regressMulti7()
+graph()
