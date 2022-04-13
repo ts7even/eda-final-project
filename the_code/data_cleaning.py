@@ -46,13 +46,6 @@ df['T0330'] = df['T0330'].replace([1,2,3,4], [1,1,0,0]) # does have a dug abouse
 df['T0332'] = df['T0332'].replace([1,2,3,4], [1,1,0,0]) # Problem disrepect towards teachers
 df['T0333'] = df['T0333'].replace([1,2,3,4], [1,1,0,0]) # Problem with dropouts
 df['T0336'] = df['T0336'].replace([1,2,3,4], [1,1,0,0]) # Problem with poverty
-# df['F0752'] = df['F0752'].replace([1,2,3,4,5,-8], [0,0,1,1,1,np.nan]) # Disatisfied with working conditions
-# df['F0746'] = df['F0746'].replace([1,2,3,4,5,-8], [1,1,np.nan,0,0,np.nan]) # Do not have shared beliefs with collegues
-# df['F0747'] = df['F0747'].replace([1,2,3,4,5,-8], [1,1,np.nan,0,0,np.nan]) # There was not a great deal of cooperative effort among the staf
-# df['F0754'] = df['F0754'].replace([1,2,3,4,5,-8], [0,0,1,1,1,np.nan]) # Disasisfied with changes in job discription and details
-# df['F0757'] = df['F0757'].replace([1,2,3,4,5,-8], [0,1,1,1,1,np.nan]) # Importance of being laid off involuntary or voluntary
-# df['F0759'] = df['F0759'].replace([1,2,3,4,5,-8], [0,1,1,1,1,np.nan]) # I was dissatisfied with opportunities for professional development at last year's school
-# df['F0796'] = df['F0796'].replace([1,2,3,4,5], [1,1,1,0,0]) # Base teacher salary under 35k
 df['T0155'] = df['T0155'].replace([1,2], [0,1]) # No Mentoring and/or peer observation and coaching, as part of a formal arrangement that is recognized or supported by the school or district
 df['T0157'] = df['T0157'].replace([1,2], [0,1]) # No to attending workshops, conferences or training
 df['T0182'] = df['T0182'].replace([1,2], [0,1]) # No to full or partial reimbursement of college tuition - which is type of support
@@ -84,8 +77,8 @@ def dataClean():
 
 def correlationMatrix():
     cor = df.corr()
-    cor2 = df2.corr().drop('T0356')
-    cor3 = df3.corr().drop('T0356')
+    cor2 = df2.corr().drop(columns=['T0356']).drop('T0356')
+    cor3 = df3.corr().drop(columns=['T0356']).drop('T0356')
     print('\n\n')
     print('Correlation Matrix of overall data')
     print(cor)
@@ -96,6 +89,7 @@ def correlationMatrix():
     print('Correlation Matrix of female data')
     print(cor3)
     print()
+
     sns.heatmap(cor)
     plt.title("Heatmap of Correlation of Leaver (Overall)")
     plt.show(block=False)
