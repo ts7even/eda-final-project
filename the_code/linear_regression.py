@@ -55,19 +55,6 @@ def opportunites():
     print()
 
 
-
-
-def graph():
-    sns.heatmap(x="F0119", y="NEW_STATUS", data=df)
-    plt.title("Scatter plot of leaver (dependent) and Opportunities of Professional Development")
-    plt.ylabel('Left Teaching')
-    plt.savefig('profiling/graph_scatter.png')
-    plt.show(block=False)
-    plt.pause(2)
-    plt.close()
-
-
-
 def IncreseSalaryProfDevelopment(): 
     print('Did you receive an increase in salary or other pay increases as a result of participating in professional development activities? (Overall)\n')
     print("Preliminary Stats")
@@ -254,94 +241,6 @@ def mastersDegree():
     print()
 
 
-# def currentColab():
-#     print('There are many opportunities to collaborate with other teachers in this school? (Overall)\n')
-#     print("Preliminary Stats")
-#     pre_stats = df.groupby('F0603')["NEW_STATUS"].describe()
-#     print(pre_stats)
-#     print()
-#     model = smf.ols('NEW_STATUS ~ C(F0603)', data = df).fit()
-#     print(model.summary(yname="Status Leaver", xname=['Intercept', 'Disagree with coloboration with teachers (Overall)'], 
-#     title='Linear Regression on the Current Year Colaboration with teachers variable against Leaver (Overall)'))
-#     print()
-#     print('There are many opportunities to collaborate with other teachers in this school? (Male)\n')
-#     print("Preliminary Stats")
-#     pre_stats = df.groupby('F0603')["NEW_STATUS"].describe()
-#     print(pre_stats)
-#     print()
-#     model = smf.ols('NEW_STATUS ~ C(F0603)', data = df1).fit()
-#     print(model.summary(yname="Status Leaver", xname=['Intercept', 'Disagree with coloboration with teachers (Male)'], 
-#     title='Linear Regression on the Current Year Colaboration with teachers variable against Leaver (Male)'))
-#     print()
-#     print('There are many opportunities to collaborate with other teachers in this school? (Female)\n')
-#     print("Preliminary Stats")
-#     pre_stats = df.groupby('F0603')["NEW_STATUS"].describe()
-#     print(pre_stats)
-#     print()
-#     model = smf.ols('NEW_STATUS ~ C(F0603)', data = df2).fit()
-#     print(model.summary(yname="Status Leaver", xname=['Intercept', 'Disagree with coloboration with teachers (Female)'], 
-#     title='Linear Regression on the Current Year Colaboration with teachers variable against Leaver (Female)'))
-#     print()    
-
-
-# def formerColab():
-#     print('There are many opportunities to collaborate with other teachers in this school? (Overall)\n')
-#     print("Preliminary Stats")
-#     pre_stats = df.groupby('F0115')["NEW_STATUS"].describe()
-#     print(pre_stats)
-#     print()
-#     model = smf.ols('NEW_STATUS ~ C(F0115)', data = df).fit()
-#     print(model.summary(yname="Status Leaver", xname=['Intercept', 'Disagree with coloboration with teachers (Overall)'], 
-#     title='Linear Regression on the former year Colaboration with teachers variable against Leaver (Overall)'))
-#     print()
-#     print('There are many opportunities to collaborate with other teachers in this school? (Male)\n')
-#     print("Preliminary Stats")
-#     pre_stats = df.groupby('F0115')["NEW_STATUS"].describe()
-#     print(pre_stats)
-#     print()
-#     model = smf.ols('NEW_STATUS ~ C(F0115)', data = df1).fit()
-#     print(model.summary(yname="Status Leaver", xname=['Intercept', 'Disagree with coloboration with teachers (Male)'], 
-#     title='Linear Regression on the former year Colaboration with teachers variable against Leaver (Male)'))
-#     print()
-#     print('There are many opportunities to collaborate with other teachers in this school? (Female)\n')
-#     print("Preliminary Stats")
-#     pre_stats = df.groupby('F0115')["NEW_STATUS"].describe()
-#     print(pre_stats)
-#     print()
-#     model = smf.ols('NEW_STATUS ~ C(F0115)', data = df2).fit()
-#     print(model.summary(yname="Status Leaver", xname=['Intercept', 'Disagree with coloboration with teachers (Female)'], 
-#     title='Linear Regression on the former year Colaboration with teachers variable against Leaver (Female)'))
-#     print()
-
-# def encouragement():
-#     print('The school administrators behavior towards the staff was supportive and encouraging? (Overall)\n')
-#     print("Preliminary Stats")
-#     pre_stats = df.groupby('F0121')["NEW_STATUS"].describe()
-#     print(pre_stats)
-#     print()
-#     model = smf.ols('NEW_STATUS ~ C(F0121)', data = df).fit()
-#     print(model.summary(yname="Status Leaver", xname=['Intercept', 'Disagree with administrator encouragement (Overall)'], 
-#     title='Linear Regression for administration encouragement for teachers variable against Leaver (Overall)'))
-#     print()
-#     print('The school administrators behavior towards the staff was supportive and encouraging? (Male)\n')
-#     print("Preliminary Stats")
-#     pre_stats = df.groupby('F0121')["NEW_STATUS"].describe()
-#     print(pre_stats)
-#     print()
-#     model = smf.ols('NEW_STATUS ~ C(F0121)', data = df1).fit()
-#     print(model.summary(yname="Status Leaver", xname=['Intercept', 'Disagree with administrator encouragement (Male)'], 
-#     title='Linear Regression for administration encouragement for teachers variable against Leaver (Male)'))
-#     print()
-#     print('The school administrators behavior towards the staff was supportive and encouraging? (Female)\n')
-#     print("Preliminary Stats")
-#     pre_stats = df.groupby('F0121')["NEW_STATUS"].describe()
-#     print(pre_stats)
-#     print()
-#     model = smf.ols('NEW_STATUS ~ C(F0121)', data = df2).fit()
-#     print(model.summary(yname="Status Leaver", xname=['Intercept', 'Disagree with administrator encouragement (Female)'], 
-#     title='Linear Regression for administration encouragement for teachers variable against Leaver (Female)'))
-#     print()
-
 
 def teacherEarnings():
     print('Base Salary Pay? (Overall)\n')
@@ -380,7 +279,4 @@ usefullDevelopment()
 age()
 freeLunch()
 mastersDegree()
-# currentColab()
-# formerColab()
-# encouragement()
 teacherEarnings()

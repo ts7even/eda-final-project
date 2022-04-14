@@ -9,12 +9,13 @@ import scipy as sp
 import matplotlib 
 import matplotlib.pyplot as plt
 import seaborn as sns
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
 matplotlib.use('Qt5Agg')
 
 df = pd.read_csv('source/data_cleaning/cleaned_data.csv')
 df1 = pd.read_csv('source/data_cleaning/cleaned_data_male.csv')
 df2 = pd.read_csv('source/data_cleaning/cleaned_data_female.csv')
-
 
 
 
@@ -153,8 +154,53 @@ def regressMulti7():
     print()
 
 
+def logiGraph(): # Need to try it with a continuous variable for independent
+    # Overall Data on No mentorship or couch 
+    # Train Test Split Method
+    # plt.scatter(df.T0157, df.NEW_STATUS, marker='+', color='red')
 
+    # Setting Up the Training Data
+    X_train, X_test, y_train, y_test = train_test_split(df[['T0157']],df.NEW_STATUS, test_size=0.1)
 
+    model = LogisticRegression()
+    model.fit(X_train , y_train)
+
+    # Predicting Data
+    prediction = model.predict(X_test) # Predicting the model 
+    rank = model.score(X_test,y_test) # Shows the accuracy of the model 
+    probability = model.predict_proba(X_test) # Probability of individuals in the model Left Side 0 (Not Leave) | Right Side 1  (Leave) = Which you read as a percentage
+    print(rank) # Value of 1.0 should be perfect. Currently it is 0.5691
+    print(probability)
+    sns.regplot(x='T0157', y='NEW_STATUS', data=df, logistic=True)
+    plt.title("Logistic Regression (Sigma Loc Function S -Curve) Leaver Vs. No mentorship ")
+    plt.show(block=False)
+    plt.savefig('profiling/no_mentorship_logi_graph.png')
+    plt.pause(2)
+    plt.close()
+
+def logiGraph2(): # Contiuous Variable 
+
+    # Graph Variable
+    plt.scatter(df.TOTEXPER_x, df.NEW_STATUS, marker='+', color='red')
+
+    # Setting Up the Training Data
+    X_train, X_test, y_train, y_test = train_test_split(df[['TOTEXPER_x']],df.NEW_STATUS, test_size=0.1)
+
+    model = LogisticRegression()
+    model.fit(X_train , y_train)
+
+    # Predicting Data
+    prediction = model.predict(X_test) # Predicting the model 
+    rank = model.score(X_test,y_test) # Shows the accuracy of the model 
+    probability = model.predict_proba(X_test) # Probability of individuals in the model Left Side 0 (Not Leave) | Right Side 1  (Leave) = Which you read as a percentage
+    print(rank) # Value of 1.0 should be perfect. Currently it is 0.5691
+    # print(probability)
+    sns.regplot(x='TOTEXPER_x', y='NEW_STATUS', data=df, logistic=True)
+    plt.title("Logistic Regression (Sigma Loc Function S -Curve) Leaver Vs. Experiance")
+    plt.show(block=False)
+    plt.savefig('profiling/total_experiance_logi_graph.png')
+    plt.pause(2)
+    plt.close()
 
 
 
@@ -164,4 +210,6 @@ def regressMulti7():
 # regressMulti4()
 # regressMulti5()
 # regressMulti6()
-regressMulti7()
+# regressMulti7()
+logiGraph()
+logiGraph2()

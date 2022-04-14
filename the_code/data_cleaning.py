@@ -58,10 +58,11 @@ df['T0174'] = df['T0174'].replace([1,2], [0,1]) # Have not participated in any p
 
 
 
- 
+asd = df['TOTEXPER_x'].describe()
+print(asd)
 
 df = df[['NEW_STATUS', 'F0119', 'T0186', 'S1628', 'AGE_T_x', 'S0287', 'T0178',  'T0080', 'EARNALL', 'T0356',
-'T0329', 'T0330', 'T0332', 'T0333', 'T0336', 'T0155','T0157', 'T0182', 'T0184', 'T0159', 'T0165', 'T0174']]
+'T0329', 'T0330', 'T0332', 'T0333', 'T0336', 'T0155','T0157', 'T0182', 'T0184', 'T0159', 'T0165', 'T0174', 'TOTEXPER_x']]
 # Not in index  'TOTEXPER', 'NEWTCH', 
 
 df2 = df[(df['T0356']==1)] # Male
@@ -77,8 +78,11 @@ def dataClean():
 
 def correlationMatrix():
     cor = df.corr()
+    cor.to_csv('source/matrix/overall_correlation_matrix.csv')
     cor2 = df2.corr().drop(columns=['T0356']).drop('T0356')
+    cor2.to_csv('source/matrix/male_correlation_matrix.csv')
     cor3 = df3.corr().drop(columns=['T0356']).drop('T0356')
+    cor3.to_csv('source/matrix/female_correlation_matrix.csv')
     print('\n\n')
     print('Correlation Matrix of overall data')
     print(cor)
@@ -121,6 +125,6 @@ def profiler():
     profile = ProfileReport(df, title='Graphing Targeted Variables', minimal=True)
     profile.to_file('profiling/project-profiling.html')
 
-dataClean()
-correlationMatrix() 
+# dataClean()
+# correlationMatrix() 
 # profiler()
