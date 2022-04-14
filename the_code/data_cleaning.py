@@ -125,6 +125,6 @@ def profiler():
     profile = ProfileReport(df, title='Graphing Targeted Variables', minimal=True)
     profile.to_file('profiling/project-profiling.html')
 
-# dataClean()
-# correlationMatrix() 
+dataClean()
+correlationMatrix() 
 # profiler()
