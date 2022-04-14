@@ -123,33 +123,33 @@ def regressMulti6():
 
 
 def regressMulti7():
-    model = smf.logit('NEW_STATUS ~ C(F0119) + C(T0186) + C(S1628) + C(AGE_T_x) + C(S0287) + C(T0178) + C(T0080) + C(EARNALL) + C(T0329) + C(T0330) + C(T0332) + C(T0333) +C(T0336) +C(T0336) +C(T0155) +C(T0157) +C(T0182) +C(T0184) +C(T0159) +C(T0165) +C(T0174)', data = df).fit()
+    model = smf.logit('NEW_STATUS ~ C(F0119) + C(T0186) + C(S1628) + C(AGE_T_x) + C(S0287) + C(T0178) + C(T0080) + C(EARNALL) + C(T0329) + C(T0330) + C(T0332) + C(T0333) +C(T0336) +C(T0336) +C(T0155) +C(T0157) +C(T0182) +C(T0184) +C(T0159) +C(T0165) +C(T0174) + TOTEXPER_x', data = df).fit()
     print(model.summary(yname="Status Leaver",
     xname=['Intercept', 'Not Pleased Prof Dev (Overall)', 'No salary increase becasue of prof dev (Overall)', 'No Free Training Avaliable (Overall)',
     'Younger than 40 (Overall)', '20 percent or more free lunch (Overall)','Not useful prof dev (Overall)', 'No Masters Degree (Overall)',
     'Teachers that make less than 39,999k (Overall)', 'Student Alcohol Abuse Problem', 'Student Drug Abuse Problem', 'Disrespect Towards Teachers', 'Problem with dropouts',
-    'Problem With Poverty', 'No Mentorship or Couching', 'No Prof Dev Workshops', 'No Tuition reimbersement', 'No reimbersement daily expenses',
-    'No Prof Dev Main Assign', 'No Prof Dev Methods', 'No Prof Dev Student Discipline'], 
+    'Problem With Poverty', 'No Mentorship or Coaching', 'No Prof Dev Workshops', 'No Tuition reimbersement', 'No reimbersement daily expenses',
+    'No Prof Dev Main Assign', 'No Prof Dev Methods', 'No Prof Dev Student Discipline', 'Total Years of Experiance'], 
     title=' Multiple Linear Regression on F0119, T0186, S1628, AGE_T_x, S0287, T0178 (Overall)'))
     print()
 
-    model = smf.logit('NEW_STATUS ~ C(F0119) + C(T0186) + C(S1628) + C(AGE_T_x) + C(S0287) + C(T0178) + C(T0080) + C(EARNALL) + C(T0329) + C(T0330) + C(T0332) + C(T0333) +C(T0336) +C(T0336) +C(T0155) +C(T0157) +C(T0182) +C(T0184) +C(T0159) +C(T0165) +C(T0174)', data = df1).fit()
+    model = smf.logit('NEW_STATUS ~ C(F0119) + C(T0186) + C(S1628) + C(AGE_T_x) + C(S0287) + C(T0178) + C(T0080) + C(EARNALL) + C(T0329) + C(T0330) + C(T0332) + C(T0333) +C(T0336) +C(T0336) +C(T0155) +C(T0157) +C(T0182) +C(T0184) +C(T0159) +C(T0165) +C(T0174) + TOTEXPER_x', data = df1).fit()
     print(model.summary(yname="Status Leaver",
     xname=['Intercept', 'Not Pleased Prof Dev (Male)', 'No salary increase becasue of prof dev (Male)', 'No Free Training Avaliable (Male)',
     'Younger than 40 (Male)', '20 percent or more free lunch (Male)','Not useful prof dev (Female)', 'No Masters Degree (Male)',
     'Teachers that make less than 39,999k (Male)', 'Student Alcohol Abuse Problem', 'Student Drug Abuse Problem', 'Disrespect Towards Teachers', 'Problem with dropouts',
-    'Problem With Poverty', 'No Mentorship or Couching', 'No Prof Dev Workshops', 'No Tuition reimbersement', 'No reimbersement daily expenses',
-    'No Prof Dev Main Assign', 'No Prof Dev Methods', 'No Prof Dev Student Discipline'], 
+    'Problem With Poverty', 'No Mentorship or Coaching', 'No Prof Dev Workshops', 'No Tuition reimbersement', 'No reimbersement daily expenses',
+    'No Prof Dev Main Assign', 'No Prof Dev Methods', 'No Prof Dev Student Discipline', 'Total Years of Experiance'], 
     title=' Multiple Linear Regression on F0119, T0186, S1628, AGE_T_x, S0287, T0178 (Male)'))
     print()
 
-    model = smf.logit('NEW_STATUS ~ C(F0119) + C(T0186) + C(S1628) + C(AGE_T_x) + C(S0287) + C(T0178) + C(T0080) + C(EARNALL) + C(T0329) + C(T0330) + C(T0332) + C(T0333) +C(T0336) +C(T0336) +C(T0155) +C(T0157) +C(T0182) +C(T0184) +C(T0159) +C(T0165) +C(T0174)', data = df2).fit()
+    model = smf.logit('NEW_STATUS ~ C(F0119) + C(T0186) + C(S1628) + C(AGE_T_x) + C(S0287) + C(T0178) + C(T0080) + C(EARNALL) + C(T0329) + C(T0330) + C(T0332) + C(T0333) +C(T0336) +C(T0336) +C(T0155) +C(T0157) +C(T0182) +C(T0184) +C(T0159) +C(T0165) +C(T0174) + TOTEXPER_x', data = df2).fit()
     print(model.summary(yname="Status Leaver",
     xname=['Intercept', 'Not Pleased Prof Dev (Female)', 'No salary increase becasue of prof dev (Female)', 'No Free Training Avaliable (Female)',
     'Younger than 40 (Female)', '20 percent or more free lunch (Female)','Not useful prof dev (Female)', 'No Masters Degree (Female)',
     'Teachers that make less than 39,999k (Female)','Student Alcohol Abuse Problem', 'Student Drug Abuse Problem', 'Disrespect Towards Teachers', 'Problem with dropouts',
-    'Problem With Poverty', 'No Mentorship or Couching', 'No Prof Dev Workshops', 'No Tuition reimbersement', 'No reimbersement daily expenses',
-    'No Prof Dev Main Assign', 'No Prof Dev Methods', 'No Prof Dev Student Discipline'], 
+    'Problem With Poverty', 'No Mentorship or Coaching', 'No Prof Dev Workshops', 'No Tuition reimbersement', 'No reimbersement daily expenses',
+    'No Prof Dev Main Assign', 'No Prof Dev Methods', 'No Prof Dev Student Discipline', 'Total Years of Experiance'], 
     title=' Multiple Linear Regression on F0119, T0186, S1628, AGE_T_x, S0287, T0178 (Female)'))
     print()
 
@@ -172,6 +172,8 @@ def logiGraph(): # Need to try it with a continuous variable for independent
     print(rank) # Value of 1.0 should be perfect. Currently it is 0.5691
     sns.regplot(x='T0157', y='NEW_STATUS', data=df, logistic=True)
     plt.title("Logistic Regression (Logit Function Sigmoid -Curve) Leaver Vs. No mentorship ")
+    plt.ylabel('Teacher Left')
+    plt.xlabel('No Mentorship or Coaching')
     plt.show(block=False)
     plt.savefig('profiling/no_mentorship_logi_graph.png')
     plt.pause(2)
@@ -196,6 +198,8 @@ def logiGraph2(): # Contiuous Variable
     # print(probability)
     sns.regplot(x='TOTEXPER_x', y='NEW_STATUS', data=df, logistic=True)
     plt.title("Logistic Regression (Logit Function Sigmoid -Curve) Leaver Vs. Experiance")
+    plt.ylabel('Teacher Left')
+    plt.xlabel('Total Years of Experiance')
     plt.show(block=False)
     plt.savefig('profiling/total_experiance_logi_graph.png')
     plt.pause(2)
@@ -209,6 +213,6 @@ def logiGraph2(): # Contiuous Variable
 # regressMulti4()
 # regressMulti5()
 # regressMulti6()
-# regressMulti7()
+regressMulti7()
 logiGraph()
 logiGraph2()
