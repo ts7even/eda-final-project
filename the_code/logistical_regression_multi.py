@@ -170,7 +170,6 @@ def logiGraph(): # Need to try it with a continuous variable for independent
     rank = model.score(X_test,y_test) # Shows the accuracy of the model 
     probability = model.predict_proba(X_test) # Probability of individuals in the model Left Side 0 (Not Leave) | Right Side 1  (Leave) = Which you read as a percentage
     print(rank) # Value of 1.0 should be perfect. Currently it is 0.5691
-    print(probability)
     sns.regplot(x='T0157', y='NEW_STATUS', data=df, logistic=True)
     plt.title("Logistic Regression (Sigma Loc Function S -Curve) Leaver Vs. No mentorship ")
     plt.show(block=False)
