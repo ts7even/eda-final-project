@@ -68,7 +68,7 @@ Make sure you git pull before you start coding on other devives.
 
 ## Git Merge Merge Branches into master branch. Git rebase rewinds the latest merge
 * git master (go into the master branch)
-* git merge --squash feature (summarize all commits into one commit as latest commit into master branch)
+* git merge --squash feature or git merge (branch Name) (summarize all commits into one commit as latest commit into master branch)
 * git commit -m "Branch merged into Master"
 * git push 
 
