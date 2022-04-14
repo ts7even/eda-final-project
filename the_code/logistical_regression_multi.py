@@ -171,7 +171,7 @@ def logiGraph(): # Need to try it with a continuous variable for independent
     probability = model.predict_proba(X_test) # Probability of individuals in the model Left Side 0 (Not Leave) | Right Side 1  (Leave) = Which you read as a percentage
     print(rank) # Value of 1.0 should be perfect. Currently it is 0.5691
     sns.regplot(x='T0157', y='NEW_STATUS', data=df, logistic=True)
-    plt.title("Logistic Regression (Sigma Loc Function S -Curve) Leaver Vs. No mentorship ")
+    plt.title("Logistic Regression (Logit Function Sigmoid -Curve) Leaver Vs. No mentorship ")
     plt.show(block=False)
     plt.savefig('profiling/no_mentorship_logi_graph.png')
     plt.pause(2)
@@ -195,7 +195,7 @@ def logiGraph2(): # Contiuous Variable
     print(rank) # Value of 1.0 should be perfect. Currently it is 0.5691
     # print(probability)
     sns.regplot(x='TOTEXPER_x', y='NEW_STATUS', data=df, logistic=True)
-    plt.title("Logistic Regression (Sigma Loc Function S -Curve) Leaver Vs. Experiance")
+    plt.title("Logistic Regression (Logit Function Sigmoid -Curve) Leaver Vs. Experiance")
     plt.show(block=False)
     plt.savefig('profiling/total_experiance_logi_graph.png')
     plt.pause(2)
