@@ -23,36 +23,31 @@ df['NEW_STATUS'] = df.STATUS.map({'L':1, 'M':0, 'S':0}) #Coded for Leaver and mo
 
 
 
+
+df['S0287'] = df['S0287'].replace([1,2,3,4, -8, -9], [1, 1, 0, 0, np.nan, np.nan]) 
+df['AGE_T_x'] = df['AGE_T_x'].replace([1,2,3,4], [1,1,0,0]) # Weighing teachers that are 39 years and younger since the need prof dev the most. And 40 and older are more likley at the end of their carrers. 
+df['T0080'] = df['T0080'].replace([1,2,-8], [1,0,np.nan]) 
+df['EARNALL'] = df['EARNALL'].replace([1,2,3,4], [1,1,0,0]) 
+df['T0329'] = df['T0329'].replace([1,2,3,4], [1,1,0,0]) #Does have studeent use of aclcohol problem
+df['T0333'] = df['T0333'].replace([1,2,3,4], [1,1,0,0]) # Problem with dropouts
+df['T0336'] = df['T0336'].replace([1,2,3,4], [1,1,0,0]) # Problem with poverty
+df['T0155'] = df['T0155'].replace([1,2], [1,0]) # Mentoring and/or peer observation and coaching, as part of a formal arrangement that is recognized or supported by the school or district
+df['T0159'] = df['T0159'].replace([1,2], [1,0]) # participated in any professional development activities that focused on in-depth study of the content in your MAIN teaching assignment field?
+df['T0165'] = df['T0165'].replace([1,2], [1,0])
+# Testing varaibles that might have a correlation
+# participated in any professional development activities that focused on methods of teaching?
+# df['T0330'] = df['T0330'].replace([1,2,3,4], [1,1,0,0]) # does have a dug abouse problem at the school
+# df['T0332'] = df['T0332'].replace([1,2,3,4], [1,1,0,0]) # Problem disrepect towards teachers
+# df['T0157'] = df['T0157'].replace([1,2], [1,0]) # attending workshops, conferences or training
+# df['T0182'] = df['T0182'].replace([1,2], [1,0]) # full or partial reimbursement of college tuition - which is type of support
+# df['T0184'] = df['T0184'].replace([1,2], [1,0]) # Reimbersement for travel and or daily expenses
+# df['T0174'] = df['T0174'].replace([1,2], [1,0]) # participated in any professional development activities that focused on student discipline and management in the classroom?
+# df['NEWTCH'] = df['NEWTEACH'].replace([1,2], [1,0]) # Weighted for teachers has taught 3 years or less
 # Ones we are targeting
 # df['F0119'] = df['F0119'].replace([1,2,3,4,5,-8], [0,0,np.nan,1,1,np.nan])  
 # df['T0178'] = df['T0178'].replace([1,2,3,4,5], [0,0,np.nan,1, 1]) 
 # df['T0186'] = df['T0186'].replace([1,2], [1,0])  
-df['S0287'] = df['S0287'].replace([1,2,3,4, -8, -9], [1, 1, 0, 0, np.nan, np.nan])  
-# df['S1628'] = df['S1628'].replace([1,2,-9], [0,1,np.nan]) 
-
-# Hard Recode for Younger Teachers 
-df['AGE_T_x'] = df['AGE_T_x'].replace([1,2,3,4], [1,1,0,0]) # Weighing teachers that are 39 years and younger since the need prof dev the most. And 40 and older are more likley at the end of their carrers. 
-
-# Professor wanted us to add more variables; These are our wild cards
-# df['NEWTCH'] = df['NEWTEACH'].replace([1,2], [1,0]) # Weighted for teachers has taught 3 years or less
-df['T0080'] = df['T0080'].replace([1,2,-8], [1,0,np.nan]) 
-df['EARNALL'] = df['EARNALL'].replace([1,2,3,4], [1,1,0,0]) 
-
-# Testing varaibles that might have a correlation
-df['T0329'] = df['T0329'].replace([1,2,3,4], [1,1,0,0]) #Does have studeent use of aclcohol problem
-# df['T0330'] = df['T0330'].replace([1,2,3,4], [1,1,0,0]) # does have a dug abouse problem at the school
-# df['T0332'] = df['T0332'].replace([1,2,3,4], [1,1,0,0]) # Problem disrepect towards teachers
-df['T0333'] = df['T0333'].replace([1,2,3,4], [1,1,0,0]) # Problem with dropouts
-df['T0336'] = df['T0336'].replace([1,2,3,4], [1,1,0,0]) # Problem with poverty
-df['T0155'] = df['T0155'].replace([1,2], [1,0]) # Mentoring and/or peer observation and coaching, as part of a formal arrangement that is recognized or supported by the school or district
-# df['T0157'] = df['T0157'].replace([1,2], [1,0]) # attending workshops, conferences or training
-# df['T0182'] = df['T0182'].replace([1,2], [1,0]) # full or partial reimbursement of college tuition - which is type of support
-# df['T0184'] = df['T0184'].replace([1,2], [1,0]) # Reimbersement for travel and or daily expenses
-df['T0159'] = df['T0159'].replace([1,2], [1,0]) # participated in any professional development activities that focused on in-depth study of the content in your MAIN teaching assignment field?
-df['T0165'] = df['T0165'].replace([1,2], [1,0]) # participated in any professional development activities that focused on methods of teaching?
-# df['T0174'] = df['T0174'].replace([1,2], [1,0]) # participated in any professional development activities that focused on student discipline and management in the classroom?
-
-
+# df['S1628'] = df['S1628'].replace([1,2,-9], [0,1,np.nan])  
 
 
 
@@ -72,9 +67,13 @@ def dataClean():
     df2.to_csv('source/data_cleaning/cleaned_data_male.csv')
     df3.to_csv('source/data_cleaning/cleaned_data_female.csv')
 
-
+df = df.rename(columns={'NEW_STATUS': 'LEAVER','AGE_T_x': 'AGE','TOTEXPER_x': 'EXPER', 'EARNALL': 'SALARY'})
+df2 = df.rename(columns={'NEW_STATUS': 'LEAVER','AGE_T_x': 'AGE','TOTEXPER_x': 'EXPER', 'EARNALL': 'SALARY'})
+df3 = df.rename(columns={'NEW_STATUS': 'LEAVER','AGE_T_x': 'AGE','TOTEXPER_x': 'EXPER', 'EARNALL': 'SALARY'})
+sns.set(rc={"figure.figsize":(10, 8)}) #width=3, #height=4
 
 def correlationMatrix():
+    
     cor = df.corr().drop(columns=['T0356']).drop('T0356')
     cor.to_csv('source/matrix/overall_correlation_matrix.csv')
     cor2 = df2.corr().drop(columns=['T0356']).drop('T0356')
@@ -92,22 +91,25 @@ def correlationMatrix():
     print(cor3)
     print()
 
-    sns.heatmap(cor)
+    sns.heatmap(cor, annot=True, annot_kws={"size":10})
     plt.title("Heatmap of Correlation of Leaver (Overall)")
+    plt.yticks(rotation=0)
     plt.show(block=False)
     plt.savefig('profiling/heatmap_correlation_overall_regular.png')
     plt.pause(2)
     plt.close()
    
-    sns.heatmap(cor2)
+    sns.heatmap(cor2, annot=True, annot_kws={"size":10})
     plt.title("Heatmap of Correlation of Leaver (Male)")
+    plt.yticks(rotation=0)
     plt.show(block=False)
     plt.savefig('profiling/heatmap_correlation_male_regular.png')
     plt.pause(2)
     plt.close()
     
-    sns.heatmap(cor3)
+    sns.heatmap(cor3, annot=True, annot_kws={"size":10})
     plt.title("Heatmap of Correlation of Leaver (Female)")
+    plt.yticks(rotation=0)
     plt.show(block=False)
     plt.savefig('profiling/heatmap_correlation_female_regular.png')
     plt.pause(2)
@@ -125,4 +127,4 @@ def profiler():
 
 dataClean()
 correlationMatrix() 
-# profiler()
+profiler()

@@ -158,7 +158,7 @@ def logiGraph(): # Need to try it with a continuous variable for independent
     # plt.scatter(df.T0157, df.NEW_STATUS, marker='+', color='red')
 
     # Setting Up the Training Data
-    X_train, X_test, y_train, y_test = train_test_split(df[['T0157']],df.NEW_STATUS, test_size=0.1)
+    X_train, X_test, y_train, y_test = train_test_split(df[['T0159']],df.NEW_STATUS, test_size=0.1)
 
     model = LogisticRegression()
     model.fit(X_train , y_train)
@@ -168,8 +168,8 @@ def logiGraph(): # Need to try it with a continuous variable for independent
     rank = model.score(X_test,y_test) # Shows the accuracy of the model 
     probability = model.predict_proba(X_test) # Probability of individuals in the model Left Side 0 (Not Leave) | Right Side 1  (Leave) = Which you read as a percentage
     print(f'Score of No Mentorship: {rank}') # Value of 1.0 should be perfect. Currently it is 0.5691
-    sns.regplot(x='T0157', y='NEW_STATUS', data=df, logistic=True)
-    plt.title("Logistic Regression (Logit Function Sigmoid -Curve) Leaver Vs. No mentorship ")
+    sns.regplot(x='T0159', y='NEW_STATUS', data=df, logistic=True)
+    plt.title("Logistic Regression (Logit Function Sigmoid -Curve) Leaver Vs. Prof Dev Main Assign ")
     plt.ylabel('Teacher Left')
     plt.xlabel('No Mentorship or Coaching')
     plt.show(block=False)
@@ -212,5 +212,5 @@ def logiGraph2(): # Contiuous Variable
 # regressMulti5()
 # regressMulti6()
 regressMulti7()
-# logiGraph()
-# logiGraph2()
+logiGraph()
+logiGraph2()
