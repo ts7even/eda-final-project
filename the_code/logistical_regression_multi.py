@@ -18,6 +18,10 @@ df1 = pd.read_csv('source/data_cleaning/cleaned_data_male.csv')
 df2 = pd.read_csv('source/data_cleaning/cleaned_data_female.csv')
 
 
+# To See if Data Carried over and observations are the same.
+asd = df['AGE_T_x'].describe()
+print(asd)
+
 
 def regressMulti2():
     model = smf.logit('NEW_STATUS ~ C(F0119) + C(T0186)', data = df).fit()
@@ -213,6 +217,6 @@ def logiGraph2(): # Contiuous Variable
 # regressMulti4()
 # regressMulti5()
 # regressMulti6()
-regressMulti7()
-logiGraph()
-logiGraph2()
+# regressMulti7()
+# logiGraph()
+# logiGraph2()
