@@ -18,10 +18,6 @@ df1 = pd.read_csv('source/data_cleaning/cleaned_data_male.csv')
 df2 = pd.read_csv('source/data_cleaning/cleaned_data_female.csv')
 
 
-# To See if Data Carried over and observations are the same.
-asd = df['AGE_T_x'].describe()
-print(asd)
-
 
 def regressMulti2():
     model = smf.logit('NEW_STATUS ~ C(F0119) + C(T0186)', data = df).fit()
@@ -126,35 +122,33 @@ def regressMulti6():
     print()
 
 
+# This one is good to go. 
 def regressMulti7():
-    model = smf.logit('NEW_STATUS ~ C(F0119) + C(T0186) + C(S1628) + C(AGE_T_x) + C(S0287) + C(T0178) + C(T0080) + C(EARNALL) + C(T0329) + C(T0330) + C(T0332) + C(T0333) +C(T0336) +C(T0336) +C(T0155) +C(T0157) +C(T0182) +C(T0184) +C(T0159) +C(T0165) +C(T0174) + TOTEXPER_x', data = df).fit()
+    model = smf.logit('NEW_STATUS ~ AGE_T_x + S0287 + T0080 + EARNALL + T0329 + T0333 + T0159 + T0165 + TOTEXPER_x ', data = df).fit()
     print(model.summary(yname="Status Leaver",
-    xname=['Intercept', 'Not Pleased Prof Dev (Overall)', 'No salary increase becasue of prof dev (Overall)', 'No Free Training Avaliable (Overall)',
-    'Younger than 40 (Overall)', '20 percent or more free lunch (Overall)','Not useful prof dev (Overall)', 'No Masters Degree (Overall)',
-    'Teachers that make less than 39,999k (Overall)', 'Student Alcohol Abuse Problem', 'Student Drug Abuse Problem', 'Disrespect Towards Teachers', 'Problem with dropouts',
-    'Problem With Poverty', 'No Mentorship or Coaching', 'No Prof Dev Workshops', 'No Tuition reimbersement', 'No reimbersement daily expenses',
-    'No Prof Dev Main Assign', 'No Prof Dev Methods', 'No Prof Dev Student Discipline', 'Total Years of Experiance'], 
-    title=' Multiple Linear Regression on F0119, T0186, S1628, AGE_T_x, S0287, T0178 (Overall)'))
+    xname=['Intercept',
+    'Younger than 40 (AGE_T_x)', '4 percent or less free lunch (S0287)','Masters Degree (T0080)',
+    'Teachers that make less than 39,999k (EARNALL)', 'Student Alcohol Abuse Problem (T0329)', 'Problem with dropouts (T0333)',
+    'Prof Dev Main Assign (T0159)', 'Prof Dev Methods of Teaching (T0165)', 'Total Years of Experiance (TOTEXPER_x)'], 
+    title=' Multiple Logistic Regression (Overall)'))
     print()
 
-    model = smf.logit('NEW_STATUS ~ C(F0119) + C(T0186) + C(S1628) + C(AGE_T_x) + C(S0287) + C(T0178) + C(T0080) + C(EARNALL) + C(T0329) + C(T0330) + C(T0332) + C(T0333) +C(T0336) +C(T0336) +C(T0155) +C(T0157) +C(T0182) +C(T0184) +C(T0159) +C(T0165) +C(T0174) + TOTEXPER_x', data = df1).fit()
+    model = smf.logit('NEW_STATUS ~ AGE_T_x + S0287 + T0080 + EARNALL + T0329 + T0333 + T0159 + T0165 + TOTEXPER_x ', data = df1).fit()
     print(model.summary(yname="Status Leaver",
-    xname=['Intercept', 'Not Pleased Prof Dev (Male)', 'No salary increase becasue of prof dev (Male)', 'No Free Training Avaliable (Male)',
-    'Younger than 40 (Male)', '20 percent or more free lunch (Male)','Not useful prof dev (Female)', 'No Masters Degree (Male)',
-    'Teachers that make less than 39,999k (Male)', 'Student Alcohol Abuse Problem', 'Student Drug Abuse Problem', 'Disrespect Towards Teachers', 'Problem with dropouts',
-    'Problem With Poverty', 'No Mentorship or Coaching', 'No Prof Dev Workshops', 'No Tuition reimbersement', 'No reimbersement daily expenses',
-    'No Prof Dev Main Assign', 'No Prof Dev Methods', 'No Prof Dev Student Discipline', 'Total Years of Experiance'], 
-    title=' Multiple Logistic Regression on F0119, T0186, S1628, AGE_T_x, S0287, T0178 (Male)'))
+    xname=['Intercept',
+    'Younger than 40 (AGE_T_x)', '4 percent or less free lunch (S0287)','Masters Degree (T0080)',
+    'Teachers that make less than 39,999k (EARNALL)', 'Student Alcohol Abuse Problem (T0329)', 'Problem with dropouts (T0333)',
+    'Prof Dev Main Assign (T0159)', 'Prof Dev Methods of Teaching (T0165)', 'Total Years of Experiance (TOTEXPER_x)'], 
+    title=' Multiple Logistic Regression (Male)'))
     print()
 
-    model = smf.logit('NEW_STATUS ~ C(F0119) + C(T0186) + C(S1628) + C(AGE_T_x) + C(S0287) + C(T0178) + C(T0080) + C(EARNALL) + C(T0329) + C(T0330) + C(T0332) + C(T0333) +C(T0336) +C(T0336) +C(T0155) +C(T0157) +C(T0182) +C(T0184) +C(T0159) +C(T0165) +C(T0174) + TOTEXPER_x', data = df2).fit()
+    model = smf.logit('NEW_STATUS ~ AGE_T_x + S0287 + T0080 + EARNALL + T0329 + T0333 + T0159 + T0165 + TOTEXPER_x ', data = df2).fit()
     print(model.summary(yname="Status Leaver",
-    xname=['Intercept', 'Not Pleased Prof Dev (Female)', 'No salary increase becasue of prof dev (Female)', 'No Free Training Avaliable (Female)',
-    'Younger than 40 (Female)', '20 percent or more free lunch (Female)','Not useful prof dev (Female)', 'No Masters Degree (Female)',
-    'Teachers that make less than 39,999k (Female)','Student Alcohol Abuse Problem', 'Student Drug Abuse Problem', 'Disrespect Towards Teachers', 'Problem with dropouts',
-    'Problem With Poverty', 'No Mentorship or Coaching', 'No Prof Dev Workshops', 'No Tuition reimbersement', 'No reimbersement daily expenses',
-    'No Prof Dev Main Assign', 'No Prof Dev Methods', 'No Prof Dev Student Discipline', 'Total Years of Experiance'], 
-    title=' Multiple Logistic Regression on F0119, T0186, S1628, AGE_T_x, S0287, T0178 (Female)'))
+    xname=['Intercept',
+    'Younger than 40 (AGE_T_x)', '4 percent or less free lunch (S0287)','Masters Degree (T0080)',
+    'Teachers that make less than 39,999k (EARNALL)', 'Student Alcohol Abuse Problem (T0329)', 'Problem with dropouts (T0333)',
+    'Prof Dev Main Assign (T0159)', 'Prof Dev Methods of Teaching (T0165)', 'Total Years of Experiance (TOTEXPER_x)'], 
+    title=' Multiple Logistic Regression (Female)'))
     print()
 
 
@@ -217,6 +211,6 @@ def logiGraph2(): # Contiuous Variable
 # regressMulti4()
 # regressMulti5()
 # regressMulti6()
-# regressMulti7()
+regressMulti7()
 # logiGraph()
 # logiGraph2()

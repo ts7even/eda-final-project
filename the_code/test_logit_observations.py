@@ -19,13 +19,50 @@ df2 = pd.read_csv('source/data_cleaning/cleaned_data_female.csv')
 
 
 # To See if Data Carried over and observations are the same.
-test_observation1 = df['AGE_T_x'].describe()
-test_observation2 = df['F0119'].describe()
-test_observation3 = df['T0330'].count()
-
-print(test_observation1)
-print(test_observation2)
-print(test_observation3)
+test_observation1 = df['NEW_STATUS'].count()
+test_observation2 = df['F0119'].count()
+test_observation3 = df['T0186'].count()
+test_observation4 = df['S1628'].count()
+test_observation5 = df['AGE_T_x'].count()
+test_observation6 = df['S0287'].count()
+test_observation7 = df['T0178'].count()
+test_observation8 = df['T0080'].count()
+test_observation9 = df['EARNALL'].count()
+test_observation10 = df['T0329'].count()
+test_observation11 = df['T0330'].count()
+test_observation12= df['T0332'].count()
+test_observation13 = df['T0333'].count()
+test_observation14 = df['T0336'].count()
+test_observation15 = df['T0155'].count()
+test_observation16 = df['T0157'].count()
+test_observation17 = df['T0182'].count()
+test_observation18 = df['T0184'].count()
+test_observation19 = df['T0159'].count()
+test_observation20 = df['T0165'].count()
+test_observation21 = df['T0174'].count()
+test_observation22 = df['TOTEXPER_x'].count()
+print(f'Observations for NEW_STATUS:  {test_observation1}')
+print(f'Observations for F0119: {test_observation2}')
+print(f'Observations for T0186: {test_observation3}')
+print(f'Observations for S1628: {test_observation4}')
+print(f'Observations for AGE_T_x: {test_observation5}')
+print(f'Observations for S0287: {test_observation6}')
+print(f'Observations for T0178: {test_observation7}')
+print(f'Observations for T0080: {test_observation8}')
+print(f'Observations for EARNALL: {test_observation9}')
+print(f'Observations for T0329: {test_observation10}')
+print(f'Observations for T0330: {test_observation11}')
+print(f'Observations for T0332: {test_observation12}')
+print(f'Observations for T0333: {test_observation13}')
+print(f'Observations for T0336: {test_observation14}')
+print(f'Observations for T0155: {test_observation15}')
+print(f'Observations for T0157: {test_observation16}')
+print(f'Observations for T0182: {test_observation17}')
+print(f'Observations for T0184: {test_observation18}')
+print(f'Observations for T0159: {test_observation19}')
+print(f'Observations for T0165: {test_observation20}')
+print(f'Observations for T0174: {test_observation21}')
+print(f'Observations for TOTEXPER_x: {test_observation22}')
 
 
 
@@ -54,6 +91,17 @@ def regressMulti8():
     title=' Multiple Logistic Regression (Test to see observations)'))
     print()
 
+def regressMulti9():
+    model = smf.logit('NEW_STATUS ~ AGE_T_x + S0287 + T0080 + EARNALL + T0329 + T0333 + T0159 + T0165 + TOTEXPER_x ', data = df).fit()
+    print(model.summary(yname="Status Leaver",
+    xname=['Intercept',
+    'Younger than 40 (AGE_T_x)', '4 percent or less free lunch (S0287)','Masters Degree (T0080)',
+    'Teachers that make less than 39,999k (EARNALL)', 'Student Alcohol Abuse Problem (T0329)', 'Problem with dropouts (T0333)',
+    'Prof Dev Main Assign (T0159)', 'Prof Dev Methods of Teaching (T0165)', 'Total Years of Experiance (TOTEXPER_x)'], 
+    title=' Multiple Logistic Regression (Test to see observations)'))
+    print()
 
-regressMulti7()
-regressMulti8()
+
+# regressMulti7()
+# regressMulti8()
+regressMulti9()
