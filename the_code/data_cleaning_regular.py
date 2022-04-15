@@ -24,11 +24,11 @@ df['NEW_STATUS'] = df.STATUS.map({'L':1, 'M':0, 'S':0}) #Coded for Leaver and mo
 
 
 # Ones we are targeting
-df['F0119'] = df['F0119'].replace([1,2,3,4,5,-8], [0,0,np.nan,1,1,np.nan])  
-df['T0178'] = df['T0178'].replace([1,2,3,4,5], [0,0,np.nan,1, 1]) 
-df['T0186'] = df['T0186'].replace([1,2], [1,0])  
+# df['F0119'] = df['F0119'].replace([1,2,3,4,5,-8], [0,0,np.nan,1,1,np.nan])  
+# df['T0178'] = df['T0178'].replace([1,2,3,4,5], [0,0,np.nan,1, 1]) 
+# df['T0186'] = df['T0186'].replace([1,2], [1,0])  
 df['S0287'] = df['S0287'].replace([1,2,3,4, -8, -9], [1, 1, 0, 0, np.nan, np.nan])  
-df['S1628'] = df['S1628'].replace([1,2,-9], [0,1,np.nan]) 
+# df['S1628'] = df['S1628'].replace([1,2,-9], [0,1,np.nan]) 
 
 # Hard Recode for Younger Teachers 
 df['AGE_T_x'] = df['AGE_T_x'].replace([1,2,3,4], [1,1,0,0]) # Weighing teachers that are 39 years and younger since the need prof dev the most. And 40 and older are more likley at the end of their carrers. 
@@ -40,18 +40,18 @@ df['EARNALL'] = df['EARNALL'].replace([1,2,3,4], [1,1,0,0])
 
 # Testing varaibles that might have a correlation
 df['T0329'] = df['T0329'].replace([1,2,3,4], [1,1,0,0]) #Does have studeent use of aclcohol problem
-df['T0330'] = df['T0330'].replace([1,2,3,4], [1,1,0,0]) # does have a dug abouse problem at the school
-df['T0332'] = df['T0332'].replace([1,2,3,4], [1,1,0,0]) # Problem disrepect towards teachers
+# df['T0330'] = df['T0330'].replace([1,2,3,4], [1,1,0,0]) # does have a dug abouse problem at the school
+# df['T0332'] = df['T0332'].replace([1,2,3,4], [1,1,0,0]) # Problem disrepect towards teachers
 df['T0333'] = df['T0333'].replace([1,2,3,4], [1,1,0,0]) # Problem with dropouts
 df['T0336'] = df['T0336'].replace([1,2,3,4], [1,1,0,0]) # Problem with poverty
 df['T0155'] = df['T0155'].replace([1,2], [1,0]) # Mentoring and/or peer observation and coaching, as part of a formal arrangement that is recognized or supported by the school or district
-df['T0157'] = df['T0157'].replace([1,2], [1,0]) # attending workshops, conferences or training
-df['T0182'] = df['T0182'].replace([1,2], [1,0]) # full or partial reimbursement of college tuition - which is type of support
-df['T0184'] = df['T0184'].replace([1,2], [1,0]) # Reimbersement for travel and or daily expenses
+# df['T0157'] = df['T0157'].replace([1,2], [1,0]) # attending workshops, conferences or training
+# df['T0182'] = df['T0182'].replace([1,2], [1,0]) # full or partial reimbursement of college tuition - which is type of support
+# df['T0184'] = df['T0184'].replace([1,2], [1,0]) # Reimbersement for travel and or daily expenses
 df['T0159'] = df['T0159'].replace([1,2], [1,0]) # participated in any professional development activities that focused on in-depth study of the content in your MAIN teaching assignment field?
 df['T0165'] = df['T0165'].replace([1,2], [1,0]) # participated in any professional development activities that focused on methods of teaching?
-df['T0174'] = df['T0174'].replace([1,2], [1,0]) # participated in any professional development activities that focused on student discipline and management in the classroom?
-# df[''] = df[''].replace([], [])
+# df['T0174'] = df['T0174'].replace([1,2], [1,0]) # participated in any professional development activities that focused on student discipline and management in the classroom?
+
 
 
 
@@ -60,7 +60,7 @@ df['T0174'] = df['T0174'].replace([1,2], [1,0]) # participated in any profession
 #'T0329', 'T0330', 'T0332', 'T0333', 'T0336', 'T0155','T0157', 'T0182', 'T0184', 'T0159', 'T0165', 'T0174', 'TOTEXPER_x', 
 #'T0277' , 'T0278' ]]
 
-df = df[['AGE_T_x', 'S0287', 'T0080', 'EARNALL', 'T0329', 'T0333', 'T0159', 'T0156', 'TOTEXPER_x', 'T0356']]
+df = df[['NEW_STATUS','AGE_T_x', 'S0287', 'T0080', 'EARNALL', 'T0329', 'T0333', 'T0159', 'T0165', 'TOTEXPER_x', 'T0356']]
  
 
 df2 = df[(df['T0356']==1)] # Male

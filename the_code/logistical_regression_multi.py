@@ -124,7 +124,7 @@ def regressMulti6():
 
 # This one is good to go. 
 def regressMulti7():
-    model = smf.logit('NEW_STATUS ~ AGE_T_x + S0287 + T0080 + EARNALL + T0329 + T0333 + T0159 + T0165 + TOTEXPER_x ', data = df).fit()
+    model = smf.logit('NEW_STATUS ~ AGE_T_x + S0287 + T0080 + EARNALL + T0329 + T0333 + T0159 + T0165 + TOTEXPER_x', data = df).fit()
     print(model.summary(yname="Status Leaver",
     xname=['Intercept',
     'Younger than 40 (AGE_T_x)', '4 percent or less free lunch (S0287)','Masters Degree (T0080)',
@@ -133,7 +133,7 @@ def regressMulti7():
     title=' Multiple Logistic Regression (Overall)'))
     print()
 
-    model = smf.logit('NEW_STATUS ~ AGE_T_x + S0287 + T0080 + EARNALL + T0329 + T0333 + T0159 + T0165 + TOTEXPER_x ', data = df1).fit()
+    model = smf.logit('NEW_STATUS ~ AGE_T_x + S0287 + T0080 + EARNALL + T0329 + T0333 + T0159 + T0165 + TOTEXPER_x  ', data = df1).fit()
     print(model.summary(yname="Status Leaver",
     xname=['Intercept',
     'Younger than 40 (AGE_T_x)', '4 percent or less free lunch (S0287)','Masters Degree (T0080)',
