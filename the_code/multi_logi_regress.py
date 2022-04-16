@@ -11,6 +11,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import confusion_matrix
 matplotlib.use('Qt5Agg')
 
 df = pd.read_csv('source/data_cleaning/cleaned_data.csv')
@@ -19,69 +20,11 @@ df2 = pd.read_csv('source/data_cleaning/cleaned_data_female.csv')
 
 
 def playground():
-    data = ['AGE', 'S0287', 'T0080', 'SALARY', 'T0329', 'T0333', 'T0159', 'T0165', 'EXPER', 'T0356']
+    data = ['AGE', 'S0287', 'T0080', 'SALARY', 'T0329', 'T0333', 'T0159', 'T0165', 'EXPER']
     for d in data:
         sns.countplot(x=d, data=df, palette='Set3', hue='LEAVER')
+        plt.legend(['Stayer','Leaver'])
         plt.show()
-
-def regressMulti2():
-    model = smf.logit('LEAVER ~ C(F0119)', data = df).fit()
-    print(model.summary(yname="Status Leaver",
-    xname=['Intercept', 'AGE Less than 40 (AGE)'], title='Logistic Regression of Leaver and Age'))
-    print()
-    model = smf.logit('LEAVER ~ C(F0119) + C(T0186)', data = df1).fit()
-    print(model.summary(yname="Status Leaver",
-    xname=['Intercept', 'Not Pleased Prof Dev (Male)', 'No salary increase becasue of prof dev (Male)'], 
-    title='Multiple regression of F0119 and T0186 (Male)'))
-    print()
-    model = smf.logit('LEAVER ~ C(F0119) + C(T0186)', data = df2).fit()
-    print(model.summary(yname="Status Leaver",
-    xname=['Intercept', 'Not Pleased Prof Dev (Female)', 'No salary increase becasue of prof dev (Female)'], 
-    title='Multiple regression of F0119 and T0186 (Female)'))
-    print()
-
-  
-
-
-def regressMulti3():
-    model = smf.logit('LEAVER ~ C(F0119) + C(T0186) + C(S1628)', data = df).fit()
-    print(model.summary(yname="Status Leaver",
-    xname=['Intercept', 'Not Pleased Prof Dev (Overall)', 'No salary increase becasue of prof dev (Overall)', 'No Free Training Avaliable (Overall)'], 
-    title=' Multiple Linear Regression on F0119, T0186, and S1628 (Overall)'))
-    print()
-    model = smf.logit('LEAVER ~ C(F0119) + C(T0186) + C(S1628)', data = df1).fit()
-    print(model.summary(yname="Status Leaver",
-    xname=['Intercept', 'Not Pleased Prof Dev (Male)', 'No salary increase becasue of prof dev (Male)', 'No Free Training Avaliable (Male)'], 
-    title=' Multiple Linear Regression on F0119, T0186, and S1628 (Male)'))
-    print()
-    model = smf.logit('LEAVER ~ C(F0119) + C(T0186) + C(S1628)', data = df2).fit()
-    print(model.summary(yname="Status Leaver",
-    xname=['Intercept', 'Not Pleased Prof Dev (Female)', 'No salary increase becasue of prof dev (Female)', 'No Free Training Avaliable (Female)'], 
-    title=' Multiple Linear Regression on F0119, T0186, and S1628 (Female)'))
-    print()
-
-
-
-def regressMulti4():
-    model = smf.logit('LEAVER ~ C(F0119) + C(T0186) + C(S1628) + C(AGE)', data = df).fit()
-    print(model.summary(yname="Status Leaver",
-    xname=['Intercept', 'Not Pleased Prof Dev (Overall)', 'No salary increase becasue of prof dev (Overall)', 'No Free Training Avaliable (Overall)',
-    'Younger than 40 (Overall)'], 
-    title=' Multiple Linear Regression on F0119, T0186, S1628, and AGE  (Overall)'))
-    print()
-    model = smf.logit('LEAVER ~ C(F0119) + C(T0186) + C(S1628) + C(AGE)', data = df1).fit()
-    print(model.summary(yname="Status Leaver",
-    xname=['Intercept', 'Not Pleased Prof Dev (Overall)', 'No salary increase becasue of prof dev (Male)', 'No Free Training Avaliable (Male)',
-    'Younger than 40 (Male)'], 
-    title=' Multiple Linear Regression on F0119, T0186, S1628, and AGE  (Male)'))
-    print()
-    model = smf.logit('LEAVER ~ C(F0119) + C(T0186) + C(S1628) + C(AGE)', data = df2).fit()
-    print(model.summary(yname="Status Leaver",
-    xname=['Intercept', 'Not Pleased Prof Dev (Female)', 'No salary increase becasue of prof dev (Female)', 'No Free Training Avaliable (Female)',
-    'Younger than 40 (Overall)'], 
-    title=' Multiple Linear Regression on F0119, T0186, S1628, and AGE  (Female)'))
-    print()
-
 
 
 
@@ -164,9 +107,6 @@ def logiGraph(): # Need to try it with a continuous variable for independent
     plt.title("Logistic Regression (Logit Function Sigmoid -Curve) Leaver Vs. Prof Dev Main Assign ")
     plt.ylabel('Teacher Left')
     plt.xlabel('No Mentorship or Coaching')
-    plt.show(block=False)
-    plt.savefig('profiling/no_mentorship_logi_graph.png')
-    plt.pause(2)
     plt.close()
 
 def logiGraph2(): # Contiuous Variable 
@@ -196,15 +136,32 @@ def logiGraph2(): # Contiuous Variable
     plt.close()
 
 
+def logiGraph3():
+
+    X_train, X_test, y_train, y_test = train_test_split(df[['T0329']],df.LEAVER, test_size=0.1)
+    model = LogisticRegression()
+    model.fit(X_test,y_test)
+    rank = model.score(X_test,y_test)
+    prediction = model.predict(X_test)
+    print('Accuracy of logistic regression on Alcohol Abuse {:.2f}'.format(rank))
+
+    # Confusion Matrix: You read it diagonally x1 + y2 = Correctly Predicted; X2
+    conf_matrix = confusion_matrix(y_test,prediction)
+    print(conf_matrix)
+
+
+
+
+
+
+
+
 
 # playground()
-
-# regressMulti2()
-# regressMulti3()
-# regressMulti4()
 # regressMulti5()
 # regressMulti6()
 # regressMulti7()
-regressMulti8()
+# regressMulti8()
 # logiGraph()
 # logiGraph2()
+logiGraph3()
