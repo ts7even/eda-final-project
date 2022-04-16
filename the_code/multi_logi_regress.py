@@ -25,10 +25,9 @@ def playground():
         plt.show()
 
 def regressMulti2():
-    model = smf.logit('LEAVER ~ C(F0119) + C(T0186)', data = df).fit()
+    model = smf.logit('LEAVER ~ C(F0119)', data = df).fit()
     print(model.summary(yname="Status Leaver",
-    xname=['Intercept', 'Not Pleased Prof Dev (Overall)', 'No salary increase becasue of prof dev (Overall)'], 
-    title='Multiple regression of F0119 and T0186 (Overall)'))
+    xname=['Intercept', 'AGE Less than 40 (AGE)'], title='Logistic Regression of Leaver and Age'))
     print()
     model = smf.logit('LEAVER ~ C(F0119) + C(T0186)', data = df1).fit()
     print(model.summary(yname="Status Leaver",
@@ -85,50 +84,38 @@ def regressMulti4():
 
 
 
+
 def regressMulti5():
-    model = smf.logit('LEAVER ~ C(F0119) + C(T0186) + C(S1628) + C(AGE) + C(S0287)', data = df).fit()
+    model = smf.logit('LEAVER ~ S0287 + EXPER + T0277 + T0278 + AGE', data = df).fit()
     print(model.summary(yname="Status Leaver",
-    xname=['Intercept', 'Not Pleased Prof Dev (Overall)', 'No salary increase becasue of prof dev (Overall)', 'No Free Training Avaliable (Overall)',
-    'Younger than 40 (Overall)', '20 percent or more free lunch (Overall)'], 
-    title=' Multiple Linear Regression on F0119, T0186, S1628, AGE, S0287 (Overall)'))
+    xname=['Intercept', '4 percent or less free lunch (S0287)', 'Total Years of Experiance (EXPER)', 'Total Hours of Preperation (T0277)',
+    'How many students where tardy (T0278)', 'Younger than 40 (AGE)'], 
+    title=' Multiple Logistic Regression With High Correlation Test'))
     print()
-    model = smf.logit('LEAVER ~ C(F0119) + C(T0186) + C(S1628) + C(AGE) + C(S0287)', data = df1).fit()
-    print(model.summary(yname="Status Leaver",
-    xname=['Intercept', 'Not Pleased Prof Dev (Male)', 'No salary increase becasue of prof dev (Male)', 'No Free Training Avaliable (Male)',
-    'Younger than 40 (Male)', '20 percent or more free lunch (Male)'], 
-    title=' Multiple Linear Regression on F0119, T0186, S1628, AGE, S0287 (Male)'))
-    print()
-    model = smf.logit('LEAVER ~ C(F0119) + C(T0186) + C(S1628) + C(AGE) + C(S0287)', data = df2).fit()
-    print(model.summary(yname="Status Leaver",
-    xname=['Intercept', 'Not Pleased Prof Dev (Female)', 'No salary increase becasue of prof dev (Female)', 'No Free Training Avaliable (Female)',
-    'Younger than 40 (Female)', '20 percent or more free lunch (Female)'], 
-    title=' Multiple Linear Regression on F0119, T0186, S1628, AGE, S0287 (Female)'))
-    print()
-    
 
 def regressMulti6():
-    model = smf.logit('LEAVER ~ C(F0119) + C(T0186) + C(S1628) + C(AGE) + C(S0287) + C(T0178)', data = df).fit()
+    model = smf.logit('LEAVER ~ T0080 + SALARY + T0329 + T0330', data = df).fit()
     print(model.summary(yname="Status Leaver",
-    xname=['Intercept', 'Not Pleased Prof Dev (Overall)', 'No salary increase becasue of prof dev (Overall)', 'No Free Training Avaliable (Overall)',
-    'Younger than 40 (Overall)', '20 percent or more free lunch (Overall)','Not useful prof dev (Overall)' ], 
-    title=' Multiple Linear Regression on F0119, T0186, S1628, AGE, S0287, T0178 (Overall)'))
+    xname=['Intercept', 'Masters Degree (T0080)', 'Teachers that make less than 39,999k (EARNALL)', 'Student Alcohol Abuse Problem (T0329)',
+    'Student Drug Abuse Problem (T0330)'], 
+    title=' Multiple Logistic Regression With High Correlation Test'))
     print()
-    model = smf.logit('LEAVER ~ C(F0119) + C(T0186) + C(S1628) + C(AGE) + C(S0287) + C(T0178)', data = df1).fit()
+
+def regressMulti7():
+    model = smf.logit('LEAVER ~ AGE + S0287 + T0080 + SALARY + T0329 + T0333 + T0159 + T0165 + EXPER + T0278 + T0277 + T0330', data = df).fit()
     print(model.summary(yname="Status Leaver",
-    xname=['Intercept', 'Not Pleased Prof Dev (Male)', 'No salary increase becasue of prof dev (Male)', 'No Free Training Avaliable (Male)',
-    'Younger than 40 (Male)', '20 percent or more free lunch (Male)','Not useful prof dev (Male)' ], 
-    title=' Multiple Linear Regression on F0119, T0186, S1628, AGE, S0287, T0178 (Male)'))
+    xname=['Intercept',
+    'Younger than 40 (AGE)', '4 percent or less free lunch (S0287)','Masters Degree (T0080)',
+    'Teachers that make less than 39,999k (SALARY)', 'Student Alcohol Abuse Problem (T0329)', 'Problem with dropouts (T0333)',
+    'Prof Dev Main Assign (T0159)', 'Prof Dev Methods of Teaching (T0165)', 'Total Years of Experiance (EXPER)', ' Total students in class (T0278)',
+    'Hours spent in preperation (T0277)', 'Problem with drug abuse (T0330)'], 
+    title=' Multiple Logistic Regression (Overall)'))
     print()
-    model = smf.logit('LEAVER ~ C(F0119) + C(T0186) + C(S1628) + C(AGE) + C(S0287) + C(T0178)', data = df2).fit()
-    print(model.summary(yname="Status Leaver",
-    xname=['Intercept', 'Not Pleased Prof Dev (Female)', 'No salary increase becasue of prof dev (Female)', 'No Free Training Avaliable (Female)',
-    'Younger than 40 (Female)', '20 percent or more free lunch (Female)','Not useful prof dev (Female)' ], 
-    title=' Multiple Linear Regression on F0119, T0186, S1628, AGE, S0287, T0178 (Female)'))
-    print()
+
 
 
 # This one is good to go. 
-def regressMulti7():
+def regressMulti8():
     model = smf.logit('LEAVER ~ AGE + S0287 + T0080 + SALARY + T0329 + T0333 + T0159 + T0165 + EXPER', data = df).fit()
     print(model.summary(yname="Status Leaver",
     xname=['Intercept',
@@ -215,8 +202,9 @@ def logiGraph2(): # Contiuous Variable
 # regressMulti2()
 # regressMulti3()
 # regressMulti4()
-# regressMulti5()
-# regressMulti6()
+regressMulti5()
+regressMulti6()
 regressMulti7()
+regressMulti8()
 # logiGraph()
 # logiGraph2()
