@@ -127,4 +127,4 @@ def profiler():
 
 dataClean()
 correlationMatrix() 
-profiler()
+# profiler()

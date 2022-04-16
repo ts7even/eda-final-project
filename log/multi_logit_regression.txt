@@ -1,0 +1,77 @@
+                    Multiple Logistic Regression (Overall)                    
+==============================================================================
+Dep. Variable:          Status Leaver   No. Observations:                 3560
+Model:                          Logit   Df Residuals:                     3550
+Method:                           MLE   Df Model:                            9
+Date:                Sat, 16 Apr 2022   Pseudo R-squ.:                  0.1261
+Time:                        15:06:52   Log-Likelihood:                -2091.3
+converged:                       True   LL-Null:                       -2393.1
+Covariance Type:            nonrobust   LLR p-value:                3.742e-124
+=================================================================================================================
+                                                    coef    std err          z      P>|z|      [0.025      0.975]
+-----------------------------------------------------------------------------------------------------------------
+Intercept                                        -1.9198      0.170    -11.295      0.000      -2.253      -1.587
+Younger than 40 (AGE)                             0.2342      0.110      2.136      0.033       0.019       0.449
+4 percent or less free lunch (S0287)              0.1664      0.080      2.091      0.037       0.010       0.322
+Masters Degree (T0080)                            0.2137      0.082      2.616      0.009       0.054       0.374
+Teachers that make less than 39,999k (SALARY)     0.2415      0.095      2.545      0.011       0.056       0.427
+Student Alcohol Abuse Problem (T0329)             0.5512      0.090      6.129      0.000       0.375       0.727
+Problem with dropouts (T0333)                     0.2863      0.103      2.789      0.005       0.085       0.488
+Prof Dev Main Assign (T0159)                     -0.2320      0.076     -3.033      0.002      -0.382      -0.082
+Prof Dev Methods of Teaching (T0165)             -0.1695      0.081     -2.083      0.037      -0.329      -0.010
+Total Years of Experiance (EXPER)                 0.0789      0.005     15.022      0.000       0.069       0.089
+=================================================================================================================
+
+Optimization terminated successfully.
+         Current function value: 0.587447
+         Iterations 5
+                      Multiple Logistic Regression (Male)                     
+==============================================================================
+Dep. Variable:          Status Leaver   No. Observations:                 3560
+Model:                          Logit   Df Residuals:                     3550
+Method:                           MLE   Df Model:                            9
+Date:                Sat, 16 Apr 2022   Pseudo R-squ.:                  0.1261
+Time:                        15:06:52   Log-Likelihood:                -2091.3
+converged:                       True   LL-Null:                       -2393.1
+Covariance Type:            nonrobust   LLR p-value:                3.742e-124
+=================================================================================================================
+                                                    coef    std err          z      P>|z|      [0.025      0.975]
+-----------------------------------------------------------------------------------------------------------------
+Intercept                                        -1.9198      0.170    -11.295      0.000      -2.253      -1.587
+Younger than 40 (AGE)                             0.2342      0.110      2.136      0.033       0.019       0.449
+4 percent or less free lunch (S0287)              0.1664      0.080      2.091      0.037       0.010       0.322
+Masters Degree (T0080)                            0.2137      0.082      2.616      0.009       0.054       0.374
+Teachers that make less than 39,999k (SALARY)     0.2415      0.095      2.545      0.011       0.056       0.427
+Student Alcohol Abuse Problem (T0329)             0.5512      0.090      6.129      0.000       0.375       0.727
+Problem with dropouts (T0333)                     0.2863      0.103      2.789      0.005       0.085       0.488
+Prof Dev Main Assign (T0159)                     -0.2320      0.076     -3.033      0.002      -0.382      -0.082
+Prof Dev Methods of Teaching (T0165)             -0.1695      0.081     -2.083      0.037      -0.329      -0.010
+Total Years of Experiance (EXPER)                 0.0789      0.005     15.022      0.000       0.069       0.089
+=================================================================================================================
+
+Optimization terminated successfully.
+         Current function value: 0.587447
+         Iterations 5
+                     Multiple Logistic Regression (Female)                    
+==============================================================================
+Dep. Variable:          Status Leaver   No. Observations:                 3560
+Model:                          Logit   Df Residuals:                     3550
+Method:                           MLE   Df Model:                            9
+Date:                Sat, 16 Apr 2022   Pseudo R-squ.:                  0.1261
+Time:                        15:06:52   Log-Likelihood:                -2091.3
+converged:                       True   LL-Null:                       -2393.1
+Covariance Type:            nonrobust   LLR p-value:                3.742e-124
+=================================================================================================================
+                                                    coef    std err          z      P>|z|      [0.025      0.975]
+-----------------------------------------------------------------------------------------------------------------
+Intercept                                        -1.9198      0.170    -11.295      0.000      -2.253      -1.587
+Younger than 40 (AGE)                             0.2342      0.110      2.136      0.033       0.019       0.449
+4 percent or less free lunch (S0287)              0.1664      0.080      2.091      0.037       0.010       0.322
+Masters Degree (T0080)                            0.2137      0.082      2.616      0.009       0.054       0.374
+Teachers that make less than 39,999k (SALARY)     0.2415      0.095      2.545      0.011       0.056       0.427
+Student Alcohol Abuse Problem (T0329)             0.5512      0.090      6.129      0.000       0.375       0.727
+Problem with dropouts (T0333)                     0.2863      0.103      2.789      0.005       0.085       0.488
+Prof Dev Main Assign (T0159)                     -0.2320      0.076     -3.033      0.002      -0.382      -0.082
+Prof Dev Methods of Teaching (T0165)             -0.1695      0.081     -2.083      0.037      -0.329      -0.010
+Total Years of Experiance (EXPER)                 0.0789      0.005     15.022      0.000       0.069       0.089
+=================================================================================================================
