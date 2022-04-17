@@ -102,3 +102,43 @@ Prof Dev Main Assign (T0159)                     -0.1401      0.125     -1.119  
 Prof Dev Methods of Teaching (T0165)             -0.2095      0.132     -1.589      0.112      -0.468       0.049
 Total Years of Experiance (EXPER)                 0.2156      0.038      5.701      0.000       0.141       0.290
 =================================================================================================================
+
+
+
+Optimization terminated successfully.
+         Current function value: 0.672643
+         Iterations 4
+                    Multiple Logistic Regression (Overall)                    
+==============================================================================
+Dep. Variable:          Status Leaver   No. Observations:                 3828
+Model:                          Logit   Df Residuals:                     3826
+Method:                           MLE   Df Model:                            1
+Date:                Sun, 17 Apr 2022   Pseudo R-squ.:                0.002522
+Time:                        15:33:25   Log-Likelihood:                -2574.9
+converged:                       True   LL-Null:                       -2581.4
+Covariance Type:            nonrobust   LLR p-value:                 0.0003079
+========================================================================================================
+                                           coef    std err          z      P>|z|      [0.025      0.975]
+--------------------------------------------------------------------------------------------------------
+Intercept                               -0.2194      0.058     -3.805      0.000      -0.332      -0.106
+Prof Dev Methods of Teaching (T0165)    -0.2542      0.070     -3.614      0.000      -0.392      -0.116
+========================================================================================================
+
+Optimization terminated successfully.
+         Current function value: 0.485562
+         Iterations 6
+                   Multiple Logistic Regression (EXPER < 1)                   
+==============================================================================
+Dep. Variable:          Status Leaver   No. Observations:                  416
+Model:                          Logit   Df Residuals:                      414
+Method:                           MLE   Df Model:                            1
+Date:                Sun, 17 Apr 2022   Pseudo R-squ.:                 0.01505
+Time:                        15:33:25   Log-Likelihood:                -201.99
+converged:                       True   LL-Null:                       -205.08
+Covariance Type:            nonrobust   LLR p-value:                   0.01296
+========================================================================================================
+                                           coef    std err          z      P>|z|      [0.025      0.975]
+--------------------------------------------------------------------------------------------------------
+Intercept                               -1.0561      0.184     -5.753      0.000      -1.416      -0.696
+Prof Dev Methods of Teaching (T0165)    -0.6240      0.250     -2.493      0.013      -1.115      -0.133
+========================================================================================================

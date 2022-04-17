@@ -20,7 +20,7 @@ df = pd.read_csv('source/merge/data-merge2.csv', low_memory=False)
 
 # Reassigning Varables to {Status L:1, M:0, S:0}
 df['NEW_STATUS'] = df.STATUS.map({'L':1, 'M':0, 'S':0}) #Coded for Leaver and mover 
-
+df['YOUNG'] = df.AGE_T_x.map({1:1, 2:0, 3:0, 4:np.nan}) #Coded for Leaver and mover
 # Creating Dummy Variables
 df['S0287'] = df['S0287'].replace([1,2,3,4, -8, -9], [1, 1, 0, 0, np.nan, np.nan]) 
 df['AGE_T_x'] = df['AGE_T_x'].replace([1,2,3,4], [1,1,0,0]) # Weighing teachers that are 39 years and younger since the need prof dev the most. And 40 and older are more likley at the end of their carrers. 
@@ -34,7 +34,7 @@ df['T0159'] = df['T0159'].replace([1,2], [1,0]) # participated in any profession
 df['T0165'] = df['T0165'].replace([1,2], [1,0])
 
 # Minimixing Data into CSV
-df = df[['NEW_STATUS','AGE_T_x', 'S0287', 'T0080', 'EARNALL', 'T0329', 'T0333', 'T0159', 'T0165', 'TOTEXPER_x', 'T0356', 'T0278', 'T0277', 'T0330']]
+df = df[['NEW_STATUS','AGE_T_x', 'S0287', 'T0080', 'EARNALL', 'T0329', 'T0333', 'T0159', 'T0165', 'TOTEXPER_x', 'T0356', 'T0278', 'T0277', 'T0330', 'YOUNG']]
  
 
 # Renaming data for heatmap
@@ -47,8 +47,8 @@ df4 = df.rename(columns={'NEW_STATUS': 'LEAVER','AGE_T_x': 'AGE','TOTEXPER_x': '
 # Filtering and creating new datasets for male and female
 df2 = df[(df['T0356']==1)] # Male
 df3 = df[(df['T0356']==2)] # Female
-df4 = df[(df['EXPER'] <=6)] # Experiance less than 6 years
-asd = df4.describe()
+df4 = df[(df['EXPER'] <=1)] # Experiance less than 6 years
+asd = df.describe()
 print(asd)
 # Sending to new dataframe 
 def dataClean():
@@ -113,5 +113,5 @@ def profiler():
     profile.to_file('profiling/project-profiling.html')
 
 dataClean()
-correlationMatrix() 
+# correlationMatrix() 
 # profiler()

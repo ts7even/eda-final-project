@@ -14,6 +14,7 @@ matplotlib.use('Qt5Agg')
 df = pd.read_csv('source/data_cleaning/cleaned_data.csv')
 df1 = pd.read_csv('source/data_cleaning/cleaned_data_male.csv')
 df2 = pd.read_csv('source/data_cleaning/cleaned_data_female.csv')
+df4 = pd.read_csv('source/data_cleaning/cleaned_data_experiance.csv')
 
 vari = ['AGE', 'S0287', 'T0080', 'SALARY', 'T0329', 'T0333', 'T0159', 'T0165', 'EXPER']
 def graphVariables():
@@ -23,6 +24,15 @@ def graphVariables():
     plt.title('Teacher Age')
     plt.show(block=False)
     plt.savefig('profiling/presentation_graphs/presentation_AGE.png') 
+    plt.pause(2)
+    plt.close()
+
+    df['YOUNG'] = df['YOUNG'].replace([0,1], ['Between 30 and 49 years old','Younger than 30'])
+    sns.countplot('YOUNG', data=df, palette='Set3', hue='LEAVER')
+    plt.legend(['Stayer','Leaver'])
+    plt.title('Teacher Age')
+    plt.show(block=False)
+    plt.savefig('profiling/presentation_graphs/presentation_YOUNG.png') 
     plt.pause(2)
     plt.close()
 
@@ -89,5 +99,30 @@ def graphVariables():
     plt.pause(2)
     plt.close()
 
+    df['T0165'] = df['T0165'].replace([0,1], ['No', 'Yes'])
+    sns.countplot('T0165', data=df4, palette='Set3', hue='LEAVER')
+    plt.legend(['Stayer','Leaver'])
+    plt.title('Teaching Methods Professional Development Less than 1 Year Experiance')
+    plt.show(block=False)
+    plt.savefig('profiling/presentation_graphs/prof_dev_teach_methods_less_one_year_experiance.png') 
+    plt.pause(2)
+    plt.close()
+
+    
+
     # df[''] = df[''].replace([0,1], ['', ''])
 graphVariables()
+
+
+def graphExperVar():
+    df['EXPER'] = df['EXPER'].replace([0,1], ['No', 'Yes'])
+    sns.countplot('EXPER', data=df, palette='Set3', hue='LEAVER')
+    plt.legend(['Stayer','Leaver'])
+    plt.title('Teacher Experiance')
+    plt.show(block=False)
+    plt.savefig('profiling/presentation_graphs/teacher_experiance.png') 
+    plt.pause(2)
+    plt.close()
+
+
+graphExperVar()
