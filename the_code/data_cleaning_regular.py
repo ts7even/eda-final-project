@@ -70,6 +70,7 @@ def correlationMatrix():
     cor2.to_csv('source/matrix/male_correlation_matrix.csv')
     cor3 = df3.corr().drop(columns=['T0356']).drop('T0356')
     cor3.to_csv('source/matrix/female_correlation_matrix.csv')
+    cor4 = df4.corr().drop(columns=['T0356', 'EXPER']).drop(['T0356', 'EXPER'])
     print('\n\n')
     print('Correlation Matrix of overall data')
     print(cor)
@@ -80,6 +81,9 @@ def correlationMatrix():
     print('Correlation Matrix of female data')
     print(cor3)
     print()
+    print('Correlation Matrix of less than 1 year experiance data')
+    print(cor4)
+
 
     sns.heatmap(cor, annot=True, annot_kws={"size":10})
     plt.title("Heatmap of Correlation of Leaver (Overall)")
@@ -105,6 +109,14 @@ def correlationMatrix():
     plt.pause(2)
     plt.close()
 
+    sns.heatmap(cor4, annot=True, annot_kws={"size":10})
+    plt.title("Heatmap of Correlation of Leaver (Less than 1yr EXPER)")
+    plt.yticks(rotation=0)
+    plt.show(block=False)
+    plt.savefig('profiling/heatmap_correlation_less_than_one_exper.png')
+    plt.pause(2)
+    plt.close()
+
 
 
 # Creating a profile report of the data
@@ -113,5 +125,5 @@ def profiler():
     profile.to_file('profiling/project-profiling.html')
 
 dataClean()
-# correlationMatrix() 
+correlationMatrix() 
 # profiler()
