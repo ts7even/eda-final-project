@@ -110,8 +110,6 @@ def graphVariables():
 
     
 
-    # df[''] = df[''].replace([0,1], ['', ''])
-
 
 
 def graphExperVar():
