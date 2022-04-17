@@ -149,7 +149,7 @@ def logiGraph3():
     prediction = model.predict(X_test)
     print('Accuracy of logistic regression on Alcohol Abuse {:.2f}'.format(rank))
 
-    # Confusion Matrix: You read it diagonally x1 + y2 = Correctly Predicted; X2 + y1  = Not Correctly 
+    # Confusion Matrix: You read it diagonally x1 + y2 = Correctly Predicted; X2 + y1  = Not Correctly Predicted
     conf_matrix = confusion_matrix(y_test,prediction)
     print(conf_matrix)
     #  Classification Report: 
