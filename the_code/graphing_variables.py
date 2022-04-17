@@ -111,18 +111,24 @@ def graphVariables():
     
 
     # df[''] = df[''].replace([0,1], ['', ''])
-graphVariables()
+
 
 
 def graphExperVar():
-    df['EXPER'] = df['EXPER'].replace([0,1], ['No', 'Yes'])
-    sns.countplot('EXPER', data=df, palette='Set3', hue='LEAVER')
+    plot_ = sns.countplot('EXPER', data=df, palette='Set3', hue='LEAVER')
+
+    for ind, label in enumerate(plot_.get_xticklabels()):
+        if ind % 5 == 0:  # every 10th label is kept
+            label.set_visible(True)
+        else:
+            label.set_visible(False)
+
     plt.legend(['Stayer','Leaver'])
     plt.title('Teacher Experiance')
-    plt.show(block=False)
+    plt.show(block=False) 
     plt.savefig('profiling/presentation_graphs/teacher_experiance.png') 
     plt.pause(2)
     plt.close()
 
-
+# graphVariables()
 graphExperVar()
