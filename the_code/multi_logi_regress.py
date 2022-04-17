@@ -12,6 +12,9 @@ import seaborn as sns
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import confusion_matrix
+from sklearn.metrics import classification_report
+from sklearn.metrics import roc_auc_score
+from sklearn.metrics import roc_curve
 matplotlib.use('Qt5Agg')
 
 df = pd.read_csv('source/data_cleaning/cleaned_data.csv')
@@ -142,17 +145,61 @@ def logiGraph3():
     model = LogisticRegression()
     model.fit(X_test,y_test)
     rank = model.score(X_test,y_test)
+    probability = model.predict_proba(X_test)
     prediction = model.predict(X_test)
     print('Accuracy of logistic regression on Alcohol Abuse {:.2f}'.format(rank))
 
-    # Confusion Matrix: You read it diagonally x1 + y2 = Correctly Predicted; X2
+    # Confusion Matrix: You read it diagonally x1 + y2 = Correctly Predicted; X2 + y1  = Not Correctly 
     conf_matrix = confusion_matrix(y_test,prediction)
     print(conf_matrix)
+    #  Classification Report: 
+    print(classification_report(y_test,prediction))
 
+    # Graphing ROC Curve (Reciever Operating Characteristic)
+    logit_roc_auc = roc_auc_score(y_test, prediction)
+    fpr, tpr, thresholds = roc_curve(y_test, probability[:,1])
+    plt.figure()
+    plt.plot(fpr, tpr, label='Logistic Regression (area = %0.2f)' % logit_roc_auc)
+    plt.plot([0, 1], [0, 1],'r--')
+    plt.xlim([0.0, 1.0])
+    plt.ylim([0.0, 1.05])
+    plt.xlabel('False Positive Rate')
+    plt.ylabel('True Positive Rate')
+    plt.title('Receiver Operator Characteristic (ROC Curve) of T0329')
+    plt.legend(loc="lower right")
+    plt.savefig('profiling/ROC_curve_T0329.png')
+    plt.show()
 
+def logiGraph4():
 
+    X_train, X_test, y_train, y_test = train_test_split(df[['AGE']],df.LEAVER, test_size=0.1)
+    model = LogisticRegression()
+    model.fit(X_test,y_test)
+    rank = model.score(X_test,y_test)
+    probability = model.predict_proba(X_test)
+    prediction = model.predict(X_test)
+    print('Accuracy of logistic regression on Alcohol Abuse {:.2f}'.format(rank))
 
+    # Confusion Matrix: You read it diagonally x1 + y2 = Correctly Predicted; X2 + y1  = Not Correctly 
+    conf_matrix = confusion_matrix(y_test,prediction)
+    print(conf_matrix)
+    #  Classification Report: 
+    print(classification_report(y_test,prediction))
 
+    # Graphing ROC Curve (Reciever Operating Characteristic)
+    logit_roc_auc = roc_auc_score(y_test, prediction)
+    fpr, tpr, thresholds = roc_curve(y_test, probability[:,1])
+    plt.figure()
+    plt.plot(fpr, tpr, label='Logistic Regression (area = %0.2f)' % logit_roc_auc)
+    plt.plot([0, 1], [0, 1],'r--')
+    plt.xlim([0.0, 1.0])
+    plt.ylim([0.0, 1.05])
+    plt.xlabel('False Positive Rate')
+    plt.ylabel('True Positive Rate')
+    plt.title('Receiver Operator Characteristic (ROC Curve) of AGE')
+    plt.legend(loc="lower right")
+    plt.savefig('profiling/ROC_curve_AGE.png')
+    plt.show()
 
 
 
@@ -163,5 +210,6 @@ def logiGraph3():
 # regressMulti7()
 # regressMulti8()
 # logiGraph()
-# logiGraph2()
-logiGraph3()
+logiGraph2()
+# logiGraph3()
+# logiGraph4()

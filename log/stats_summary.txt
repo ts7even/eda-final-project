@@ -1,0 +1,117 @@
+Stats summary for Leaver:  count    3828.000000
+mean        0.403344
+std         0.490633
+min         0.000000
+25%         0.000000
+50%         0.000000
+75%         1.000000
+max         1.000000
+Name: LEAVER, dtype: float64
+
+
+
+Stats summary for AGE:  count    3828.000000
+mean        0.467607
+std         0.499015
+min         0.000000
+25%         0.000000
+50%         0.000000
+75%         1.000000
+max         1.000000
+Name: AGE, dtype: float64
+
+
+
+Stats summary for S0287:  count    3594.000000
+mean        0.348915
+std         0.476693
+min         0.000000
+25%         0.000000
+50%         0.000000
+75%         1.000000
+max         1.000000
+Name: S0287, dtype: float64
+
+
+
+Stats summary for T0080:  count    3786.000000
+mean        0.413365
+std         0.492502
+min         0.000000
+25%         0.000000
+50%         0.000000
+75%         1.000000
+max         1.000000
+Name: T0080, dtype: float64
+
+
+
+Stats summary for SALARY:  count    3828.000000
+mean        0.605277
+std         0.488855
+min         0.000000
+25%         0.000000
+50%         1.000000
+75%         1.000000
+max         1.000000
+Name: SALARY, dtype: float64
+
+
+
+Stats summary for T0329:  count    3828.000000
+mean        0.311390
+std         0.463122
+min         0.000000
+25%         0.000000
+50%         0.000000
+75%         1.000000
+max         1.000000
+Name: T0329, dtype: float64
+
+
+
+Stats summary for T0333:  count    3828.000000
+mean        0.204023
+std         0.403039
+min         0.000000
+25%         0.000000
+50%         0.000000
+75%         0.000000
+max         1.000000
+Name: T0333, dtype: float64
+
+
+
+Stats summary for T0159:  count    3828.000000
+mean        0.522466
+std         0.499560
+min         0.000000
+25%         0.000000
+50%         1.000000
+75%         1.000000
+max         1.000000
+Name: T0159, dtype: float64
+
+
+
+Stats summary for T0165:  count    3828.000000
+mean        0.682079
+std         0.465729
+min         0.000000
+25%         0.000000
+50%         1.000000
+75%         1.000000
+max         1.000000
+Name: T0165, dtype: float64
+
+
+
+Stats summary for EXPER: count    3828.000000
+mean       13.449843
+std        11.640456
+min         1.000000
+25%         3.000000
+50%         9.000000
+75%        23.000000
+max        47.000000
+Name: EXPER, dtype: float64
