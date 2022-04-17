@@ -36,21 +36,28 @@ df['T0165'] = df['T0165'].replace([1,2], [1,0])
 # Minimixing Data into CSV
 df = df[['NEW_STATUS','AGE_T_x', 'S0287', 'T0080', 'EARNALL', 'T0329', 'T0333', 'T0159', 'T0165', 'TOTEXPER_x', 'T0356', 'T0278', 'T0277', 'T0330']]
  
-# Filtering and creating new datasets for male and female
-df2 = df[(df['T0356']==1)] # Male
-df3 = df[(df['T0356']==2)] # Female
-
-# Sending to new dataframe 
-def dataClean():
-    df.to_csv('source/data_cleaning/cleaned_data.csv')
-    df2.to_csv('source/data_cleaning/cleaned_data_male.csv')
-    df3.to_csv('source/data_cleaning/cleaned_data_female.csv')
-
 
 # Renaming data for heatmap
 df = df.rename(columns={'NEW_STATUS': 'LEAVER','AGE_T_x': 'AGE','TOTEXPER_x': 'EXPER', 'EARNALL': 'SALARY'})
 df2 = df.rename(columns={'NEW_STATUS': 'LEAVER','AGE_T_x': 'AGE','TOTEXPER_x': 'EXPER', 'EARNALL': 'SALARY'})
 df3 = df.rename(columns={'NEW_STATUS': 'LEAVER','AGE_T_x': 'AGE','TOTEXPER_x': 'EXPER', 'EARNALL': 'SALARY'})
+df4 = df.rename(columns={'NEW_STATUS': 'LEAVER','AGE_T_x': 'AGE','TOTEXPER_x': 'EXPER', 'EARNALL': 'SALARY'})
+
+
+# Filtering and creating new datasets for male and female
+df2 = df[(df['T0356']==1)] # Male
+df3 = df[(df['T0356']==2)] # Female
+df4 = df[(df['EXPER'] <=6)] # Experiance less than 6 years
+asd = df4.describe()
+print(asd)
+# Sending to new dataframe 
+def dataClean():
+    df.to_csv('source/data_cleaning/cleaned_data.csv')
+    df2.to_csv('source/data_cleaning/cleaned_data_male.csv')
+    df3.to_csv('source/data_cleaning/cleaned_data_female.csv')
+    df4.to_csv('source/data_cleaning/cleaned_data_experiance.csv')
+
+
 sns.set(rc={"figure.figsize":(10, 8)}) #width=3, #height=4
 
 

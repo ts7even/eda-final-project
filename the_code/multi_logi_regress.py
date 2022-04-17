@@ -20,7 +20,7 @@ matplotlib.use('Qt5Agg')
 df = pd.read_csv('source/data_cleaning/cleaned_data.csv')
 df1 = pd.read_csv('source/data_cleaning/cleaned_data_male.csv')
 df2 = pd.read_csv('source/data_cleaning/cleaned_data_female.csv')
-
+df4 = pd.read_csv('source/data_cleaning/cleaned_data_experiance.csv') #experiance less than 6
 
 def playground():
     data = ['AGE', 'S0287', 'T0080', 'SALARY', 'T0329', 'T0333', 'T0159', 'T0165', 'EXPER']
@@ -87,6 +87,15 @@ def regressMulti8():
     'Teachers that make less than 39,999k (SALARY)', 'Student Alcohol Abuse Problem (T0329)', 'Problem with dropouts (T0333)',
     'Prof Dev Main Assign (T0159)', 'Prof Dev Methods of Teaching (T0165)', 'Total Years of Experiance (EXPER)'], 
     title=' Multiple Logistic Regression (Female)'))
+    print()
+
+    model = smf.logit('LEAVER ~ AGE + S0287 + T0080 + SALARY + T0329 + T0333 + T0159 + T0165 + EXPER ', data = df4).fit()
+    print(model.summary(yname="Status Leaver",
+    xname=['Intercept',
+    'Younger than 40 (AGE)', '4 percent or less free lunch (S0287)','Masters Degree (T0080)',
+    'Teachers that make less than 39,999k (SALARY)', 'Student Alcohol Abuse Problem (T0329)', 'Problem with dropouts (T0333)',
+    'Prof Dev Main Assign (T0159)', 'Prof Dev Methods of Teaching (T0165)', 'Total Years of Experiance (EXPER)'], 
+    title=' Multiple Logistic Regression (EXPER < 5)'))
     print()
 
 
@@ -208,7 +217,7 @@ def logiGraph4():
 # regressMulti5()
 # regressMulti6()
 # regressMulti7()
-# regressMulti8()
+regressMulti8()
 # logiGraph()
 # logiGraph2()
 # logiGraph3()

@@ -34,4 +34,3 @@ def opportunites():
         print()
 opportunites()
 
-
