@@ -210,6 +210,6 @@ def logiGraph4():
 # regressMulti7()
 # regressMulti8()
 # logiGraph()
-logiGraph2()
+# logiGraph2()
 # logiGraph3()
 # logiGraph4()
