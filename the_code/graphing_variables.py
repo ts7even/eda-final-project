@@ -99,12 +99,14 @@ def graphVariables():
     plt.pause(2)
     plt.close()
 
-    df['T0165'] = df['T0165'].replace([0,1], ['No', 'Yes'])
+
+def graphYoung():
+    df4['T0165'] = df4['T0165'].replace([0,1], ['No', 'Yes'])
     sns.countplot('T0165', data=df4, palette='Set3', hue='LEAVER')
     plt.legend(['Stayer','Leaver'])
     plt.title('Teaching Methods Professional Development Less than 1 Year Experiance')
     plt.show(block=False)
-    plt.savefig('profiling/presentation_graphs/prof_dev_teach_methods_less_one_year_experiance.png') 
+    plt.savefig('profiling/presentation_graphs/prof_dev_teach_methods_less_one_year_experiance_two.png') 
     plt.pause(2)
     plt.close()
 
@@ -128,5 +130,8 @@ def graphExperVar():
     plt.pause(2)
     plt.close()
 
+
+
+graphYoung()
 # graphVariables()
-graphExperVar()
+# graphExperVar()
